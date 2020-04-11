@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context=".MuscleGroupInfo.Quads">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200sp" />
+
+    <RelativeLayout
+        android:id="@+id/firstrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10sp">
+
+        <TextView
+            android:id="@+id/current_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/current_max"
+            android:textColor="#F5F5F5" />
+
+        <TextView
+            android:id="@+id/current_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/current_max"
+            android:layout_marginTop="8sp"
+            android:text="@string/current_volume"
+            android:textColor="#F5F5F5" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10sp">
+
+
+        <Button
+            android:id="@+id/quadsresetmax"
+            android:layout_width="140sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_toStartOf="@+id/quadsresetvolume"
+            android:background="@drawable/add_button"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/reset_max"
+            android:textColor="#BAF833"
+            app:cornerRadius="200dp" />
+
+        <Button
+            android:id="@+id/quadsresetvolume"
+            android:layout_width="140sp"
+            android:layout_height="35sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/add_button"
+            android:ems="10"
+            android:gravity="center"
+            android:text="@string/reset_volume"
+            android:textColor="#BAF833"
+            app:cornerRadius="200dp" />
+
+        <TextView
+            android:id="@+id/mrv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/setquadsmax"
+            android:layout_marginBottom="3sp"
+            android:layout_toStartOf="@id/setmaxet"
+            android:text="@string/mrv"
+            android:textAlignment="textEnd"
+            android:textColor="#F5F5F5" />
+
+        <EditText
+            android:id="@+id/setmaxet"
+            android:layout_width="60sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quadsresetvolume"
+            android:layout_marginTop="16sp"
+            android:layout_toStartOf="@id/setquadsmax"
+            android:backgroundTint="#F5F5F5"
+            android:inputType="number"
+            android:textColor="#F5F5F5"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"/>
+
+        <Button
+            android:id="@+id/setquadsmax"
+            android:layout_width="140sp"
+            android:layout_height="35sp"
+            android:layout_below="@id/quadsresetmax"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16sp"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/add_button"
+            android:gravity="center"
+            android:text="@string/set_max"
+            android:textColor="#BAF833" />
+
+        <TextView
+            android:id="@+id/mav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mrv"
+            android:layout_marginTop="8sp"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            android:text="@string/mav"
+            android:textColor="#33BAF8"
+            />
+
+        <TextView
+            android:id="@+id/mavbody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mrv"
+            android:layout_marginTop="8sp"
+            android:text="@string/mavbody"
+            android:textColor="#F5F5F5"
+            android:layout_marginEnd="10sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

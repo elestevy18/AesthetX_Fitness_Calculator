@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item
+            android:id="@+id/MealPlan"
+            android:icon="@drawable/ic_fitness_white"
+            android:title="@string/Meal_Plan" />
+    <item
+            android:id="@+id/VolumeTracker"
+            android:icon="@drawable/ic_fitness_white"
+            android:title="@string/Volume_Tracker" />
+    <item
+            android:id="@+id/Resources"
+            android:icon="@drawable/ic_fitness_white"
+            android:title="@string/Resources" />
+
+
+</menu>

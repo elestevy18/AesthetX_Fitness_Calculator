@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15sp"
+    android:background="#000000"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="75sp">
+
+        <TextView
+            android:id="@+id/ibw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="1dp"
+            android:text="@string/ibw"
+
+            android:textColor="#F5F5F5"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/ibw2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ibw"
+            android:lineSpacingExtra="1dp"
+            android:paddingTop="20sp"
+            android:text="@string/ibw2"
+
+            android:textColor="#F5F5F5"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/ibw3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibw2"
+            android:lineSpacingExtra="1dp"
+            android:paddingTop="20sp"
+            android:text="@string/ibw3"
+            android:textColor="#F5F5F5"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

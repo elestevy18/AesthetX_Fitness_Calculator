@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.scifit">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".DashBoardTabs.UpdateData"></activity>
+        <activity
+            android:name=".Excercises.GlobalExercise"
+            android:theme="@style/AppThemeBasic"></activity>
+        <activity android:name=".Intro.Intro" />
+        <activity android:name=".MuscleGroupInfo.LowerTrap" />
+        <activity android:name=".MuscleGroupInfo.UpperTrap" />
+        <activity android:name=".DashBoardTabs.Dashboards" />
+        <activity android:name=".AddVolume.Form.SuspendedNeckRotation" />
+        <activity android:name=".AddVolume.Form.HarnessLateralFlexion" />
+        <activity android:name=".AddVolume.Form.TowelLateralFlexion" />
+        <activity android:name=".AddVolume.Form.PlatedNeckLateralFlexion" />
+        <activity android:name=".AddVolume.Form.HarnessNeckExtension" />
+        <activity android:name=".AddVolume.Form.TowelNeckExtension" />
+        <activity android:name=".AddVolume.Form.PlatedNeckExtension" />
+        <activity android:name=".AddVolume.Form.NeckHarnessCurls" />
+        <activity android:name=".AddVolume.Form.PlateCurl" />
+        <activity android:name=".AddVolume.QuadsVolume" />
+        <activity android:name=".AddVolume.DiaphragmVolume" />
+        <activity android:name=".AddVolume.ObliquesVolume" />
+        <activity android:name=".AddVolume.AbsVolume" />
+        <activity android:name=".AddVolume.SerratusVolume" />
+        <activity android:name=".AddVolume.BicepsVolume" />
+        <activity android:name=".AddVolume.ChestVolume" />
+        <activity android:name=".AddVolume.CalvesVolume" />
+        <activity android:name=".AddVolume.HamstringsVolume" />
+        <activity android:name=".AddVolume.GluteMediusVolume" />
+        <activity android:name=".AddVolume.GlutesVolume" />
+        <activity android:name=".AddVolume.ErectorsVolume" />
+        <activity android:name=".AddVolume.LatsVolume" />
+        <activity android:name=".AddVolume.RadialForearmVolume" />
+        <activity android:name=".AddVolume.ForearmFlexorsVolume" />
+        <activity android:name=".AddVolume.ForearmExtensorsVolume" />
+        <activity android:name=".AddVolume.UlnarForearmVolume" />
+        <activity android:name=".AddVolume.TricepsVolume" />
+        <activity android:name=".AddVolume.RotatorCuffVolume" />
+        <activity android:name=".AddVolume.AnteriorDeltoidVolume" />
+        <activity android:name=".AddVolume.MedialDeltoidVolume" />
+        <activity android:name=".AddVolume.PosteriorDeltoidVolume" />
+        <activity android:name=".AddVolume.LowerTrapsVolume" />
+        <activity android:name=".AddVolume.UpperTrapVolume" />
+        <activity android:name=".AddVolume.NeckVolume" />
+        <activity android:name=".MuscleGroupInfo.Biceps" />
+        <activity android:name=".MuscleGroupInfo.Quads" />
+        <activity android:name=".MuscleGroupInfo.Diaphragm" />
+        <activity android:name=".MuscleGroupInfo.Obliques" />
+        <activity android:name=".MuscleGroupInfo.Abs" />
+        <activity android:name=".MuscleGroupInfo.Serratus" />
+        <activity android:name=".MuscleGroupInfo.Calves" />
+        <activity android:name=".MuscleGroupInfo.Hamstrings" />
+        <activity android:name=".MuscleGroupInfo.GluteMedius" />
+        <activity android:name=".MuscleGroupInfo.Glutes" />
+        <activity android:name=".MuscleGroupInfo.Erectors" />
+        <activity android:name=".MuscleGroupInfo.Lats" />
+        <activity android:name=".MuscleGroupInfo.RadialForearm" />
+        <activity android:name=".MuscleGroupInfo.ForearmFlexors" />
+        <activity android:name=".MuscleGroupInfo.ForearmExtensors" />
+        <activity android:name=".MuscleGroupInfo.UlnarForearm" />
+        <activity android:name=".MuscleGroupInfo.Triceps" />
+        <activity android:name=".MuscleGroupInfo.RotatorCuff" />
+        <activity android:name=".MuscleGroupInfo.AnteriorDeltoid" />
+        <activity android:name=".MuscleGroupInfo.MedialDeltoid" />
+        <activity android:name=".MuscleGroupInfo.PosteriorDeltoid" />
+        <activity android:name=".MuscleGroupInfo.Chest" />
+        <activity android:name=".MuscleGroupInfo.Neck" />
+        <activity android:name=".SettingsTODO.AboutUS" />
+        <activity android:name=".DashBoardTabs.Resources" />
+        <activity android:name=".DashBoardTabs.MealPlan" />
+        <activity android:name=".PopUpDialogs.BodyFatChart" />
+        <activity android:name=".FirstBootManager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PopUpDialogs.FAQFourYears" />
+        <activity android:name=".SettingsTODO.FAQ" />
+        <activity android:name=".PopUpDialogs.DashCalories" />
+        <activity android:name=".PopUpDialogs.DashIdealBodyWeight" />
+        <activity android:name=".Intro.MagicFormulaMale" />
+        <activity android:name=".Intro.Activity6" />
+        <activity android:name=".Intro.Activity5" />
+        <activity android:name=".Intro.Activity7" />
+        <activity android:name=".Intro.Activity4" />
+        <activity android:name=".Intro.MagicFormulaFemale" />
+        <activity android:name=".Intro.Activity3" />
+        <activity android:name=".Intro.Activity2" />
+        <activity android:name=".Intro.MainActivity" />
+    </application>
+
+</manifest>

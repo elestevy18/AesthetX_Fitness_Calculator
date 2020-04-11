@@ -1,0 +1,172 @@
+<resources>
+    <string name="app_name">Aesthet(X)</string>
+    <string name="slideOneText">Achieve an Aesthetic</string>
+    <string name="slideOneoneText">Physique</string>
+    <string name="slideTwoText">We\'ll begin by learning \nmore about yourself</string>
+    <string name="slideThreeText">What\'s your current\nbodyweight?</string>
+    <string name="slideFourText">What\'s your height?</string>
+    <string name="slideFourTextFeet">Feet</string>
+    <string name="slideFourTextInches">Inches</string>
+    <string name="slideFiveText">For how many months\n have you consistently \nlifted weights before?</string>
+    <string name="slideSixText">Are you male or \n female?</string>
+    <string name="slideSevenText">What is your body \ncomposition? (Fat %)</string>
+    <string name="EditTextLine">__________</string>
+    <string name="pounds">Pounds</string>
+    <string name="feet">Feet</string>
+    <string name="inches">Inches</string>
+    <string name="learnMore">Learn More</string>
+    <string name="male">Male</string>
+    <string name="months">Months</string>
+    <string name="female">Female</string>
+    <string name="button">Let\'s Go</string>
+    <string name="skipbutton">skip</string>
+    <string name="nextbutton">next</string>
+    <string name="interpunct">·</string>
+    <string name="bodyweighthint">Bodyweight in pounds</string>
+    <string name="bodyheighthintfeet">Height in Feet</string>
+    <string name="bodyheighthintinches">Height in Inches</string>
+    <string name="mfmale1">Your ideal bodyweight is\u0020</string>
+    <string name="lbs">\u0020pounds.</string>
+    <string name="musclelbs">\u0020pounds of muscle\u0020</string>
+    <string name="mfmale2">Your potential fat loss is\u0020</string>
+    <string name="mfmale3">You have currently built\u0020</string>
+    <string name="mfmale4">You can build\u0020</string>
+    <string name="mfmale5">a month</string>
+    <string name="mfmale6">Your caloric deviance is\u0020</string>
+    <string name="mfmale7">\u0020calories a day .</string>
+    <string name="mfmale8">\u0020totalling\u0020</string>
+    <string name="space">\u0020      \u0020</string>
+    <string name="dashboard">\u0020\u0020Go to your dashboard\u0020\u0020</string>
+    <string name="learnmore">Learn more on about your stats \non your dashboard</string>
+    <string name="IBW">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020Ideal \n\u0020\u0020\u0020\u0020Bodyweight</string>
+    <string name="MMG">Muscle Growth this month\n\n\n</string>
+    <string name="fatloss">Total Fatloss\u0020\u0020\n\n\n\n</string>
+    <string name="calorie">Caloric Deviance \n\n\n\n</string>
+    <string name="learnmoredas">Click on any stat to learn more</string>
+    <string name="totalgrowth">Total\nMuscle\nGrowth</string>
+    <string name="ind">%1$s/\n%2$s</string>
+    <string name="ibw">\t\t\t\t\tThe number you see on your dashboard is your weight after 4 years of training and at 12% or 20% bodyfat.</string>
+    <string name="ibw2">\t\t\t\t\tAesthet(x) is software designed for individuals who want to achieve a substance free aesthetic physique.
+        We believe an aesthetic physique shows as much muscle definition without compromising health.
+        Such a physique requires well-developed lean mass and around 12% body fat for males or 20% body fat for females.
+        Body fat percentage is also known as body composition. If your goal is to achieve a different body composition check out our meal plan calculator
+        (coming soon).</string>
+    <string name="ibw3">\t\t\t\t\tIt is important to clarify that an ideal physique is that which you believe is the best.
+        Aesthet(x) was developed by a hobbyist natural bodybuilder and engineering student who enjoys a muscular look and quantified the process natural bodybuilding to share with
+        others.</string>
+    <string name="fouryears">The law of diminishing returns takes effect in an individual’s hypertrophy after the first four years of training.
+        On average male individuals experience 20, 10, 5 and 2.5 pounds of muscle growth in their first, second, third and fourth year respectively.
+        About half that growth is expected for females. Therefore, Aesthet(x) provides insight inside that four-year timeframe. Further development is achievable;
+        however, we encourage our users to educate themselves further to achieve desirable results in their intermediate to advanced phase.
+        Visit our resources (coming soon) tab to learn more.</string>
+    <string name="ad">Substance Free</string>
+    <string name="add">Without the use of steroids</string>
+    <string name="LofDR">Law of diminishing returns</string>
+    <string name="LofDR2">Used to refer to a point at which the level of profits or benefits gained is less than the amount of money or energy invested.</string>
+    <string name="hypertrophy">Hypertrophy</string>
+    <string name="hypertrophy2">The enlargement of an organ or tissue (muscle in this case) from the increase in size of its cells.</string>
+    <string name="pmgdash">\t\tThis number is the muscle growth you should expect this month assuming proper training and nutrition.\n\n
+    \t\tYour monthly muscle growth is determined by a formula factoring in sex and experience. Most male individuals experience an average of
+        20, 10, 5 and 2.5 pounds of muscle growth in their first, second, third and fourth year respectively. About half that growth is expected for females. </string>
+    <string name="fatlosss">\t\tThis number is your current fat loss potential to achieve 12% bodyfat if you’re a male and 20% bodyfat if you’re female.</string>
+    <string name="cal">The number you see on your dashboard is your caloric deviance, the difference between your caloric maintenance and desired caloric intake.</string>
+    <string name="caldev">Caloric Maintenance</string>
+    <string name="caldevbody">The number of calories that will maintain your current bodyweight.</string>
+    <string name="calint">Caloric Intake</string>
+    <string name="calintbody">The number of calories consumed in a day. It\'s numeric value can imply weight loss or gain,
+    according to an individual\'s goals.</string>
+    <string name="Growth">\t\tThis is your current growth over your potential growth.\n\n
+\t\tYour current growth is calculated based on the premise that a male builds 20, 10 ,5, and 2.5 pounds of muscle in their first, second, third, and fourth year respectively.
+        About half that growth is expected for females. \n\n
+\t\tThe total growth described here is assumed to be 45 pounds in 4 years for males and 22.5 pounds for females.
+</string>
+
+    <string name="lbsin">%1$s <i>lbs</i></string>
+    <string name="notsure">Not sure?</string>
+    <string name="clickehere">Click here.</string>
+    <string name="fatchart">Here are a couple charts to visually asses your body composition.
+        Aesthet(x) will help males achieve 12% bodyfat and 20 % bodyfat for females.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="Meal_Plan">Meal Plan</string>
+    <string name="Resources">Resources</string>
+    <string name="Volume_Tracker">Volume Tracker</string>
+    <string name="Coming_soon">Coming Soon</string>
+    <string name="About_Us">About Us</string>
+    <string name="DashboardMen">DashBoard</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="reset_volume">\u0020Reset Volume\u0020</string>
+    <string name="current_max">Current max:\u0020</string>
+    <string name="set_max">Set Max</string>
+    <string name="current_volume">Current volume:\u0020</string>
+    <string name="mrv">Maximum Recoverable Volume:</string>
+    <string name="reset_max">Reset Max</string>
+    <string name="mav">Maximum Adaptive Volume:</string>
+    <string name="mavbody">Maximum Adaptive Volume: The amount of quality sets an individual can perform weekly to maximize growth. </string>
+    <string name="Dashboard">Dash\nboard</string>
+    <string name="volumetracker">Volume\nTracker</string>
+    <string name="mealplan">Meal\nPlan</string>
+    <string name="resources">resources</string>
+    <string name="sedentarytxt">No activity/ office employee</string>
+    <string name="sedentary">sedentary</string>
+    <string name="activitylevel">What is your activity\n level?</string>
+    <string name="lighttxt">Train 1–2x a week</string>
+    <string name="light">Light</string>
+    <string name="moderatetxt">Train 3–5x a week</string>
+    <string name="moderate">moderate</string>
+    <string name="heavytxt">Train 6–7x a week</string>
+    <string name="heavy">Heavy</string>
+    <string name="athletictxt">Train 2x daily</string>
+    <string name="athletic">athletic</string>
+    <string name="age">What is your\n age?</string>
+    <string name="mptitle">Personalized Meal Plan</string>
+    <string name="lowfat">Low Fat</string>
+    <string name="source">Energy Source</string>
+    <string name="highfat">High Fat</string>
+    <string name="calintake">Estimate Daily Caloric Expenditure:\u0020 </string>
+    <string name="proteintxt">Protein</string>
+    <string name="lowprotein">Low Protein</string>
+    <string name="highprotein">High Protein</string>
+    <string name="caloricintake">Weight Loss Speed</string>
+    <string name="slow">Slow</string>
+    <string name="fast">Fast</string>
+    <string name="calbar">"Your calculated calorie intake is the fastest for muscle growth"</string>
+    <string name="calin"> Daily Caloric \nIntake:</string>
+    <string name="calintakeint">3000</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="meallplan">Meal Plan</string>
+    <string name="caloriebar">Your calculated calorie intake is the fastest for muscle growth</string>
+    <string name="dashboardmg">MONTHLY POTENTIAL MUSCLE GROWTH</string>
+    <string name="dashboardibw">IDEAL\nBODYWEIGHT</string>
+    <string name="dashboardcmg">CURRENT\nMUSCLE\nGROWTH</string>
+    <string name="arrow">→</string>
+    <string name="excercises">\u0020\u0020Excercises</string>
+    <string name="update_information">Update\nInformation</string>
+    <string name="bodyweight">Bodyweight:</string>
+    <string name="inchess">Inches:</string>
+    <string name="feets">Feet:</string>
+    <string name="height">Height</string>
+    <string name="experience">Experience:</string>
+    <string name="composition">Composition:</string>
+    <string name="ageup">Age:</string>
+    <string name="actvitylevel">Activity Level:</string>
+    <string name="back">Back</string>
+    <string name="save">save</string>
+    <string name="males">Male:</string>
+    <string name="females">Female:</string>
+
+
+    <string-array name="numbers">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+    </string-array>
+
+
+</resources>

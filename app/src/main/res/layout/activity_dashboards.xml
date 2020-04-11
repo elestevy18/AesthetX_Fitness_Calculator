@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashBoardTabs.Dashboards"
+    android:orientation="vertical"
+    android:clickable="false">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:titleTextColor="#000000"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:elevation="20sp">
+
+            <ImageView
+                android:layout_width="178dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="0dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/aesthetx_medium_res" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+<!--        app:title="\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\Aesthet(X)"-->
+<!--        android:textAlignment="center"-->
+
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#000000"
+        app:tabTextColor="@color/textColorPrimary"
+        app:tabSelectedTextColor="#BAF833"
+        android:background="#000000"
+        app:tabTextAppearance="@style/AppTabTextAppearance">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Dashboard"
+            android:foregroundTint="@color/textColorPrimary"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/volumetracker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volumetracker"
+            android:elevation="5dp"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/mealplan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mealplan" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/resources"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resources" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    android:paddingTop="40dp"
+    tools:context=".Intro.Activity4">
+
+
+
+    <EditText
+        android:id="@+id/editFeetHeight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/SpaceView"
+        android:layout_below="@id/textView4"
+        android:inputType="numberDecimal"
+        android:textColor="#F5F5F5"
+        android:textSize="30sp"
+        android:backgroundTint="#F5F5F5"
+        android:textAlignment="center"
+        android:imeOptions="actionNext"/>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/slideFourText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F5F5F5"
+        android:textSize="30sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388" />
+
+    <TextView
+        android:id="@+id/SpaceView"
+        android:layout_width="90dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editInchesHeight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/SpaceView"
+        android:layout_below="@id/textView4"
+        android:inputType="numberDecimal"
+        android:textColor="#F5F5F5"
+        android:textSize="30sp"
+        android:backgroundTint="#F5F5F5"
+        android:textAlignment="center"
+        android:imeOptions="actionNext" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/editFeetHeight"
+        android:layout_alignStart="@+id/editFeetHeight"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="-8dp"
+        android:layout_toStartOf="@+id/SpaceView"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/feet"
+        android:textColor="#F5F5F5"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/editInchesHeight"
+        android:layout_alignEnd="@+id/editInchesHeight"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="-9dp"
+        android:layout_toEndOf="@+id/SpaceView"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/inches"
+        android:textColor="#F5F5F5"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/linedivide4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"
+        android:layout_above="@id/linearlayout4.2"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearlayout4.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="5.5" />
+
+
+        <TextView
+            android:id="@+id/indicator_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interpunct"
+            android:textColor="#ffffff "
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/indicator_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interpunct"
+            android:textColor="#D3D3D3"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/indicator_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interpunct"
+            android:textColor="#D3D3D3"
+            android:textSize="40sp" />
+
+        <TextView
+
+            android:id="@+id/indicator_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interpunct"
+            android:textColor="#BAF833"
+            android:textSize="40sp"
+            android:textStyle="bold"
+             />
+
+        <TextView
+            android:id="@+id/indicator_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interpunct"
+            android:textColor="#D3D3D3"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/indicator_six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/interpunct"
+            android:textColor="#D3D3D3"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/indicator_seven"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/interpunct"
+            android:textColor="#D3D3D3"
+            android:textSize="40sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/nextbutton4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:text="@string/nextbutton"
+            android:textColor="#F5F5F5" />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent">
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Classes.Fragments.IntroFragments.IntroFiveFragment"
+    android:background="#000000">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/slideFiveText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#F5F5F5"
+        android:textSize="30sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"/>
+
+
+    <EditText
+        android:id="@+id/ExperienceInput"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#F5F5F5"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#33BAF8"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="32dp"
+        android:layout_below="@id/ExperienceInput"
+        android:layout_alignStart="@+id/ExperienceInput"
+        android:layout_alignEnd="@+id/ExperienceInput"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="@string/months"
+        android:textColor="#F5F5F5"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/ExperienceInput"
+        app:layout_constraintStart_toStartOf="@+id/ExperienceInput"
+        app:layout_constraintTop_toBottomOf="@+id/ExperienceInput" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
