@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".DashBoardTabs.UpdateData"
+    tools:context="Aesthet.X.adfree.DashBoardTabs.UpdateData"
     android:weightSum="8"
     android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -21,7 +22,7 @@
             android:gravity="center"
             android:text="@string/bodyweight"
             android:textColor="@color/textColorPrimary"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/bodyweightin"
@@ -30,15 +31,20 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="3dp"
             android:backgroundTint="@color/colorAccent2"
-            android:text="@string/bodyweight"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLines="1"
+            android:textColorHint="@color/colorAccent2"
             android:textColor="@color/colorAccent2" />
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <TextView
             android:id="@+id/height"
             android:layout_width="wrap_content"
@@ -67,9 +73,11 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="16sp"
             android:layout_toStartOf="@+id/inches"
-            android:text="@string/feet"
+            android:backgroundTint="@color/colorAccent2"
             android:textColor="@color/colorAccent2"
-            android:backgroundTint="@color/colorAccent2"/>
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLines="1"
+            android:textColorHint="@color/colorAccent2" />
 
         <TextView
             android:id="@+id/inches"
@@ -80,10 +88,11 @@
             android:gravity="center"
             android:text="@string/inchess"
             android:textColor="@color/textColorPrimary"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
 
         <EditText
+            android:imeOptions="actionDone"
             android:id="@+id/heightinches"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -92,8 +101,10 @@
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="0dp"
             android:backgroundTint="@color/colorAccent2"
-            android:text="@string/inches"
-            android:textColor="@color/colorAccent2" />
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLines="1"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="@color/colorAccent2" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -109,19 +120,25 @@
             android:gravity="center"
             android:text="@string/experience"
             android:textColor="@color/textColorPrimary"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/experiencein"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15sp"
-            android:text="@string/experience"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/colorAccent2"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLines="1"
             android:textColor="@color/colorAccent2"
-            android:backgroundTint="@color/colorAccent2"/>
+            android:textColorHint="@color/colorAccent2" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -135,23 +152,31 @@
             android:gravity="center"
             android:text="@string/composition"
             android:textColor="@color/textColorPrimary"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
+            android:layout_alignParentBottom="true"
             android:id="@+id/compositionin"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="15sp"
-            android:text="@string/composition"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/colorAccent2"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLength="3"
+            android:maxLines="1"
             android:textColor="@color/colorAccent2"
-            android:backgroundTint="@color/colorAccent2"/>
+            android:textColorHint="@color/colorAccent2" />
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -160,20 +185,25 @@
             android:gravity="center"
             android:text="@string/ageup"
             android:textColor="@color/textColorPrimary"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
+            android:backgroundTint="@color/colorAccent2"
+            android:imeOptions="actionDone"
             android:id="@+id/agein"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="15sp"
-            android:text="@string/ageup"
+            android:inputType="numberDecimal|numberSigned"
             android:textColor="@color/colorAccent2"
-            android:backgroundTint="@color/colorAccent2"/>
+            android:maxLength="3"
+            android:maxLines="1"
+            android:textColorHint="@color/colorAccent2" />
 
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -201,41 +231,50 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginEnd="15sp"
         android:layout_weight="1">
 
 
-        <RadioButton
-            android:id="@+id/maleradio"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/colorAccent"
-            android:text="@string/male"
-            android:textColor="@color/textColorPrimary" />
-
-        <RadioButton
-            android:id="@+id/femalradio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="16sp"
-            android:layout_marginEnd="32dp"
-            android:backgroundTint="@color/colorAccent"
-            android:text="@string/female"
-            android:textColor="@color/textColorPrimary" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15sp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal">
 
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32sp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/female"
+                android:textColor="@color/textColorPrimary" />
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0sp"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/male"
+                android:textColor="@color/textColorPrimary" />
+        </RadioGroup>
 
 
     </RelativeLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -252,6 +291,7 @@
             android:background="@drawable/round_green_button"
             android:text="@string/back"
             android:textColor="@color/colorAccent" />
+
         <Button
             android:id="@+id/save"
             android:layout_width="wrap_content"

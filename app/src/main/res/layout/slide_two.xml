@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Intro.MainActivity"
+    tools:context="Aesthet.X.adfree.Intro.MainActivity"
     android:fitsSystemWindows="true">
 
 
@@ -28,15 +28,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.388"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp" />
 
     <View
         android:id="@+id/linedivide"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_above="@id/linearlayout2"
-        />
+        android:layout_above="@id/linearlayout2" />
 
     <LinearLayout
         android:id="@+id/linearlayout2"
@@ -67,7 +66,7 @@
             android:text="@string/interpunct"
             android:textColor="#BAF833"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/indicator_three"
@@ -130,8 +129,7 @@
     <ScrollView
         android:id="@+id/ScrollView01"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent">
-    </ScrollView>
+        android:layout_width="fill_parent"></ScrollView>
 
 
 </RelativeLayout>

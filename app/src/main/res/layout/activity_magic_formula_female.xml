@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Intro.MagicFormulaFemale"
+    tools:context="Aesthet.X.adfree.Intro.MagicFormulaFemale"
     android:padding="30sp">
 
 
@@ -365,8 +365,6 @@
         </LinearLayout>
 
 
-
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -417,7 +415,6 @@
                 tools:layout_editor_absoluteY="-93dp" />
 
         </LinearLayout>
-
 
 
     </LinearLayout>

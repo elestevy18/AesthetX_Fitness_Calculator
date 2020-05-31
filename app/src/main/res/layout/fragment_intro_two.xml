@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Classes.Fragments.IntroFragments.IntroTwoFragment"
+    tools:context="Aesthet.X.adfree.Classes.Fragments.IntroFragments.IntroTwoFragment"
     android:background="#000000">
 
     <TextView
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.388"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"/>
+        android:layout_marginEnd="10dp" />
 
     <View
         android:id="@+id/linedivide"

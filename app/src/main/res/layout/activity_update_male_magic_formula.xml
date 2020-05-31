@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:backgroundTint="#000000"
+    tools:context="Aesthet.X.adfree.DashBoardTabs.UpdateMaleMagicFormula">
+
+
+    <TextView
+        android:id="@+id/updating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8sp"
+        android:gravity="center"
+        android:text="@string/updating"
+        android:textColor="@color/colorAccent2"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/contentLoadingProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pr"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:backgroundTint="@color/colorAccent"
+        android:indeterminate="true"
+        android:progressTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/contentLoadingProgressBar"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:backgroundTint="@color/colorAccent"
+        android:indeterminate="true"
+        android:progressTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

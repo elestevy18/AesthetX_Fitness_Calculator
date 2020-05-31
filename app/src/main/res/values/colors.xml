@@ -3,12 +3,12 @@
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#BAF833</color>
-    <color name="colorAccent2">#33BAF8</color>
-    <color name="colorAccent3">#FFA500</color>
-    <color name="colorAccent4">#FF073A</color>
+    <color name="colorAccent2">#5bc7f9</color>
+    <color name="colorAccent3">#ffbf00</color>
+    <color name="colorAccent4">#ff073a</color>
     <color name="textColorPrimary">#F5F5F5</color>
     <color name="RadioColor">#FFFFFF</color>
-    <color name="colorAccent5">#FFA4F4 </color>
+    <color name="colorAccent5">#ffbff7</color>
 
 
 </resources>

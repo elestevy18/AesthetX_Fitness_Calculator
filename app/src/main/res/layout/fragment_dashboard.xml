@@ -1,88 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="Aesthet.X.adfree.Classes.Fragments.DashboardFragment">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000"
-        android:fitsSystemWindows="true"
-        android:orientation="vertical"
-        tools:context=".Classes.Fragments.DashboardFragment"
-        >
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15sp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1">
 
-        <RelativeLayout
+        <Button
+            android:id="@+id/ibwbutton"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginTop="15sp">
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboardbuttons"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_vertical"
 
-            <Button
-                android:id="@+id/ibwbutton"
-                android:layout_width="match_parent"
+            android:textColor="#BAF833"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="15dp">
+
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/dashboardbuttons"
+                android:layout_weight=".9"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center_vertical"
-
-                android:textColor="#BAF833"
-                android:textSize="24sp"
+                android:gravity="center"
+                android:text="@string/dashboardibw"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
                 android:textStyle="bold|italic" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/ibwbutton2"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:elevation="15dp">
+                android:layout_weight="1.1"
+                android:background="@drawable/dashboardbuttons"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text=""
+                android:textAllCaps="false"
+                android:textSize="28sp"
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".9"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:gravity="center"
-                    android:text="@string/dashboardibw"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="20sp"
-                    android:textStyle="bold|italic" />
+                />
 
-                <Button
-                    android:id="@+id/ibwbutton2"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.1"
-                    android:background="@drawable/dashboardbuttons"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text=""
-                    android:textSize="28sp"
-                    android:textAllCaps="false"
+        </LinearLayout>
 
-                    />
+    </RelativeLayout>
 
-            </LinearLayout>
 
-        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight=".7">
 
+        <Button
+            android:id="@+id/pmgbutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboardframe"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_vertical"
+            android:textColor="#BAF833"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/dashboardmg"
+                android:textColor="@color/colorAccent2"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/linedivide"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white" />
+
+            <TextView
+                android:id="@+id/pmgtxt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="2.2 lbs"
+                android:textAllCaps="false"
+                android:textColor="#F5F5F5"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight=".7">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight=".7"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <Button
-                android:id="@+id/pmgbutton"
+                android:id="@+id/pflbutton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true"
@@ -106,224 +176,136 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/fatloss"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight=".7"
+                    android:layout_weight=".8"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:gravity="center"
-                    android:text="@string/dashboardmg"
-                    android:textColor="@color/colorAccent2"
+                    android:text="POTENTIAL\nFATLOSS"
+                    android:textColor="@color/colorAccent3"
                     android:textSize="16sp" />
 
                 <View
-                    android:id="@+id/linedivide"
+                    android:id="@+id/linedivide3"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/white"
-                    />
+                    android:background="@android:color/white" />
+
                 <TextView
-                    android:id="@+id/pmgtxt"
+                    android:id="@+id/pfltxt"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1.3"
+                    android:layout_weight="1.2"
                     android:fontFamily="sans-serif-condensed-medium"
+                    android:gravity="center"
                     android:text="2.2 lbs"
-                    android:textSize="28sp"
                     android:textAllCaps="false"
                     android:textColor="#F5F5F5"
-                    android:gravity="center"
-                    />
+                    android:textSize="28sp" />
+
 
             </LinearLayout>
-
         </RelativeLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight=".7">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <Button
-                    android:id="@+id/pflbutton"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:background="@drawable/dashboardframe"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:gravity="center_vertical"
-                    android:textColor="#BAF833"
-                    android:textSize="24sp"
-                    android:textStyle="bold|italic" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:elevation="15dp">
-
-                    <TextView
-                        android:id="@+id/fatloss"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:text="POTENTIAL\nFATLOSS"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:textColor="@color/colorAccent3"
-                        android:textSize="16sp"
-                        android:layout_weight=".8"
-                        android:gravity="center"
-                        />
-                    <View
-                        android:id="@+id/linedivide3"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@android:color/white"
-                        />
-                    <TextView
-                        android:id="@+id/pfltxt"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1.2"
-                        android:fontFamily="sans-serif-condensed-medium"
-                        android:text="2.2 lbs"
-                        android:textSize="28sp"
-                        android:textAllCaps="false"
-                        android:textColor="#F5F5F5"
-                        android:gravity="center"
-                        />
-
-
-
-                </LinearLayout>
-            </RelativeLayout>
-
-        </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1."
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp">
-
-            <Button
-                android:id="@+id/cpbutton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginBottom="0dp"
-                android:background="@drawable/dashboardframe"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:gravity="center_vertical"
-                android:textColor="#BAF833"
-                android:textSize="24sp"
-                android:textStyle="bold|italic" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:elevation="15dp">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".7"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:gravity="center"
-                    android:text="@string/dashboardcmg"
-                    android:textColor="@color/colorAccent5"
-                    android:textSize="18sp" />
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".6"
-                    android:layout_marginEnd="20sp" >
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ProgressBar
-                            android:id="@+id/progressBar"
-                            style="?android:progressBarStyleHorizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:progress="100"
-                            android:progressBackgroundTint="#F5F5F5"
-                            android:progressDrawable="@drawable/backgroundcircle" />
-
-
-                    <ProgressBar
-                        android:id="@+id/growthprogress"
-                        style="?android:progressBarStyleHorizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="0dp"
-                        android:elevation="6dp"
-                        android:progressDrawable="@drawable/circle" />
-
-
-                        <TextView
-                            android:id="@+id/progresstxt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="00.00/\n"
-                            android:textColor="#F5F5F5"
-                            android:textSize="14sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/progressBar"
-                            app:layout_constraintEnd_toEndOf="@+id/progressBar"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/progressBar" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </RelativeLayout>
-            </LinearLayout>
-
-        </RelativeLayout>
-
 
     </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="1.">
+
+        <Button
+            android:id="@+id/cpbutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dashboardframe"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_vertical"
+            android:textColor="#BAF833"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8sp"
+            android:elevation="15dp">
+
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="@string/dashboardcmg"
+                android:textColor="@color/colorAccent5"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/progressBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginEnd="32sp"
+                android:progress="100"
+                android:progressBackgroundTint="#F5F5F5"
+                android:progressDrawable="@drawable/backgroundcircle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ProgressBar
+                android:id="@+id/growthprogress"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_alignParentEnd="true"
+                android:elevation="6dp"
+                android:progressDrawable="@drawable/circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+
+
+            <TextView
+                android:id="@+id/progresstxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="00.00/\n"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBar"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toTopOf="@+id/progressBar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

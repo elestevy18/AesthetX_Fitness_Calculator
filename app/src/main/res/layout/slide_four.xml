@@ -7,8 +7,7 @@
     android:background="#000000"
     android:fitsSystemWindows="true"
     android:paddingTop="40dp"
-    tools:context=".Intro.Activity4">
-
+    tools:context="Aesthet.X.adfree.Intro.Activity4">
 
 
     <EditText
@@ -17,12 +16,13 @@
         android:layout_height="wrap_content"
         android:layout_toStartOf="@id/SpaceView"
         android:layout_below="@id/textView4"
-        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"
         android:textColor="#F5F5F5"
         android:textSize="30sp"
         android:backgroundTint="#F5F5F5"
         android:textAlignment="center"
-        android:imeOptions="actionNext"/>
+        android:inputType="numberDecimal|numberSigned" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/SpaceView"
         android:layout_below="@id/textView4"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:textColor="#F5F5F5"
         android:textSize="30sp"
         android:backgroundTint="#F5F5F5"
@@ -97,8 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_above="@id/linearlayout4.2"
-        />
+        android:layout_above="@id/linearlayout4.2" />
 
     <LinearLayout
         android:id="@+id/linearlayout4.2"
@@ -146,8 +145,7 @@
             android:text="@string/interpunct"
             android:textColor="#BAF833"
             android:textSize="40sp"
-            android:textStyle="bold"
-             />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/indicator_five"
@@ -189,13 +187,11 @@
             android:textColor="#F5F5F5" />
 
     </LinearLayout>
+
     <ScrollView
         android:id="@+id/ScrollView01"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent">
-    </ScrollView>
-
-
+        android:layout_width="fill_parent"></ScrollView>
 
 
 </RelativeLayout>

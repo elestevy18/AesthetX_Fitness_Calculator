@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Aesthet(X)</string>
+    <string name="app_name">Aesthet(X) Premium</string>
     <string name="slideOneText">Achieve an Aesthetic</string>
     <string name="slideOneoneText">Physique</string>
     <string name="slideTwoText">We\'ll begin by learning \nmore about yourself</string>
@@ -25,10 +25,10 @@
     <string name="bodyweighthint">Bodyweight in pounds</string>
     <string name="bodyheighthintfeet">Height in Feet</string>
     <string name="bodyheighthintinches">Height in Inches</string>
-    <string name="mfmale1">Your ideal bodyweight is\u0020</string>
+    <string name="mfmale1">Your ideal body weight after 4\n years of weight lifting is\u0020</string>
     <string name="lbs">\u0020pounds.</string>
     <string name="musclelbs">\u0020pounds of muscle\u0020</string>
-    <string name="mfmale2">Your potential fat loss is\u0020</string>
+    <string name="mfmale2">Your current potential fat loss is\u0020</string>
     <string name="mfmale3">You have currently built\u0020</string>
     <string name="mfmale4">You can build\u0020</string>
     <string name="mfmale5">a month</string>
@@ -49,8 +49,7 @@
     <string name="ibw2">\t\t\t\t\tAesthet(x) is software designed for individuals who want to achieve a substance free aesthetic physique.
         We believe an aesthetic physique shows as much muscle definition without compromising health.
         Such a physique requires well-developed lean mass and around 12% body fat for males or 20% body fat for females.
-        Body fat percentage is also known as body composition. If your goal is to achieve a different body composition check out our meal plan calculator
-        (coming soon).</string>
+        Body fat percentage is also known as body composition. If your goal is to achieve a different body composition check out our meal plan calculator.</string>
     <string name="ibw3">\t\t\t\t\tIt is important to clarify that an ideal physique is that which you believe is the best.
         Aesthet(x) was developed by a hobbyist natural bodybuilder and engineering student who enjoys a muscular look and quantified the process natural bodybuilding to share with
         others.</string>
@@ -100,10 +99,11 @@
     <string name="current_max">Current max:\u0020</string>
     <string name="set_max">Set Max</string>
     <string name="current_volume">Current volume:\u0020</string>
-    <string name="mrv">Maximum Recoverable Volume:</string>
+    <string name="mrv">Maximum\nRecoverable\nVolume:</string>
     <string name="reset_max">Reset Max</string>
     <string name="mav">Maximum Adaptive Volume:</string>
     <string name="mavbody">Maximum Adaptive Volume: The amount of quality sets an individual can perform weekly to maximize growth. </string>
+    <string name="mrvbody">Maximum Recoverable Volume: The amount of quality sets an individual can perform weekly and realistically recover from. </string>
     <string name="Dashboard">Dash\nboard</string>
     <string name="volumetracker">Volume\nTracker</string>
     <string name="mealplan">Meal\nPlan</string>
@@ -144,7 +144,7 @@
     <string name="dashboardibw">IDEAL\nBODYWEIGHT</string>
     <string name="dashboardcmg">CURRENT\nMUSCLE\nGROWTH</string>
     <string name="arrow">→</string>
-    <string name="excercises">\u0020\u0020Excercises</string>
+    <string name="excercises">\u0020\u0020All Excercises</string>
     <string name="update_information">Update\nInformation</string>
     <string name="bodyweight">Bodyweight:</string>
     <string name="inchess">Inches:</string>
@@ -158,14 +158,27 @@
     <string name="save">save</string>
     <string name="males">Male:</string>
     <string name="females">Female:</string>
+    <string name="updating">Updating...</string>
+    <string name="track_your_nutrtion_with">Track your nutrtion with</string>
+    <string name="add_set">Add Set</string>
+    <string name="mav_frequency">MAV/Frequency</string>
+    <string name="slash">/</string>
+    <string name="_16">16</string>
+    <string name="FAQs">FAQs</string>
+    <string name="bwexcercises">\u0020\u0020Bodyweight Exercises</string>
+    <string name="reset_all">Reset All</string>
+    <string name="mrvtitle">Maximum Recoverable Volume:</string>
+    <string name="play">Play</string>
+    <string name="shop">Shop</string>
+    <string name="Help">Help</string>
 
 
-    <string-array name="numbers">
-        <item>One</item>
-        <item>Two</item>
-        <item>Three</item>
-        <item>Four</item>
-        <item>Five</item>
+    <string-array name="activity">
+        <item>Sedentary</item>
+        <item>Light: 1–2x weekly</item>
+        <item>Moderate: 3–5x weekly</item>
+        <item>Heavy: 6–7x weekly </item>
+        <item>Athletic: 2x daily</item>
     </string-array>
 
 

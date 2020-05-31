@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Intro.MagicFormulaMale"
-    >
+    tools:context="Aesthet.X.adfree.Intro.MagicFormulaMale">
 
 
     <LinearLayout
@@ -40,6 +39,7 @@
                 android:textColor="@color/textColorPrimary"
                 android:textSize="18sp"
                 tools:layout_editor_absoluteX="-16dp"
+                android:gravity="center"
                 tools:layout_editor_absoluteY="-93dp" />
         </LinearLayout>
 
@@ -227,45 +227,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/textViewDailyCaloricDeviance"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/mfmale6"
-                android:textColor="@color/textColorPrimary"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="-16dp"
-                tools:layout_editor_absoluteY="-93dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/textViewDailyCaloricDeviance2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/mfmale7"
-                android:textColor="@color/textColorPrimary"
-                android:textSize="18sp"
-                tools:layout_editor_absoluteX="-16dp"
-                tools:layout_editor_absoluteY="-93dp" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -366,8 +327,6 @@
         </LinearLayout>
 
 
-
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -420,8 +379,6 @@
         </LinearLayout>
 
 
-
-
     </LinearLayout>
 
     <Button
@@ -434,9 +391,7 @@
         android:textColor="#BAF833 "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

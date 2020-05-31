@@ -1,10 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#000000"
-    android:theme="@style/Theme.MaterialComponents.NoActionBar"
-    >
+    android:theme="@style/Theme.MaterialComponents.NoActionBar">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/musclesRecyclerView"
@@ -15,8 +13,24 @@
         android:background="#000000"
         android:scrollbars="vertical" />
 
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/bodyweightexercisesfab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/allexercisesfab"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/orange_fab"
+        android:backgroundTint="@color/colorAccent3"
+        android:gravity="center"
+        android:text="@string/bwexcercises"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/allexercisesfab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -25,11 +39,10 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/green_fab"
         android:backgroundTint="#BAF833"
-        android:src="@drawable/add_for_fab"
         android:textColor="#000000"
         android:text="@string/excercises"
         android:gravity="center"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <!--<FrameLayout
         android:id="@+id/frameLayout"
@@ -44,9 +57,6 @@
             app:itemTextColor="#FFFFFF"
             app:menu="@menu/drawer_menu" />
     </FrameLayout>-->
-
-
-
 
 
 </RelativeLayout>

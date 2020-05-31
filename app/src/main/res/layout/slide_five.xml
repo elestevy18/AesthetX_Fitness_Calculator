@@ -7,7 +7,7 @@
     android:background="#000000"
     android:fitsSystemWindows="true"
     android:paddingTop="40dp"
-    tools:context=".Intro.Activity5">
+    tools:context="Aesthet.X.adfree.Intro.Activity5">
 
 
     <TextView
@@ -38,12 +38,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/textView3"
-        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"
         android:textColor="#F5F5F5"
         android:textSize="40sp"
         android:backgroundTint="#F5F5F5"
         android:textAlignment="center"
-        android:imeOptions="actionNext"/>
+        android:inputType="numberDecimal|numberSigned|numberSigned" />
 
 
     <TextView
@@ -66,8 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_above="@id/linearlayout3"
-        />
+        android:layout_above="@id/linearlayout3" />
 
     <LinearLayout
         android:id="@+id/linearlayout3"
@@ -105,8 +104,7 @@
             android:layout_height="wrap_content"
             android:text="@string/interpunct"
             android:textColor="#D3D3D3"
-            android:textSize="40sp"
-            />
+            android:textSize="40sp" />
 
         <TextView
 
@@ -124,7 +122,7 @@
             android:text="@string/interpunct"
             android:textColor="#BAF833"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/indicator_six"
@@ -162,7 +160,6 @@
     <ScrollView
         android:id="@+id/ScrollView01"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent">
-    </ScrollView>
+        android:layout_width="fill_parent"></ScrollView>
 
 </RelativeLayout>

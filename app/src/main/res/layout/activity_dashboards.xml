@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashBoardTabs.Dashboards"
+    tools:context="Aesthet.X.adfree.DashBoardTabs.Dashboards"
     android:orientation="vertical"
     android:clickable="false">
 
@@ -15,24 +14,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000000"
-        app:titleTextColor="#000000"
-        >
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:elevation="20sp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="   "
+        app:titleTextColor="#000000">
 
-            <ImageView
+
+        <ImageView
+            android:id="@+id/aesthetxlogo"
                 android:layout_width="178dp"
                 android:layout_height="33dp"
-                android:layout_marginStart="0dp"
+            android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/aesthetx_medium_res" />
-        </RelativeLayout>
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/aesthetx30times100" />
+
     </androidx.appcompat.widget.Toolbar>
-<!--        app:title="\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\Aesthet(X)"-->
-<!--        android:textAlignment="center"-->
 
 
 
@@ -52,14 +51,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/Dashboard"
-            android:foregroundTint="@color/textColorPrimary"/>
+            android:foregroundTint="@color/textColorPrimary" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/volumetracker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/volumetracker"
-            android:elevation="5dp"/>
+            android:elevation="5dp" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/mealplan"

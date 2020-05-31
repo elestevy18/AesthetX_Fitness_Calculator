@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Excercises.GlobalExercise">
+    tools:context="Aesthet.X.adfree.Excercises.GlobalExercise">
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -13,7 +13,6 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="#000000"
-        android:scrollbars="vertical"
-        />
+        android:scrollbars="vertical" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

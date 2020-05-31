@@ -1,125 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    android:orientation="vertical"
-    tools:context=".MuscleGroupInfo.Diaphragm">
+    android:orientation="vertical">
 
-    <ImageView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="200sp" />
+        android:layout_height="320sp"
+        android:background="#F5F5F5" />
 
-    <RelativeLayout
-        android:id="@+id/firstrl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10sp">
 
-        <TextView
-            android:id="@+id/current_max"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/current_max"
-            android:textColor="#F5F5F5" />
-
-        <TextView
-            android:id="@+id/current_volume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/current_max"
-            android:layout_marginTop="8sp"
-            android:text="@string/current_volume"
-            android:textColor="#F5F5F5" />
-    </RelativeLayout>
-
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secondrl"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="10sp">
+        android:layout_height="412dp"
+        android:layout_gravity="center_horizontal">
 
 
         <Button
-            android:id="@+id/diaphragmresetmax"
+            android:id="@+id/Transverseresetmax"
             android:layout_width="140sp"
             android:layout_height="35sp"
-            android:layout_marginTop="10sp"
-            android:layout_marginEnd="10sp"
-            android:layout_toStartOf="@+id/diaphragmresetvolume"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="8sp"
             android:background="@drawable/add_button"
             android:ems="10"
             android:gravity="center"
             android:text="@string/reset_max"
             android:textColor="#BAF833"
-            app:cornerRadius="200dp" />
+            android:layout_toStartOf="@+id/Transverseresetvolume"
+            app:cornerRadius="200dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/diaphragmresetvolume"
+            android:id="@+id/Transverseresetvolume"
             android:layout_width="140sp"
             android:layout_height="35sp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="10sp"
-            android:layout_marginEnd="10sp"
+            android:layout_marginTop="8sp"
             android:background="@drawable/add_button"
             android:ems="10"
             android:gravity="center"
             android:text="@string/reset_volume"
             android:textColor="#BAF833"
-            app:cornerRadius="200dp" />
+            android:layout_marginEnd="16sp"
+            app:cornerRadius="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/current_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:text="@string/current_max"
+            android:textColor="#F5F5F5"
+            app:layout_constraintEnd_toEndOf="@+id/Transverseresetmax"
+            app:layout_constraintStart_toStartOf="@+id/Transverseresetmax"
+            app:layout_constraintTop_toBottomOf="@+id/Transverseresetmax" />
+
+        <TextView
+            android:id="@+id/current_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Transverseresetvolume"
+            android:layout_alignStart="@+id/Transverseresetvolume"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8sp"
+            android:text="@string/current_volume"
+            android:textColor="#F5F5F5"
+            app:layout_constraintEnd_toEndOf="@+id/Transverseresetvolume"
+            app:layout_constraintStart_toStartOf="@+id/Transverseresetvolume"
+            app:layout_constraintTop_toBottomOf="@+id/Transverseresetvolume" />
 
         <TextView
             android:id="@+id/mrv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/setdiaphragmmax"
-            android:layout_marginBottom="3sp"
+            android:layout_alignBottom="@id/setTransversemax"
             android:layout_toStartOf="@id/setmaxet"
             android:text="@string/mrv"
             android:textAlignment="textEnd"
-            android:textColor="#F5F5F5" />
+            android:layout_marginEnd="8sp"
+            android:textColor="@color/colorAccent4"
+            app:layout_constraintBottom_toBottomOf="@+id/setmaxet"
+            app:layout_constraintEnd_toStartOf="@+id/setmaxet"
+            app:layout_constraintTop_toTopOf="@+id/setmaxet" />
 
         <EditText
             android:id="@+id/setmaxet"
             android:layout_width="60sp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/diaphragmresetvolume"
-            android:layout_marginTop="16sp"
-            android:layout_toStartOf="@id/setdiaphragmmax"
+            android:layout_below="@id/Transverseresetvolume"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="8sp"
             android:backgroundTint="#F5F5F5"
-            android:inputType="number"
+            android:layout_toStartOf="@id/setTransversemax"
             android:textColor="#F5F5F5"
-            android:layout_marginStart="10sp"
-            android:layout_marginEnd="10sp"/>
+            android:inputType="numberDecimal|numberSigned"
+            app:layout_constraintEnd_toStartOf="@+id/setTransversemax"
+            app:layout_constraintTop_toBottomOf="@+id/current_volume" />
 
         <Button
-            android:id="@+id/setdiaphragmmax"
+            android:id="@+id/setTransversemax"
             android:layout_width="140sp"
             android:layout_height="35sp"
-            android:layout_below="@id/diaphragmresetmax"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="16sp"
-            android:layout_marginEnd="10sp"
             android:background="@drawable/add_button"
             android:gravity="center"
             android:text="@string/set_max"
-            android:textColor="#BAF833" />
+            android:textColor="#BAF833"
+            app:layout_constraintBottom_toBottomOf="@+id/setmaxet"
+            app:layout_constraintEnd_toEndOf="@+id/Transverseresetvolume"
+            app:layout_constraintTop_toTopOf="@+id/setmaxet" />
 
         <TextView
             android:id="@+id/mav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/mrv"
-            android:layout_marginTop="8sp"
+            android:layout_alignParentStart="true"
             android:clickable="true"
             android:elevation="5dp"
             android:focusable="true"
             android:text="@string/mav"
             android:textColor="#33BAF8"
-            />
+            android:paddingStart="8sp"
+            app:layout_constraintStart_toStartOf="@+id/mavbody"
+            app:layout_constraintTop_toTopOf="@+id/mavbody" />
 
         <TextView
             android:id="@+id/mavbody"
@@ -129,8 +142,42 @@
             android:layout_marginTop="8sp"
             android:text="@string/mavbody"
             android:textColor="#F5F5F5"
-            android:layout_marginEnd="10sp"/>
+            android:paddingStart="8sp"
+            android:paddingEnd="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/setmaxet" />
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/mrvtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mrv"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:elevation="5dp"
+            android:focusable="true"
+            android:paddingStart="8sp"
+            android:text="@string/mrvtitle"
+            android:textColor="@color/colorAccent4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mrvbody" />
+
+        <TextView
+            android:id="@+id/mrvbody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mrv"
+            android:layout_marginTop="8sp"
+            android:paddingStart="8sp"
+            android:paddingEnd="8sp"
+            android:text="@string/mrvbody"
+            android:textColor="#F5F5F5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mavbody" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

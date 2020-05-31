@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Classes.Fragments.IntroFragments.IntroFiveFragment"
+    tools:context="Aesthet.X.adfree.Classes.Fragments.IntroFragments.IntroFiveFragment"
     android:background="#000000">
 
 
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="80sp"
         android:layout_marginStart="20sp"
-        android:layout_marginEnd="20sp"/>
+        android:layout_marginEnd="20sp" />
 
 
     <EditText
@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"
         android:backgroundTint="#F5F5F5"
         android:imeOptions="actionNext"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:textAlignment="center"
         android:textColor="#33BAF8"
         android:textSize="40sp"
@@ -58,9 +58,6 @@
         app:layout_constraintEnd_toEndOf="@+id/ExperienceInput"
         app:layout_constraintStart_toStartOf="@+id/ExperienceInput"
         app:layout_constraintTop_toBottomOf="@+id/ExperienceInput" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

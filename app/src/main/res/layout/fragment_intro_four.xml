@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Classes.Fragments.IntroFragments.IntroFourFragment"
+    tools:context="Aesthet.X.adfree.Classes.Fragments.IntroFragments.IntroFourFragment"
     android:background="#000000">
 
     <EditText
@@ -14,15 +14,14 @@
         android:layout_below="@id/textView4"
         android:backgroundTint="#F5F5F5"
         android:imeOptions="actionNext"
-        android:inputType="numberDecimal"
+        android:layout_marginStart="60sp"
         android:textAlignment="center"
         android:textColor="#33BAF8"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         android:layout_marginTop="40sp"
-        android:layout_marginStart="60sp"
-        />
+        android:inputType="numberDecimal|numberSigned" />
 
     <TextView
         android:id="@+id/textView4"
@@ -48,14 +47,14 @@
 
         android:backgroundTint="#F5F5F5"
         android:imeOptions="actionNext"
-        android:inputType="numberDecimal"
+        android:layout_marginTop="40sp"
         android:textAlignment="center"
         android:textColor="#33BAF8"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         android:layout_marginEnd="60sp"
-        android:layout_marginTop="40sp"/>
+        android:inputType="numberDecimal|numberSigned" />
 
     <TextView
         android:id="@+id/textView5"

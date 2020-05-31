@@ -7,7 +7,7 @@
     android:background="#000000"
     android:fitsSystemWindows="true"
     android:paddingTop="40dp"
-    tools:context=".Intro.MainActivity">
+    tools:context="Aesthet.X.adfree.Intro.MainActivity">
 
     <EditText
         android:id="@+id/bodyweight_input"
@@ -15,13 +15,13 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/textView3"
-        android:inputType="number"
+        android:imeOptions="actionNext"
         android:textColor="#F5F5F5"
         android:textSize="30sp"
         android:backgroundTint="#F5F5F5"
         android:textAlignment="center"
-        android:imeOptions="actionNext"
-        />
+        android:inputType="numberDecimal|numberSigned" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -55,15 +55,14 @@
         android:text="@string/pounds"
         android:textColor="#F5F5F5"
         android:textSize="14sp"
-        android:fontFamily="sans-serif-condensed-medium"/>
+        android:fontFamily="sans-serif-condensed-medium" />
 
     <View
         android:id="@+id/linedivide3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_above="@id/linearlayout3"
-        />
+        android:layout_above="@id/linearlayout3" />
 
     <LinearLayout
         android:id="@+id/linearlayout3"
@@ -102,7 +101,7 @@
             android:text="@string/interpunct"
             android:textColor="#BAF833"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
 
@@ -157,11 +156,7 @@
     <ScrollView
         android:id="@+id/ScrollView01"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent">
-    </ScrollView>
-
-
-
+        android:layout_width="fill_parent"></ScrollView>
 
 
 </RelativeLayout>

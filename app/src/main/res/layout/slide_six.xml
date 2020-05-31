@@ -6,7 +6,7 @@
     android:background="#000000"
     android:fitsSystemWindows="true"
     android:paddingTop="40dp"
-    tools:context=".Intro.Activity6">
+    tools:context="Aesthet.X.adfree.Intro.Activity6">
 
 
     <TextView
@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.388"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp" />
 
 
     <EditText
@@ -37,12 +37,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/textView7"
-        android:inputType="numberDecimal"
+        android:imeOptions="actionNext"
         android:textColor="#F5F5F5"
         android:textSize="40sp"
         android:backgroundTint="#F5F5F5"
         android:textAlignment="center"
-        android:imeOptions="actionNext"/>
+        android:inputType="numberDecimal|numberSigned" />
 
     <TextView
         android:id="@+id/notsure"
@@ -52,7 +52,8 @@
         android:text="@string/notsure"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:id="@+id/clickhere"
         android:layout_width="wrap_content"
@@ -63,7 +64,7 @@
         android:textSize="16sp"
         android:layout_centerHorizontal="true"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true" />
 
 
     <View
@@ -71,8 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/white"
-        android:layout_above="@id/linearlayout3"
-        />
+        android:layout_above="@id/linearlayout3" />
 
     <LinearLayout
         android:id="@+id/linearlayout3"
@@ -110,8 +110,7 @@
             android:layout_height="wrap_content"
             android:text="@string/interpunct"
             android:textColor="#D3D3D3"
-            android:textSize="40sp"
-            />
+            android:textSize="40sp" />
 
         <TextView
 
@@ -137,7 +136,7 @@
             android:text="@string/interpunct"
             android:textColor="#BAF833"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/indicator_seven"
@@ -146,8 +145,7 @@
             android:layout_weight="2"
             android:text="@string/interpunct"
             android:textColor="#D3D3D3"
-            android:textSize="40sp"
-            />
+            android:textSize="40sp" />
 
         <View
             android:layout_width="0dp"
@@ -168,8 +166,7 @@
     <ScrollView
         android:id="@+id/ScrollView01"
         android:layout_height="fill_parent"
-        android:layout_width="fill_parent">
-    </ScrollView>
+        android:layout_width="fill_parent"></ScrollView>
 
 
 </RelativeLayout>

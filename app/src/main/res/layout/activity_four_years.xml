@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PopUpDialogs.FAQFourYears"
+    tools:context="Aesthet.X.adfree.PopUpDialogs.FAQFourYears"
     android:background="#000000"
     android:padding="30dp">
 

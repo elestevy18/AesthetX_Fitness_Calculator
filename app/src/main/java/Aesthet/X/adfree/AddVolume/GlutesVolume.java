@@ -1,0 +1,110 @@
+package Aesthet.X.adfree.AddVolume;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.scifit.R;
+
+import java.util.ArrayList;
+
+import Aesthet.X.adfree.Classes.Adapters.GlutesAdapter;
+import Aesthet.X.adfree.Classes.MuscleGroupObjects.GlutesList;
+import Aesthet.X.adfree.PopUpDialogs.AddGluteErectorDialog;
+import Aesthet.X.adfree.PopUpDialogs.AddGluteHamDialog;
+import Aesthet.X.adfree.PopUpDialogs.AddGlutesVolumeDialog;
+import Aesthet.X.adfree.PopUpDialogs.AddHamGluteDialog;
+import Aesthet.X.adfree.PopUpDialogs.AddHipThrustVolumeDialog;
+import Aesthet.X.adfree.PopUpDialogs.AddIsoHipThrustDialog;
+import Aesthet.X.adfree.PopUpDialogs.GluteGluteMediusHamstrings;
+import Aesthet.X.adfree.PopUpDialogs.SprinterLungeDialog;
+
+
+public class GlutesVolume extends AppCompatActivity implements GlutesAdapter.OnItemClickListener, AddGlutesVolumeDialog.ExampleDialogListener,
+        AddHipThrustVolumeDialog.ExampleDialogListener, AddGluteHamDialog.ExampleDialogListener, AddHamGluteDialog.ExampleDialogListener,
+        AddIsoHipThrustDialog.ExampleDialogListener, SprinterLungeDialog.ExampleDialogListener, GluteGluteMediusHamstrings.ExampleDialogListener {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_glutes_volume);
+
+        //CreateList
+        final ArrayList<GlutesList> GlutesExerciseListList = new ArrayList<>();
+
+        GlutesExerciseListList.add(new GlutesList("Glutes", "One set towards glutes"));
+        GlutesExerciseListList.add(new GlutesList("Hip Thrust", "Glutes, Erectors Secondary: Hamstrings, Glute Medius"));
+        GlutesExerciseListList.add(new GlutesList("Isolateral Hip Thrust", "Glutes, Glute Medius Secondary: Hamstrings"));
+
+        GlutesExerciseListList.add(new GlutesList("Cable Pull Through", "Glutes Secondary: Hamstrings, Glute Medius"));
+        GlutesExerciseListList.add(new GlutesList("Glute Hyperextension", "Glutes Secondary: Hamstrings, Glute Medius"));
+        GlutesExerciseListList.add(new GlutesList("Kettlebell/Dumbbell Swing", "Glutes Secondary: Hamstrings, Glute Medius"));
+        GlutesExerciseListList.add(new GlutesList("Cable Kick Backs", "Glutes Secondary: Hamstrings, Glute Medius"));
+
+        GlutesExerciseListList.add(new GlutesList("Sprinter Lunge", "Glutes, Glute Medius Secondary: Hamstrings"));
+        GlutesExerciseListList.add(new GlutesList("Banded RDL", "Glutes, Glute Medius, Hamstrings"));
+        GlutesExerciseListList.add(new GlutesList("Marching Bridge", "Spinal Erector, Glutes"));
+
+
+
+
+        //Create Recycler View
+        RecyclerView mRecyclerView = findViewById(R.id.glutesRecyclerView);
+        mRecyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
+        GlutesAdapter mAdapter = new GlutesAdapter(GlutesExerciseListList, this);
+
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
+    @Override
+    public void addVolume() {
+
+    }
+
+    @Override
+    public void onExerciseClick(int position) {
+    }
+
+    @Override
+    public void onAddVolumeClick(int position) {
+        switch (position) {
+            case 0:
+
+                AddGlutesVolumeDialog exampleDialog = new AddGlutesVolumeDialog(this);
+                exampleDialog.show(getSupportFragmentManager(), "example dialog");
+                break;
+            case 1:
+                AddHipThrustVolumeDialog exampleDialog1 = new AddHipThrustVolumeDialog(this);
+                exampleDialog1.show(getSupportFragmentManager(), "example dialog");
+                break;
+            case 2:
+                AddIsoHipThrustDialog exampleDialog2 = new AddIsoHipThrustDialog(this);
+                exampleDialog2.show(getSupportFragmentManager(), "example dialog");
+                break;
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                AddGluteHamDialog exampleDialog3 = new AddGluteHamDialog(this);
+                exampleDialog3.show(getSupportFragmentManager(), "example dialog");
+                break;
+            case 7:
+                SprinterLungeDialog exampleDialog4 = new SprinterLungeDialog(this);
+                exampleDialog4.show(getSupportFragmentManager(), "example dialog");
+                break;
+
+            case 8:
+                GluteGluteMediusHamstrings exampleDialog8 = new GluteGluteMediusHamstrings(this);
+                exampleDialog8.show(getSupportFragmentManager(), "example dialog");
+                break;
+            case 9:
+                AddGluteErectorDialog exampleDialog5 = new AddGluteErectorDialog(this);
+                exampleDialog5.show(getSupportFragmentManager(), "example dialog");
+                break;
+        }
+    }
+}

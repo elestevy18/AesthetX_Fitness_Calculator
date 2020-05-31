@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#000000"
     android:fitsSystemWindows="true"
-    tools:context=".Intro.MainActivity">
+    tools:context="Aesthet.X.adfree.Intro.MainActivity">
 
 
     <TextView
@@ -86,7 +86,7 @@
             android:text="@string/interpunct"
             android:textColor="#BAF833"
             android:textSize="40sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/indicator_two"
@@ -94,8 +94,7 @@
             android:layout_height="wrap_content"
             android:text="@string/interpunct"
             android:textColor="#FFFFFF"
-            android:textSize="40sp"
-             />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/indicator_three"

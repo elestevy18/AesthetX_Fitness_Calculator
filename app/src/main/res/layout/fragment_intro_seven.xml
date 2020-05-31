@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Classes.Fragments.IntroFragments.IntroSevenFragment"
+    tools:context="Aesthet.X.adfree.Classes.Fragments.IntroFragments.IntroSevenFragment"
     android:background="#000000"
     android:orientation="vertical">
 
@@ -29,35 +29,36 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-    <Button
-        android:id="@+id/femalebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/female"
-        android:background="@drawable/add_button"
-        android:textColor="#BAF833"
-        />
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/femalebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/add_button"
+            android:text="@string/female"
+            android:textColor="#BAF833" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
 
-    <Button
-        android:id="@+id/malebutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/male"
-        android:background="@drawable/add_button"
-        android:textColor="#BAF833"
-        android:layout_weight="1"
-        />
+        <Button
+            android:id="@+id/malebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/add_button"
+            android:text="@string/male"
+            android:textColor="#BAF833" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
     </LinearLayout>
 
 

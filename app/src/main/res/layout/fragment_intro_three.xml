@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Classes.Fragments.IntroFragments.IntroThreeFragment"
+    tools:context="Aesthet.X.adfree.Classes.Fragments.IntroFragments.IntroThreeFragment"
     android:background="#000000"
     android:orientation="vertical">
 
@@ -25,7 +25,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80sp"/>
+        android:layout_marginTop="80sp" />
 
     <EditText
         android:id="@+id/bodyweight_input"
@@ -36,7 +36,7 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="#F5F5F5"
         android:imeOptions="actionNext"
-        android:inputType="number"
+        android:inputType="numberDecimal|numberSigned"
         android:textAlignment="center"
         android:textColor="#33BAF8"
         android:textSize="30sp"
@@ -63,8 +63,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bodyweight_input" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

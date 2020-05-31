@@ -10,16 +10,16 @@
         android:id="@+id/Neck_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="4sp">
+        android:layout_margin="2sp">
 
         <ImageView
             android:id="@+id/muscleVector"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:backgroundTint="#F5F5F5"
-            android:foregroundTint="#F5F5F5"
+            android:backgroundTint="@color/colorAccent5"
+            android:foregroundTint="@color/colorAccent5"
             android:padding="2dp"
-            android:tint="#F5F5F5" />
+            android:tint="@color/colorAccent5" />
 
         <TextView
             android:id="@+id/muscle"
@@ -28,9 +28,8 @@
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/muscleVector"
             android:text="Muscle"
-            android:textColor="#33BAF8"
-            android:textSize="16sp"
-             />
+            android:textColor="@color/colorAccent2"
+            android:textSize="16sp" />
 
 
         <TextView
@@ -53,7 +52,7 @@
             android:layout_alignBottom="@+id/muscle"
             android:layout_marginBottom="2sp"
             android:layout_toEndOf="@+id/progresstxt"
-            android:text="/"
+            android:text="@string/slash"
             android:textColor="#FFFFFF"
             android:textSize="10sp" />
 
@@ -65,10 +64,10 @@
 
             android:layout_marginBottom="2sp"
             android:layout_toEndOf="@+id/slash"
-            android:text="16"
+            android:elevation="15sp"
             android:textColor="#FFFFFF"
             android:textSize="10sp"
-            android:elevation="15sp"/>
+            android:text="@string/_16" />
 
         <ProgressBar
             android:id="@+id/neck_progress_bar"
@@ -82,7 +81,7 @@
             android:layout_toEndOf="@id/muscleVector"
             android:progress="50"
             android:theme="@style/ProgressBar"
-            android:elevation="-5dp"/>
+            android:elevation="-5dp" />
 
         <TextView
             android:id="@+id/Neck_volume"
@@ -94,7 +93,7 @@
             android:layout_toStartOf="@+id/addVolume"
             android:elevation="10dp"
             android:gravity="end"
-            android:text="MAV/Frequency"
+            android:text="@string/mav_frequency"
             android:textColor="#F5F5F5"
             android:textSize="10sp" />
 
@@ -104,15 +103,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
-            android:backgroundTint="#000000"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="@color/colorPrimary"
             android:gravity="center"
-            android:text="Add Set"
-            android:textColor="#BAF833"
+            android:text="@string/add_set"
+            android:textColor="@color/colorAccent"
             app:cornerRadius="8dp"
-            app:strokeColor="#BAF833"
+            app:strokeColor="@color/colorAccent"
             app:strokeWidth="1sp" />
 
     </RelativeLayout>
