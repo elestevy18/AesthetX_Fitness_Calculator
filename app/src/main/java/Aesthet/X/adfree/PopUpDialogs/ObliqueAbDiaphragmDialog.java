@@ -48,6 +48,14 @@ public class ObliqueAbDiaphragmDialog extends AppCompatDialogFragment {
                 obliquesTally = obliquesTally * 10;
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putInt(OBLIQUES_TALLY, obliquesTally);
+                int TransverseTally = Integer.parseInt(sets);
+                TransverseTally = TransverseTally * 10;
+                TransverseTally = TransverseTally / 2;
+                editor.putInt(Transverse_TALLY, TransverseTally);
+                int absTally = Integer.parseInt(sets);
+                absTally = absTally * 10;
+                absTally = absTally / 2;
+                editor.putInt(ABS_TALLY, absTally);
                 editor.apply();
                 Intent intent = new Intent(mContext, Dashboards.class);
                 startActivity(intent);

@@ -41,6 +41,8 @@ public class MealPlanFragment extends Fragment {
     private static final String SBPROGRESS = "SBPROGRESS";
     private static final String PROSBPROGRESS = "SBPROGRESS";
     private static final String CALSBPROGRESS = "SBPROGRESS";
+    private static final String DEFICIT = "DEFICIT";
+
     private static final String MALE = "male";
     private static final String FEMALE = "female";
     private static final String CALORIES = "calories";
@@ -48,6 +50,8 @@ public class MealPlanFragment extends Fragment {
     public static final String TDEE = "tdee";
     private static final String SHOWADS = "com.example.application.scifit.showads";
     private static final String SHARED_PREFS = "com.example.application.scifit.sharedPrefs";
+    private static final String MAXLOSSRATE = "MAXLOSSRATE";
+    private static final String MINLOSSRATE = "MINLOSSRATE";
     private final String[] xData = {"Protein", "Fat", "Carbs"};
     private PieChart piechart;
     private float[] yData = {1, 1, 1};
@@ -217,6 +221,8 @@ public class MealPlanFragment extends Fragment {
         });
         boolean male = sharedPreferences.getBoolean(MALE, false);
         boolean female = sharedPreferences.getBoolean(FEMALE, false);
+
+        //CALORIES
         SeekBar calSeekBar = v.findViewById(R.id.calorieSeekBar);
         int calSeekBarPosition = sharedPreferences.getInt(CALSBPROGRESS, 0);
         calSeekBar.setProgress(calSeekBarPosition);
@@ -237,9 +243,17 @@ public class MealPlanFragment extends Fragment {
                     double maxLossRateCalsD = ((bodyweight * .01) * 3500) / 7;
                     float maxLossRate = (float) maxLossRateCalsD;
 
+                    //Data storage for fatloss chart
+                    editor.putFloat(MAXLOSSRATE, maxLossRate);
+                    editor.putFloat(MINLOSSRATE, minRateLossCals);
+
+                                                                                                                                    
                     float deficitRange = maxLossRate - minRateLossCals;
                     float deficitScale = deficitRange / 100;
                     float deficit = (progress * deficitScale);
+                    float deficit7 = deficit / 7;
+                    editor.putFloat(DEFICIT, deficit7);
+
                     intake = tdee - deficit;
 
 
@@ -283,6 +297,8 @@ public class MealPlanFragment extends Fragment {
                 getActivity().startActivity(i);
             }
         });
+//INVISIBLE BUTTON
+
 
 
         return v;
@@ -319,5 +335,4 @@ public class MealPlanFragment extends Fragment {
         piechart.setData(pieData);
         piechart.invalidate();
     }
-
 }

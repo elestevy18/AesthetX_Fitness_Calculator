@@ -39,7 +39,6 @@ import Aesthet.X.adfree.PopUpDialogs.AddCurlsVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddDeadliftVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddDiaphragmVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddDipDialog;
-import Aesthet.X.adfree.PopUpDialogs.AddErectorHalfHamDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddErectorsVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddFacePullDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddForearmCurlsDialog;
@@ -85,7 +84,6 @@ import Aesthet.X.adfree.PopUpDialogs.AddUpperTrapVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.ErectorGluteMedius;
 import Aesthet.X.adfree.PopUpDialogs.GluteGluteMediusHamstrings;
 import Aesthet.X.adfree.PopUpDialogs.GluteMediusHalfObliques;
-import Aesthet.X.adfree.PopUpDialogs.LowerTrapPostDeltErectorDialog;
 import Aesthet.X.adfree.PopUpDialogs.OHPDialog;
 import Aesthet.X.adfree.PopUpDialogs.ObliqueAbDiaphragmDialog;
 import Aesthet.X.adfree.PopUpDialogs.ObliqueAbDiaphragmFullDialog;
@@ -119,7 +117,9 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         ObliqueDiaphragmDialog.ExampleDialogListener, AddDiaphragmVolumeDialog.ExampleDialogListener, AddQuadsVolumeDialog.ExampleDialogListener,
         AddSquatDialog.ExampleDialogListener, QuadGluteMediusFullDialog.ExampleDialogListener, QuadsGluteGluteMediusDialog.ExampleDialogListener,
         SprinterLungeDialog.ExampleDialogListener, SideLungeDialog.ExampleDialogListener, ObliqueDiaphragmFullDialog.ExampleDialogListener, AddForearmFlexorVolumeDialog.ExampleDialogListener,
-        AddCaliforniaPressDialog.ExampleDialogListener, AddChestPressDialog.ExampleDialogListener, AddForearmCurlsDialog.ExampleDialogListener, AddChestTricepsDialog.ExampleDialogListener, AddLowerTrapPostDeltDialog.ExampleDialogListener {
+        AddCaliforniaPressDialog.ExampleDialogListener, AddChestPressDialog.ExampleDialogListener, AddForearmCurlsDialog.ExampleDialogListener, AddChestTricepsDialog.ExampleDialogListener,
+        AddLowerTrapPostDeltDialog.ExampleDialogListener, AddQuadsGluteMediusDialog.ExampleDialogListener, GluteGluteMediusHamstrings.ExampleDialogListener, AddGluteErectorDialog.ExampleDialogListener,
+        ErectorGluteMedius.ExampleDialogListener, GluteMediusHalfObliques.ExampleDialogListener, QuadsHalfGlute.ExampleDialogListener {
     private GlobalAdapter mAdapter;
 
     @Override
@@ -138,6 +138,8 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Head Floats", "Neck Flexion, Lateral Flexion or Extension"));
         GlobalExerciseListList.add(new GlobalList("Suspended Neck Rotation", "Neck Flexion, Rotation"));
         GlobalExerciseListList.add(new GlobalList("Towel Lateral Flexion", "Lateral Flexion"));
+        GlobalExerciseListList.add(new GlobalList("Neck Flexion", "Lateral and forward Flexion"));
+
 
         //UPPER TRAP
         GlobalExerciseListList.add(new GlobalList("Deadlift", "Hamstrings, Erectors, Upper Traps \nSecondary: Lats, Glutes, Lower Trap, Transverse"));
@@ -147,7 +149,7 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Farmer Walk", "Upper Trap"));
         //LOWER TRAP
         GlobalExerciseListList.add(new GlobalList("Y Raise", "Lower Traps"));
-        GlobalExerciseListList.add(new GlobalList("Hanging Scapular Retraction", "Lower Traps"));
+        GlobalExerciseListList.add(new GlobalList("Hanging/Cable Scapular Retraction", "Lower Traps"));
         GlobalExerciseListList.add(new GlobalList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
         GlobalExerciseListList.add(new GlobalList("Floor/Dip Bar Scapular Depression", "Lower Traps"));
         //POSTERIOR DELTOID
@@ -164,6 +166,8 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Machine Lateral Raise", "Medial Deltoid"));
         GlobalExerciseListList.add(new GlobalList("Cheat Lateral Raise", "Medial Deltoid, Upper Trap"));
         GlobalExerciseListList.add(new GlobalList("Delt Rotating Plank", "Medial Deltoid"));
+        GlobalExerciseListList.add(new GlobalList("Banded Lateral Raise", "Medial Deltoid"));
+
         //ANTERIOR DELTOID
         GlobalExerciseListList.add(new GlobalList("Arnolds", "Anterior Delt Secondary: Triceps, Medial Delt"));
         GlobalExerciseListList.add(new GlobalList("Barbell Overhead Press", "Anterior Delt Secondary: Triceps, Medial Delt"));
@@ -231,9 +235,7 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Hyperextension", "Spinal Erector"));
         GlobalExerciseListList.add(new GlobalList("Machine Erector Extension", "Spinal Erector"));
         GlobalExerciseListList.add(new GlobalList("Frog Pumps", "Spinal Erectors, Glute Medius"));
-        GlobalExerciseListList.add(new GlobalList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
         GlobalExerciseListList.add(new GlobalList("Marching Bridge", "Spinal Erector, Glutes"));
-        GlobalExerciseListList.add(new GlobalList("Reverse Hyperextension", "Spinal Erector Secondary: Glutes, Hamstrings"));
 
         //GLUTES
         GlobalExerciseListList.add(new GlobalList("Hip Thrust", "Glutes Secondary: Hamstrings, Glute Medius"));
@@ -241,9 +243,12 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Cable Pull Through", "Glutes Secondary: Hamstrings, Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Sprinter Lunge", "Glutes, Glute Medius Secondary: Hamstrings"));
         GlobalExerciseListList.add(new GlobalList("Glute Hyperextension", "Glutes Secondary: Hamstrings, Glute Medius"));
+        GlobalExerciseListList.add(new GlobalList("Reverse Hyperextension", "Glutes Secondary:Spinal Erector, Hamstrings "));
         GlobalExerciseListList.add(new GlobalList("Kettlebell/Dumbbell Swing", "Glutes Secondary: Hamstrings, Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Cable Kick Backs", "Glutes Secondary: Hamstrings, Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Banded RDL", "Glutes, Glute Medius, Hamstrings"));
+        GlobalExerciseListList.add(new GlobalList("Bodyweight Hip Thrust", "Glutes Secondary: Hamstrings"));
+
 
         //GLUTEMEDIUS
         GlobalExerciseListList.add(new GlobalList("Machine Abduction", "Glute Medius"));
@@ -255,10 +260,10 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Romanian Deadlift", "Hamstring Secondary: Glutes, Erectors"));
         GlobalExerciseListList.add(new GlobalList("Hamstring Curls", "Hamstring Secondary: Glutes, Erectors"));
         GlobalExerciseListList.add(new GlobalList("Hamstring Hyperextension", "Hamstring Secondary: Glutes, Erectors"));
-        GlobalExerciseListList.add(new GlobalList("Medicine Ball Curl", "Hamstring Secondary: Glutes, Erectors"));
+        GlobalExerciseListList.add(new GlobalList("Physioball Hamstring Curls", "Hamstring Secondary: Glutes, Erectors"));
         GlobalExerciseListList.add(new GlobalList("Deficit Deadlift", "Hamstring Secondary: Glutes, Erectors"));
         GlobalExerciseListList.add(new GlobalList("Glute Ham Raise", "Hamstring Secondary: Glutes, Erectors"));
-        GlobalExerciseListList.add(new GlobalList("Single Leg Medicine Ball Curl", "Hamstrings, Glute Medius\nSecondary: Glutes, Erectors"));
+        GlobalExerciseListList.add(new GlobalList("Isolateral Hamstring Curls", "Hamstrings, Glute Medius\nSecondary: Glutes, Erectors"));
         GlobalExerciseListList.add(new GlobalList("Single Leg Romanian Deadlift", "Hamstrings, Glute Medius\nSecondary: Glutes, Erectors"));
 
         //CALVES
@@ -312,6 +317,7 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Cable Crunch", "Middle Abs Secondary; Transverse Ab"));
         GlobalExerciseListList.add(new GlobalList("Band Crunch", "Middle Abs Secondary; Transverse Ab"));
         GlobalExerciseListList.add(new GlobalList("V-Up", "Middle Abs Secondary; Transverse Ab"));
+        GlobalExerciseListList.add(new GlobalList("Ab Rollout", "Middle Abs Secondary; Transverse Ab"));
 
 
         //OBLIQUES
@@ -334,11 +340,11 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         //QUADS
         GlobalExerciseListList.add(new GlobalList("Squats", "Quads, Erectors\nSecondary: Glutes, Transverse Ab"));
         GlobalExerciseListList.add(new GlobalList("Bodyweight Squats", "Quads Secondary: Glutes, Transverse Ab"));
-        GlobalExerciseListList.add(new GlobalList("Traditional Lunge", "Quads Secondary: Glute Medius"));
+        GlobalExerciseListList.add(new GlobalList("Lunges", "Quads Secondary: Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Bulgarian Split Squat", "Quads Secondary: Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Explosive Bulgarian Split Squat", "Quads Secondary: Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Pistol Squats", "Quads, Glute Medius Secondary: Glute"));
-        GlobalExerciseListList.add(new GlobalList("Side Lunge", "Quads Glute Medius"));
+        GlobalExerciseListList.add(new GlobalList("Side Lunge", "Quads, Glute Medius"));
         GlobalExerciseListList.add(new GlobalList("Banded Lunge", "Quads"));
         GlobalExerciseListList.add(new GlobalList("Cable Walkaways", "Quads"));
         GlobalExerciseListList.add(new GlobalList("Banded Leg Press", "Quads, Glute Medius"));
@@ -405,11 +411,11 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         TextView text = Objects.requireNonNull(recyclerView.findViewHolderForAdapterPosition(position)).itemView.findViewById(R.id.exercise);
         String exercise = text.getText().toString();
         //CREATE ARRAYS AND LISTS FOR EXERCISES WITH EQUAL VOLUME PROFILES
-        String[] neckExercises = {"Plate Curl", "Global Harness Curl", "Plated Neck Extension", "Towel Lateral Flexion", "Harness Lateral Flexion", "Suspended Neck Rotation", "Head Floats"};
+        String[] neckExercises = {"Plate Curl", "Neck Harness Curl", "Plated Neck Extension", "Towel Lateral Flexion", "Harness Lateral Flexion", "Suspended Neck Rotation", "Head Floats"};
         List<String> neckList = Arrays.asList(neckExercises);
         String[] upperTrapExercises = {"Cable Shrug", "Dumbbell Shrugs", "Trap Bar Shrugs", "Farmer Walk", "Trap Pushaway"};
         List<String> trapList = Arrays.asList(upperTrapExercises);
-        String[] lowerTrapExercises = {"Y raise", "Hanging/Cable Scapular Retraction", "Prone Press", "Floor/Dip Bar Scapular Depression"};
+        String[] lowerTrapExercises = {"Y Raise", "Hanging/Cable Scapular Retraction", "Prone Press", "Floor/Dip Bar Scapular Depression"};
         List<String> lowerTrapList = Arrays.asList(lowerTrapExercises);
         String[] postDeltExercises = {"Barbell/Dumbbell High Rows", "Banded Pull Aparts", "Reverse Pec Dec"};
         List<String> postDeltList = Arrays.asList(postDeltExercises);
@@ -437,18 +443,18 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         List<String> gluteHamList = Arrays.asList(gluteHamExercises);
         String[] gluteMediusExercises = {"Machine Abduction", "Standing Abduction", "Banded Lateral Walkout"};
         List<String> gluteMediusList = Arrays.asList(gluteMediusExercises);
-        String[] hamGluteExercises = {"Hamstring Hyperextension", "Romanian Deadlift", "Medicine Ball Curl", "Deficit Deadlift", "Glute Ham Raise", "Hamstring Curls"};
+        String[] hamGluteExercises = {"Hamstring Hyperextension", "Romanian Deadlift", "Physioball Hamstring Curls", "Deficit Deadlift", "Glute Ham Raise", "Hamstring Curls"};
         List<String> hamGluteList = Arrays.asList(hamGluteExercises);
-        String[] isoRDLExercises = {"Single Leg Medicine Ball Curl", "Single Leg Romanian Deadlift"};
+        String[] isoRDLExercises = {"Isolateral Hamstring Curls", "Single Leg Romanian Deadlift"};
         List<String> isoRDLList = Arrays.asList(isoRDLExercises);
         String[] calvesExercises = {"Machine Standing Calf Raise", "Straight Leg Machine Calf Raise", "Seated Calf Raise", "Donkey Calf Raise", "Dumbbell/Plated Calf Raise"};
         List<String> calvesList = Arrays.asList(calvesExercises);
         String[] chestPressExercises = {"Incline Cable Press", "Incline Dumbbell Press", "Incline Bench Press"};
         List<String> chestPressList = Arrays.asList(chestPressExercises);
-        String[] dipExercises = {"Wide Dip", "Narrow Pushup"};
+        String[] dipExercises = {"Wide Dip", "Narrow Pushup", "Pushups", "Bench Press",
+                "Neutral Cable Press", "Machine Chest Press", "Dumbbell Chest Press"};
         List<String> dipList = Arrays.asList(dipExercises);
-        String[] chestExercises = {"Horizontal Crossover Flyes", "Decline Crossover Flyes", "Pushups",
-                "Neutral Cable Press", "Machine Chest Press", "Dumbbell Chest Press", "Bench Press"};
+        String[] chestExercises = {"Horizontal Crossover Flyes", "Decline Crossover Flyes"};
         List<String> chestList = Arrays.asList(chestExercises);
         String[] curlExercises = {"Cable/Dumbbell Spider Curls", "Banded Curls", "Preacher Curls", "Wide EZ Bar Curls", "Narrow EZ Bar Curls", "Narrow Barbell Curls", "Barbell Curls", "Narrow Dumbbell Curls", "Dumbbell Curls"};
         List<String> curlList = Arrays.asList(curlExercises);
@@ -456,13 +462,13 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         List<String> bicepList = Arrays.asList(bicepExercises);
         String[] absSerratusExercises = {"Plank/Dip Protraction", "Protracted Roll Out", "Protracted Cable Crunch"};
         List<String> absSerratusList = Arrays.asList(absSerratusExercises);
-        String[] absExercises = {"Leg Raises", "Hanging Leg Raise", "Reverse Crunches", "Pulse Up", "Cable Crunch", "V-Up", "Band Crunch"};
+        String[] absExercises = {"Leg Raises", "Hanging Leg Raise", "Reverse Crunches", "Pulse Up", "Cable Crunch", "V-Up", "Band Crunch", "Ab Rollout"};
         List<String> absList = Arrays.asList(absExercises);
-        String[] obliqueAbTransverseExercises = {"Twisting Leg Raise", "Elbow to Knee Tucks", "Banded/Cable Step Out", "Twisting Pulse Up", "Rotating Plank", "Elbow to Knee Plank"};
+        String[] obliqueAbTransverseExercises = {"Twisting Leg Raise", "Elbow to Knee Tucks", "Banded/Cable Step Out", "Twisting Pulse Up", "Rotating Plank", "Elbow to Knee Plank", "X-Crunch"};
         List<String> obliqueAbTransverseList = Arrays.asList(obliqueAbTransverseExercises);
         String[] obliqueTransverseExercises = {"Neutral Wood Choppers", "Low to High Wood Choppers", "High to Low Wood Choppers"};
         List<String> obliqueTransverseList = Arrays.asList(obliqueTransverseExercises);
-        String[] quadsGluteMediusExercises = {"Bulgarian Split Squat", "Explosive Bulgarian Split Squat", "Traditional Lunge"};
+        String[] quadsGluteMediusExercises = {"Bulgarian Split Squat", "Explosive Bulgarian Split Squat", "Lunges"};
         List<String> quadsGluteMediusList = Arrays.asList(quadsGluteMediusExercises);
         String[] quadsExercises = {"Leg Press", "Cable Walkaways", "Banded Lunge"};
         List<String> quadsList = Arrays.asList(quadsExercises);
@@ -476,6 +482,9 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         if (neckList.contains(exercise)) {
             AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Neck Flexion")) {
+            AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Bodyweight Squats")) {
             QuadsHalfGlute exampleDialog = new QuadsHalfGlute(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
@@ -483,16 +492,13 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
             AddGluteErectorDialog exampleDialog = new AddGluteErectorDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Reverse Hyperextension")) {
-            AddErectorHalfHamDialog exampleDialog = new AddErectorHalfHamDialog(this);
+            AddGluteHamDialog exampleDialog = new AddGluteHamDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Glute Side Plank")) {
             GluteMediusHalfObliques exampleDialog = new GluteMediusHalfObliques(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Banded Abduction")) {
             AddGluteMediusVolumeDialog exampleDialog = new AddGluteMediusVolumeDialog(this);
-            exampleDialog.show(getSupportFragmentManager(), "example dialog");
-        } else if (exercise.equals("Band/Bodyweight Lunge")) {
-            AddQuadsGluteMediusDialog exampleDialog = new AddQuadsGluteMediusDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Banded Wrist Extension")) {
             AddForearmExtensorVolumeDialog exampleDialog = new AddForearmExtensorVolumeDialog(this);
@@ -593,6 +599,9 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         } else if (exercise.equals("Hip Thrust")) {
             AddHipThrustVolumeDialog exampleDialog = new AddHipThrustVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Bodyweight Hip Thrust")) {
+            AddHipThrustVolumeDialog exampleDialog = new AddHipThrustVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Floor T's")) {
             AddPosteriorDeltoidVolumeDialog exampleDialog = new AddPosteriorDeltoidVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
@@ -615,7 +624,7 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
             AddAbsVolumeDialog exampleDialog = new AddAbsVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Angels of Death")) {
-            LowerTrapPostDeltErectorDialog exampleDialog = new LowerTrapPostDeltErectorDialog(this);
+            AddAngelOfDeathDialog exampleDialog = new AddAngelOfDeathDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Squats")) {
             AddSquatDialog exampleDialog = new AddSquatDialog(this);
@@ -676,6 +685,9 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (rotatorList.contains(exercise)) {
             AddRotatorCuffVolumeDialog exampleDialog = new AddRotatorCuffVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Banded Lateral Raise")) {
+            AddMedialDeltoidVolumeDialog exampleDialog = new AddMedialDeltoidVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (TricepsList.contains(exercise)) {
             AddTricepsVolumeDialog exampleDialog = new AddTricepsVolumeDialog(this);

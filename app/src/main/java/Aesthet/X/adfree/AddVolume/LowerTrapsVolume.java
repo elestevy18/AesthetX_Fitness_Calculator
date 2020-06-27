@@ -20,7 +20,8 @@ import Aesthet.X.adfree.PopUpDialogs.UpperLowerTrap;
 
 
 public class LowerTrapsVolume extends AppCompatActivity implements LowerTrapAdapter.OnItemClickListener,
-        AddLowerTrapVolumeDialog.ExampleDialogListener, AddAngelOfDeathDialog.ExampleDialogListener, AddFacePullDialog.ExampleDialogListener, UpperLowerTrap.ExampleDialogListener {
+        AddLowerTrapVolumeDialog.ExampleDialogListener, AddAngelOfDeathDialog.ExampleDialogListener, AddFacePullDialog.ExampleDialogListener,
+        UpperLowerTrap.ExampleDialogListener, AddLowerTrapPostDeltDialog.ExampleDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class LowerTrapsVolume extends AppCompatActivity implements LowerTrapAdap
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("W's", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Ring Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
-        LowerTrapExerciseListList.add(new LowerTrapExerciseList("Hanging Scapular Retraction", "Lower Traps"));
+        LowerTrapExerciseListList.add(new LowerTrapExerciseList("Hanging/Cable Scapular Retraction", "Lower Traps"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Inverted Y", "Upper and Lower Trapezoid"));
 
         //Create Recycler View

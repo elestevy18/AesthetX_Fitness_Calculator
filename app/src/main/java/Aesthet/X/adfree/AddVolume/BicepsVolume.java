@@ -77,6 +77,7 @@ public class BicepsVolume extends AppCompatActivity implements BicepsAdapter.OnI
             case 2:
             case 8:
             case 9:
+            case 1:
                 AddCurlsVolumeDialog exampleDialog = new AddCurlsVolumeDialog(this);
                 exampleDialog.show(getSupportFragmentManager(), "example dialog");
                 break;

@@ -48,6 +48,13 @@ public class AddDipDialog extends AppCompatDialogFragment {
                 TricepsTally = TricepsTally * 10;
                 SharedPreferences.Editor editor = sp.edit();
                 editor.putInt(Triceps_TALLY, TricepsTally);
+                int chestTally = Integer.parseInt(sets);
+                chestTally = chestTally * 10;
+                editor.putInt(CHEST_TALLY, chestTally);
+                int anteriorDeltoidTally = Integer.parseInt(sets);
+                anteriorDeltoidTally = anteriorDeltoidTally * 10;
+                anteriorDeltoidTally = anteriorDeltoidTally / 2;
+                editor.putInt(ANTERIORDELTOID_TALLY, anteriorDeltoidTally);
                 editor.apply();
 
                 Intent intent = new Intent(mContext, Dashboards.class);

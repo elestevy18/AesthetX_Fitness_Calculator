@@ -88,6 +88,12 @@ public class ChestVolume extends AppCompatActivity implements ChestAdapter.OnIte
         } else if (chestList.contains(exercise)) {
             AddChestVolumeDialog exampleDialog = new AddChestVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Chest Pullover")) {
+            AddPullOverDialog exampleDialog = new AddPullOverDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Incline Crossover Flyes")) {
+            AddChestDeltVolumeDialog exampleDialog = new AddChestDeltVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
         }
     }
 

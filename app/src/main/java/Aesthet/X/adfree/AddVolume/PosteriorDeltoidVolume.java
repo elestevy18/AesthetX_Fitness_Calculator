@@ -20,7 +20,7 @@ import Aesthet.X.adfree.PopUpDialogs.AddPosteriorDeltoidVolumeDialog;
 
 
 public class PosteriorDeltoidVolume extends AppCompatActivity implements PosteriorDeltoidAdapter.OnItemClickListener, AddPosteriorDeltoidVolumeDialog.ExampleDialogListener,
-        AddHalfLowerTrapPostDeltDialog.ExampleDialogListener, AddFacePullDialog.ExampleDialogListener, AddLowerTrapPostDeltDialog.ExampleDialogListener {
+        AddHalfLowerTrapPostDeltDialog.ExampleDialogListener, AddFacePullDialog.ExampleDialogListener, AddLowerTrapPostDeltDialog.ExampleDialogListener, AddAngelOfDeathDialog.ExampleDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

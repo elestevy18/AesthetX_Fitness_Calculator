@@ -43,6 +43,8 @@ public class AbsVolume extends AppCompatActivity implements AbsAdapter.OnItemCli
         AbsExerciseListList.add(new AbsList("Cable Crunch", "Middle Abs Secondary; Transverse"));
         AbsExerciseListList.add(new AbsList("Band Crunch", "Middle Abs Secondary; Transverse"));
         AbsExerciseListList.add(new AbsList("V-Up", "Middle Abs Secondary; Transverse"));
+        AbsExerciseListList.add(new AbsList("Ab Rollout", "Middle Abs Secondary; Transverse Ab"));
+
 
 
         //Create Recycler View
@@ -65,7 +67,7 @@ public class AbsVolume extends AppCompatActivity implements AbsAdapter.OnItemCli
         RecyclerView recyclerView = findViewById(R.id.absRecyclerView);
         TextView text = Objects.requireNonNull(recyclerView.findViewHolderForAdapterPosition(position)).itemView.findViewById(R.id.exercise);
         String exercise = text.getText().toString();
-        String[] absExercises = {"Abs", "Leg Raises", "Hanging Leg Raise", "Reverse Crunches", "Pulse Up", "Cable Crunch", "V-Up", "Band Crunch"};
+        String[] absExercises = {"Abs", "Leg Raises", "Hanging Leg Raise", "Reverse Crunches", "Pulse Up", "Cable Crunch", "V-Up", "Band Crunch", "Ab Rollout"};
         List<String> absList = Arrays.asList(absExercises);
         if (absList.contains(exercise)) {
             AddAbsVolumeDialog exampleDialog = new AddAbsVolumeDialog(this);

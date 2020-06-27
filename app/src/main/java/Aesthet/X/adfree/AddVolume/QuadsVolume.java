@@ -50,9 +50,9 @@ public class QuadsVolume extends AppCompatActivity implements QuadsAdapter.OnIte
         QuadsExerciseListList.add(new QuadsList("Pistol Squats", "Quads, Glute Medius Secondary: Glute"));
         QuadsExerciseListList.add(new QuadsList("Side Lunge", "Quads, Glute Medius"));
         QuadsExerciseListList.add(new QuadsList("Banded Lunge", "Quads"));
-        QuadsExerciseListList.add(new QuadsList("Bodyweight Squats", "Quads Secondary: Glutes,"));
-        QuadsExerciseListList.add(new QuadsList("Wall Sit", "Quads Secondary: Glutes"));
-        QuadsExerciseListList.add(new QuadsList("Lunges", "Quads Secondary: Glutes"));
+        QuadsExerciseListList.add(new QuadsList("Bodyweight Squats", "Quads Secondary: Glutes"));
+        QuadsExerciseListList.add(new QuadsList("Wall Sit", "Quads "));
+        QuadsExerciseListList.add(new QuadsList("Lunges", "Quads Secondary: Glute Medius, Glutes"));
 
 
 
@@ -78,7 +78,7 @@ public class QuadsVolume extends AppCompatActivity implements QuadsAdapter.OnIte
         RecyclerView recyclerView = findViewById(R.id.quadsRecyclerView);
         TextView text = Objects.requireNonNull(recyclerView.findViewHolderForAdapterPosition(position)).itemView.findViewById(R.id.exercise);
         String exercise = text.getText().toString();
-        String[] quadsGluteMediusExercises = {"Bulgarian Split Squat", "Explosive Bulgarian Split Squat", "Traditional Lunge"};
+        String[] quadsGluteMediusExercises = {"Bulgarian Split Squat", "Explosive Bulgarian Split Squat"};
         List<String> quadsGluteMediusList = Arrays.asList(quadsGluteMediusExercises);
         String[] quadsExercises = {"Leg Press", "Cable Walkaways", "Banded Lunge", "Quads", "Wall Sit"};
         List<String> quadsList = Arrays.asList(quadsExercises);
@@ -99,6 +99,9 @@ public class QuadsVolume extends AppCompatActivity implements QuadsAdapter.OnIte
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Side Lunge") || exercise.equals("Banded Leg Press")) {
             SideLungeDialog exampleDialog = new SideLungeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Lunges")) {
+            QuadsGluteGluteMediusDialog exampleDialog = new QuadsGluteGluteMediusDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         }
     }

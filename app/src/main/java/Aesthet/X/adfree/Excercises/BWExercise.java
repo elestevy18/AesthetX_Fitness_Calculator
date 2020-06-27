@@ -43,7 +43,6 @@ import Aesthet.X.adfree.PopUpDialogs.AddCurlsVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddDeadliftVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddDiaphragmVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddDipDialog;
-import Aesthet.X.adfree.PopUpDialogs.AddErectorHalfHamDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddErectorsVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddFacePullDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddForearmCurlsDialog;
@@ -89,7 +88,6 @@ import Aesthet.X.adfree.PopUpDialogs.AddUpperTrapVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.ErectorGluteMedius;
 import Aesthet.X.adfree.PopUpDialogs.GluteGluteMediusHamstrings;
 import Aesthet.X.adfree.PopUpDialogs.GluteMediusHalfObliques;
-import Aesthet.X.adfree.PopUpDialogs.LowerTrapPostDeltErectorDialog;
 import Aesthet.X.adfree.PopUpDialogs.OHPDialog;
 import Aesthet.X.adfree.PopUpDialogs.ObliqueAbDiaphragmDialog;
 import Aesthet.X.adfree.PopUpDialogs.ObliqueAbDiaphragmFullDialog;
@@ -122,7 +120,9 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
         ObliqueDiaphragmDialog.ExampleDialogListener, AddDiaphragmVolumeDialog.ExampleDialogListener, AddQuadsVolumeDialog.ExampleDialogListener,
         AddSquatDialog.ExampleDialogListener, QuadGluteMediusFullDialog.ExampleDialogListener, QuadsGluteGluteMediusDialog.ExampleDialogListener,
         SprinterLungeDialog.ExampleDialogListener, SideLungeDialog.ExampleDialogListener, ObliqueDiaphragmFullDialog.ExampleDialogListener, AddForearmFlexorVolumeDialog.ExampleDialogListener,
-        AddCaliforniaPressDialog.ExampleDialogListener, AddChestPressDialog.ExampleDialogListener, AddForearmCurlsDialog.ExampleDialogListener, AddChestTricepsDialog.ExampleDialogListener {
+        AddCaliforniaPressDialog.ExampleDialogListener, AddChestPressDialog.ExampleDialogListener, AddForearmCurlsDialog.ExampleDialogListener, AddChestTricepsDialog.ExampleDialogListener,
+        GluteGluteMediusHamstrings.ExampleDialogListener, AddGluteErectorDialog.ExampleDialogListener, ErectorGluteMedius.ExampleDialogListener, GluteMediusHalfObliques.ExampleDialogListener,
+        QuadsHalfGlute.ExampleDialogListener, AddQuadsGluteMediusDialog.ExampleDialogListener {
     private BWAdapter mAdapter;
 
     @Override
@@ -185,7 +185,7 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
         BWExerciseListList.add(new BWList("Frog Pumps", "Spinal Erectors, Glute Medius"));
         BWExerciseListList.add(new BWList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
         BWExerciseListList.add(new BWList("Marching Bridge", "Spinal Erector, Glutes"));
-        BWExerciseListList.add(new BWList("Reverse Hyperextension", "Spinal Erector Secondary: Glutes, Hamstrings"));
+        BWExerciseListList.add(new BWList("Reverse Hyperextension", "Glutes Secondary: Spinal Erector, Hamstrings "));
         //GLUTES
         BWExerciseListList.add(new BWList("Isolateral Hip Thrust", "Glutes, Glute Medius Secondary: Hamstrings"));
         BWExerciseListList.add(new BWList("Bodyweight Hip Thrust", "Glutes Secondary: Hamstrings"));
@@ -198,7 +198,7 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
 
         //HAMSTRINGS
         BWExerciseListList.add(new BWList("Physioball Hamstring Curls", "Hamstring Secondary: Glutes"));
-        BWExerciseListList.add(new BWList("Isolateral Hamstring Curls", "Hamstring Secondary: Glutes"));
+        BWExerciseListList.add(new BWList("Isolateral Hamstring Curls", "Hamstring, Glute Medius\nSecondary: Glutes, Erectors"));
         //CALVES
         BWExerciseListList.add(new BWList("Bodyweight Calf Raise", "Calves"));
 
@@ -243,6 +243,8 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
         BWExerciseListList.add(new BWList("Bulgarian Split Squat", "Quadriceps, Glute Medius Secondary: Glutes"));
         BWExerciseListList.add(new BWList("Side Lunges", "Quadriceps, Glute Medius "));
         BWExerciseListList.add(new BWList("Wall Sit", "Quadriceps"));
+        BWExerciseListList.add(new BWList("Explosive Bulgarian Split Squat", "Quads Secondary: Glute Medius"));
+
 
 
         //Create Recycler View
@@ -554,20 +556,32 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
 
         String[] TricepsExercises = {"Triceps Extension", "Ring Overhead Extension", "Bench Dip"};
         List<String> TricepsList = Arrays.asList(TricepsExercises);
-        String[] absExercises = {"Hanging Leg Raise", "Reverse Crunches", "Pulse Up", "Band Crunch", "V-Up"};
+        String[] absExercises = {"Hanging Leg Raise", "Reverse Crunches", "Pulse Up", "Band Crunch", "V-Up", "Ab Rollout"};
         List<String> absList = Arrays.asList(absExercises);
-        String[] obliqueAbTransverseExercises = {"Elbow to Knee Tucks", "Rotating Plank", "Elbow to Knee Plank"};
+        String[] obliqueAbTransverseExercises = {"Elbow to Knee Tucks", "Rotating Plank", "Elbow to Knee Plank", "X-Crunch"};
         List<String> obliqueAbTransverseList = Arrays.asList(obliqueAbTransverseExercises);
 
         //CHECK WHICH DIALOG TO OPEN FOR PROPER VOLUME INPUT
         if (exercise.equals("Head Floats")) {
             AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Neck Flexion")) {
+            AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Angels of Death")) {
-            LowerTrapPostDeltErectorDialog exampleDialog = new LowerTrapPostDeltErectorDialog(this);
+            AddAngelOfDeathDialog exampleDialog = new AddAngelOfDeathDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Trap Pushaway")) {
             AddUpperTrapVolumeDialog exampleDialog = new AddUpperTrapVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Pushups")) {
+            AddDipDialog exampleDialog = new AddDipDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Leg Raises")) {
+            AddAbsVolumeDialog exampleDialog = new AddAbsVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Bulgarian Split Squat") || exercise.equals("Explosive Bulgarian Split Squat")) {
+            AddQuadsGluteMediusDialog exampleDialog = new AddQuadsGluteMediusDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Bodyweight Squats")) {
             QuadsHalfGlute exampleDialog = new QuadsHalfGlute(this);
@@ -579,8 +593,14 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
             AddGluteErectorDialog exampleDialog = new AddGluteErectorDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Reverse Hyperextension")) {
-            AddErectorHalfHamDialog exampleDialog = new AddErectorHalfHamDialog(this);
+            AddGluteHamDialog exampleDialog = new AddGluteHamDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Lunges")) {
+            QuadsGluteGluteMediusDialog exampleDialog = new QuadsGluteGluteMediusDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Physioball Hamstring Curls")) {
+            AddHamGluteDialog exampleDialog2 = new AddHamGluteDialog(this);
+            exampleDialog2.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Glute Side Bridge")) {
             GluteMediusHalfObliques exampleDialog = new GluteMediusHalfObliques(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
@@ -589,6 +609,12 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Banded Abduction")) {
             AddGluteMediusVolumeDialog exampleDialog = new AddGluteMediusVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Banded Lunge")) {
+            AddQuadsVolumeDialog exampleDialog = new AddQuadsVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Banded Lateral Raise")) {
+            AddMedialDeltoidVolumeDialog exampleDialog = new AddMedialDeltoidVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Pistol Squats")) {
             AddPistolSquatDialog exampleDialog = new AddPistolSquatDialog(this);
@@ -605,11 +631,14 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
         } else if (exercise.equals("Bodyweight Calf Raise")) {
             AddCalvesVolumeDialog exampleDialog = new AddCalvesVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
-        } else if (exercise.equals("Side Lunge")) {
+        } else if (exercise.equals("Side Lunges")) {
             SideLungeDialog exampleDialog = new SideLungeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Sprinter Lunge")) {
             SprinterLungeDialog exampleDialog = new SprinterLungeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Isolateral Hamstring Curls")) {
+            AddIsoRDLDialog exampleDialog = new AddIsoRDLDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Wall Sit")) {
             AddQuadsVolumeDialog exampleDialog = new AddQuadsVolumeDialog(this);
@@ -704,7 +733,7 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
         } else if (exercise.equals("Chin Ups")) {
             AddChinUpsVolumeDialog exampleDialog = new AddChinUpsVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
-        } else if (exercise.equals("Hip Thrust")) {
+        } else if (exercise.equals("Bodyweight Hip Thrust")) {
             AddHipThrustVolumeDialog exampleDialog = new AddHipThrustVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Floor T's")) {

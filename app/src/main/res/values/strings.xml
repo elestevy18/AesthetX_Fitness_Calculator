@@ -158,8 +158,8 @@
     <string name="save">save</string>
     <string name="males">Male:</string>
     <string name="females">Female:</string>
-    <string name="updating">Updating...</string>
-    <string name="track_your_nutrtion_with">Track your nutrtion with</string>
+    <string name="updating">Updating…</string>
+    <string name="track_your_nutrtion_with">Track your nutrition with</string>
     <string name="add_set">Add Set</string>
     <string name="mav_frequency">MAV/Frequency</string>
     <string name="slash">/</string>
@@ -171,6 +171,9 @@
     <string name="play">Play</string>
     <string name="shop">Shop</string>
     <string name="Help">Help</string>
+    <string name="caloric_ndeficit" translatable="false">CALORIC\nDEFICIT</string>
+    <string name="weeks_until_n_ideal_body_weight" translatable="false">WEEKS UNTIL \n IDEAL BODY WEIGHT</string>
+    <string name="rate" translatable="false">RATE</string>
 
 
     <string-array name="activity">

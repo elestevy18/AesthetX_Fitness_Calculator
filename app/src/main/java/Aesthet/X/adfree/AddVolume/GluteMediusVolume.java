@@ -16,11 +16,12 @@ import Aesthet.X.adfree.PopUpDialogs.AddGluteMediusVolumeDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddIsoHipThrustDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddIsoRDLDialog;
 import Aesthet.X.adfree.PopUpDialogs.AddPistolSquatDialog;
+import Aesthet.X.adfree.PopUpDialogs.ErectorGluteMedius;
 import Aesthet.X.adfree.PopUpDialogs.GluteMediusHalfObliques;
 
 
 public class GluteMediusVolume extends AppCompatActivity implements GluteMediusAdapter.OnItemClickListener, AddGluteMediusVolumeDialog.ExampleDialogListener,
-        AddIsoHipThrustDialog.ExampleDialogListener, AddIsoRDLDialog.ExampleDialogListener, AddPistolSquatDialog.ExampleDialogListener, GluteMediusHalfObliques.ExampleDialogListener {
+        AddIsoHipThrustDialog.ExampleDialogListener, AddIsoRDLDialog.ExampleDialogListener, AddPistolSquatDialog.ExampleDialogListener, GluteMediusHalfObliques.ExampleDialogListener, ErectorGluteMedius.ExampleDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,8 @@ public class GluteMediusVolume extends AppCompatActivity implements GluteMediusA
         GluteMediusExerciseListList.add(new GluteMediusList("Banded Lateral Walkout", "Glute Medius"));
         GluteMediusExerciseListList.add(new GluteMediusList("Banded Abduction", "Glute Medius"));
         GluteMediusExerciseListList.add(new GluteMediusList("Glute Side Plank", "Glute Medius Secondary: Obliques"));
+        GluteMediusExerciseListList.add(new GluteMediusList("Frog Pumps", "Spinal Erectors, Glute Medius"));
+
 
         //Create Recycler View
         RecyclerView mRecyclerView = findViewById(R.id.gluteMediusRecyclerView);
@@ -70,8 +73,10 @@ public class GluteMediusVolume extends AppCompatActivity implements GluteMediusA
                 GluteMediusHalfObliques exampleDialog4 = new GluteMediusHalfObliques(this);
                 exampleDialog4.show(getSupportFragmentManager(), "example dialog");
                 break;
-
-
+            case 5:
+                ErectorGluteMedius exampleDialog3 = new ErectorGluteMedius(this);
+                exampleDialog3.show(getSupportFragmentManager(), "example dialog");
+                break;
         }
     }
 }

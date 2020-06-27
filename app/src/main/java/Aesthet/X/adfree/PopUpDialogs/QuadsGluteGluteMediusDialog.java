@@ -42,12 +42,19 @@ public class QuadsGluteGluteMediusDialog extends AppCompatDialogFragment {
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 SharedPreferences sp = mContext.getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
-
                 String sets = mvolume.getText().toString();
+                SharedPreferences.Editor editor = sp.edit();
                 int quadsTally = Integer.parseInt(sets);
                 quadsTally = quadsTally * 10;
-                SharedPreferences.Editor editor = sp.edit();
                 editor.putInt(QUADS_TALLY, quadsTally);
+                int gluteMediusTally = Integer.parseInt(sets);
+                gluteMediusTally = gluteMediusTally * 10;
+                gluteMediusTally = gluteMediusTally / 2;
+                editor.putInt(GLUTEMEDIUS_TALLY, gluteMediusTally);
+                int glutesTally = Integer.parseInt(sets);
+                glutesTally = glutesTally * 10;
+                glutesTally = glutesTally / 2;
+                editor.putInt(GLUTES_TALLY, glutesTally);
                 editor.apply();
                 Intent intent = new Intent(mContext, Dashboards.class);
                 startActivity(intent);

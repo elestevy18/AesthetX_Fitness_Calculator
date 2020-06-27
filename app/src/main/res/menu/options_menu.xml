@@ -24,6 +24,10 @@
         android:id="@+id/item5"
         android:title="@string/Help"
         app:showAsAction="never" />
+    <!-- <item
+            android:id="@+id/item6"
+            android:title="d"
+            app:showAsAction="never" />-->
 
 
 </menu>

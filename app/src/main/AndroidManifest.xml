@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="Aesthet.X.adfree.Excercises.Vacuums"></activity>
+        <activity android:name="Aesthet.X.adfree.Charts.FatLossChart" />
+        <activity android:name="Aesthet.X.adfree.Excercises.Vacuums" />
         <activity android:name="Aesthet.X.adfree.Excercises.HandstandPushup" />
         <activity android:name="Aesthet.X.adfree.Excercises.LegRaiseScissor" />
         <activity android:name="Aesthet.X.adfree.Excercises.BandedRDL" />
@@ -442,6 +443,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity
             android:name="Aesthet.X.adfree.PopUpDialogs.FAQFourYears"
             android:configChanges="orientation"

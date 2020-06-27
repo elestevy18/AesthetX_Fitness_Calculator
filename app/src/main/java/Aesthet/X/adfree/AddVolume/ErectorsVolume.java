@@ -22,7 +22,7 @@ import Aesthet.X.adfree.PopUpDialogs.ErectorGluteMedius;
 
 
 public class ErectorsVolume extends AppCompatActivity implements ErectorsAdapter.OnItemClickListener, AddErectorsVolumeDialog.ExampleDialogListener,
-        AddDeadliftVolumeDialog.ExampleDialogListener, AddSquatDialog.ExampleDialogListener {
+        AddDeadliftVolumeDialog.ExampleDialogListener, AddSquatDialog.ExampleDialogListener, AddAngelOfDeathDialog.ExampleDialogListener, ErectorGluteMedius.ExampleDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,6 @@ public class ErectorsVolume extends AppCompatActivity implements ErectorsAdapter
         ErectorsExerciseListList.add(new ErectorsList("Frog Pumps", "Spinal Erectors, Glute Medius"));
         ErectorsExerciseListList.add(new ErectorsList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
         ErectorsExerciseListList.add(new ErectorsList("Marching Bridge", "Spinal Erector, Glutes"));
-        ErectorsExerciseListList.add(new ErectorsList("Reverse Hyperextension", "Spinal Erector Secondary: Glutes, Hamstrings"));
 
 
         //Create Recycler View

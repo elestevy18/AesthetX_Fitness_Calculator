@@ -32,6 +32,8 @@ public class MedialDeltoidVolume extends AppCompatActivity implements MedialDelt
         MedialDeltoidExerciseListList.add(new MedialDeltoidList("Cheat Lateral Raise", "Medial Deltoid, Upper Trap"));
         MedialDeltoidExerciseListList.add(new MedialDeltoidList("Lateral Raise", "Medial Deltoid"));
         MedialDeltoidExerciseListList.add(new MedialDeltoidList("Delt Rotating Plank", "Medial Deltoid"));
+        MedialDeltoidExerciseListList.add(new MedialDeltoidList("Banded Lateral Raise", "Medial Deltoid"));
+
 
         //Create Recycler View
         RecyclerView mRecyclerView = findViewById(R.id.posteriorDeltoidRecyclerView);
@@ -60,6 +62,7 @@ public class MedialDeltoidVolume extends AppCompatActivity implements MedialDelt
             case 4:
             case 1:
             case 5:
+            case 6:
                 AddMedialDeltoidVolumeDialog exampleDialog = new AddMedialDeltoidVolumeDialog(this);
                 exampleDialog.show(getSupportFragmentManager(), "example dialog");
                 break;

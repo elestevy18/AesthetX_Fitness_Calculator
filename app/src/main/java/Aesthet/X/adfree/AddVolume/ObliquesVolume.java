@@ -87,6 +87,7 @@ public class ObliquesVolume extends AppCompatActivity implements ObliquesAdapter
             case 8:
             case 9:
             case 10:
+            case 11:
                 ObliqueAbDiaphragmDialog exampleDialog2 = new ObliqueAbDiaphragmDialog(this);
                 exampleDialog2.show(getSupportFragmentManager(), "example dialog");
                 break;

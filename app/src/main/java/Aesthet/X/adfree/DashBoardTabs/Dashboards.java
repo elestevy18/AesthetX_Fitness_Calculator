@@ -182,7 +182,11 @@ public class Dashboards extends AppCompatActivity {
             i.setData(Uri.parse("https://www.youtube.com/playlist?list=PLdsCUIkYpuc6LefqJmUbWzJDReoVOv6oU"));
             startActivity(i);
             return true;
-        }
+        } /*else if (id == R.id.item6) {
+            Intent intent = new Intent(this, FatLossChart.class);
+            startActivity(intent);
+            return true;
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
