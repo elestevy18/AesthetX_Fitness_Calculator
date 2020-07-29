@@ -574,8 +574,12 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
             }
         });
 
+
+
         return v;
     }
+
+
 
     @Override
     public void onItemCLick(int position) {

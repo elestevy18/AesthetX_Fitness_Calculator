@@ -42,14 +42,14 @@ public class Intro extends AppCompatActivity {
         setupViewPager(mViewPager);
         int color = Color.parseColor("#f5f5f5");
         int color2 = Color.parseColor("#BAF833");
-        Button next = findViewById(R.id.nextbutton);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ViewPager viewPager = findViewById(R.id.container2);
-                viewPager.setCurrentItem(1, true);
-            }
-        });
+//        Button next = findViewById(R.id.nextbutton);
+//        next.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ViewPager viewPager = findViewById(R.id.container2);
+//                viewPager.setCurrentItem(1, true);
+//            }
+//        });
         mViewPager.addOnPageChangeListener();
 
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

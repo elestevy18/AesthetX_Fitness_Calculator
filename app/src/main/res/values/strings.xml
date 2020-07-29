@@ -166,7 +166,7 @@
     <string name="_16">16</string>
     <string name="FAQs">FAQs</string>
     <string name="bwexcercises">\u0020\u0020Bodyweight Exercises</string>
-    <string name="reset_all">Reset All</string>
+    <string name="reset_all">Reset All Volumes</string>
     <string name="mrvtitle">Maximum Recoverable Volume:</string>
     <string name="play">Play</string>
     <string name="shop">Shop</string>
@@ -174,6 +174,7 @@
     <string name="caloric_ndeficit" translatable="false">CALORIC\nDEFICIT</string>
     <string name="weeks_until_n_ideal_body_weight" translatable="false">WEEKS UNTIL \n IDEAL BODY WEIGHT</string>
     <string name="rate" translatable="false">RATE</string>
+    <string name="learn_nutrition">Learn \nNutriton Here</string>
 
 
     <string-array name="activity">

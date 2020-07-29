@@ -9,19 +9,14 @@
         android:title="@string/update_information" />
     <item
         android:id="@+id/item2"
-        android:title="@string/FAQs"
+        android:title="@string/reset_all"
         app:showAsAction="never" />
     <item
         android:id="@+id/item3"
-        android:title="@string/reset_all"
+        android:title="@string/FAQs"
         app:showAsAction="never" />
-
     <item
         android:id="@+id/item4"
-        android:title="@string/shop"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/item5"
         android:title="@string/Help"
         app:showAsAction="never" />
     <!-- <item
