@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -90,7 +89,7 @@ public class MealPlanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment and download data for the math about to go down
+        // Inflate the layout for this fragment
         final View v = inflater.inflate(R.layout.fragment_meal_plan, container, false);
         final SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         float composition = sharedPreferences.getFloat(EXTRA_COMPOSITION, 0);
@@ -99,7 +98,6 @@ public class MealPlanFragment extends Fragment {
         bodyweight = sharedPreferences.getFloat(EXTRA_BODYWEIGHT, 0);
         Boolean showAds = sharedPreferences.getBoolean(SHOWADS, false);
 
-        //Math for the meal plan pie chart
         protein = bodyweight;
         protein = sharedPreferences.getFloat(PROTEIN, protein);
         double massd = bodyweight / 2.20462;
@@ -126,12 +124,9 @@ public class MealPlanFragment extends Fragment {
         piechart = v.findViewById(R.id.idPieChart);
         maxFatIntake = (tdee - 200 - (protein * 4)) / 9;
         fatDistance = maxFatIntake - fatf;
-
-        //Set value to views: text and chart
         TextView fatloss = v.findViewById(R.id.expenditure);
         fatloss.append(Float.toString(tdee));
 
-        //Chart code
         piechart.setRotationEnabled(false);
         piechart.setHoleRadius(0f);
         piechart.setTransparentCircleAlpha(0);
@@ -302,18 +297,7 @@ public class MealPlanFragment extends Fragment {
                 getActivity().startActivity(i);
             }
         });
-
-// BUTTON to learn nutrition
-
-        Button learnNutrition = v.findViewById((R.id.learnNutrition));
-        learnNutrition.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse("https://www.youtube.com/watch?v=wxzc_2c6GMg&list=PLdsCUIkYpuc6mPZwCQv-AaNjEg3YXCxL7"));
-                getActivity().startActivity(i);
-            }
-        });
+//INVISIBLE BUTTON
 
 
 

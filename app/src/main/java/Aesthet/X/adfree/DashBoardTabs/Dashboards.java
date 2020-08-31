@@ -135,6 +135,7 @@ public class Dashboards extends AppCompatActivity {
 
     }
 
+
     private void setupViewPager(ViewPager viewPager) {
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new DashboardFragment(), "Dashboard");
@@ -165,23 +166,29 @@ public class Dashboards extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.item2) {
-            Intent intent = new Intent(this, ResetVolume.class);
-            startActivity(intent);
-            return true;
-        } else if (id == R.id.item3) {
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse("https://www.aesthet-x.com/faqs/"));
             startActivity(i);
+        } else if (id == R.id.item3) {
+            Intent intent = new Intent(this, ResetVolume.class);
+            startActivity(intent);
+            return true;
         } else if (id == R.id.item4) {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("https://www.aesthet-x.com/shop/"));
+            startActivity(i);
+        } else if (id == R.id.item5) {
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse("https://www.youtube.com/playlist?list=PLdsCUIkYpuc6LefqJmUbWzJDReoVOv6oU"));
             startActivity(i);
             return true;
-        }
-
+        } /*else if (id == R.id.item6) {
+            Intent intent = new Intent(this, FatLossChart.class);
+            startActivity(intent);
+            return true;
+        }*/
         return super.onOptionsItemSelected(item);
     }
+
+
 }
-
-
-
