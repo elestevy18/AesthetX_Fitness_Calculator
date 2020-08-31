@@ -3,21 +3,12 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
-
-    signingConfigs {
-        config {
-            keyAlias 'key0'
-            keyPassword 'tacosabroso18'
-            storeFile file ('/Users/kevinjimenez/Documents/tacosabrosoKey')
-            storePassword 'tacosabroso18'
-        }
-    }
     defaultConfig {
-        applicationId "com.AesthetX.aesthetX"
+        applicationId "com.AesthetX.aesthetxadfree"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 14
-        versionName "1.14"
+        versionCode 9
+        versionName "1.09"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -44,7 +35,5 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     implementation 'com.google.android.gms:play-services-ads:19.1.0'
-    def billing_version = "3.0.0"
-    implementation "com.android.billingclient:billing:$billing_version"
-
+    implementation 'com.anjlab.android.iab.v3:library:1.0.44'
 }
