@@ -27,7 +27,7 @@ public class DiaphragmVolume extends AppCompatActivity implements DiaphragmAdapt
         final ArrayList<DiaphragmList> TransverseExerciseListList = new ArrayList<>();
         TransverseExerciseListList.add(new DiaphragmList("Transverse Ab", "One set towards Transverse Ab"));
         TransverseExerciseListList.add(new DiaphragmList("Vacuums", "Transverse Ab"));
-        TransverseExerciseListList.add(new DiaphragmList("Banded/Cable/ Resisted rotation", "Transverse Ab, Obliques"));
+        TransverseExerciseListList.add(new DiaphragmList("Banded/Cable Resisted Rotation", "Transverse Ab, Obliques"));
         //Create Recycler View
         RecyclerView mRecyclerView = findViewById(R.id.TransverseRecyclerView);
         mRecyclerView.setHasFixedSize(true);

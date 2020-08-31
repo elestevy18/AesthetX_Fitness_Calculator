@@ -1,5 +1,7 @@
 package Aesthet.X.adfree.Classes.Fragments;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -7,15 +9,30 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
+import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.example.scifit.R;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Legend;
@@ -28,6 +45,11 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
+import Aesthet.X.adfree.Classes.ResetVolume;
+import Aesthet.X.adfree.DashBoardTabs.Dashboards;
+import Aesthet.X.adfree.DashBoardTabs.UpdateData;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -70,6 +92,7 @@ public class MealPlanFragment extends Fragment {
     private int seekBarPosition;
     private int proSeekBarPosition;
 
+
     public MealPlanFragment() {
         // Required empty public constructor
     }
@@ -90,6 +113,9 @@ public class MealPlanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+
         // Inflate the layout for this fragment and download data for the math about to go down
         final View v = inflater.inflate(R.layout.fragment_meal_plan, container, false);
         final SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
@@ -319,6 +345,8 @@ public class MealPlanFragment extends Fragment {
 
         return v;
     }
+
+
 
     private void addDataSet(float protein, float fat, float carbs) {
         String TAG = "MainActivity";

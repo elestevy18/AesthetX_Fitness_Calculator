@@ -36,7 +36,7 @@ public class GlutesVolume extends AppCompatActivity implements GlutesAdapter.OnI
         final ArrayList<GlutesList> GlutesExerciseListList = new ArrayList<>();
 
         GlutesExerciseListList.add(new GlutesList("Glutes", "One set towards glutes"));
-        GlutesExerciseListList.add(new GlutesList("Hip Thrust", "Glutes, Erectors Secondary: Hamstrings, Glute Medius"));
+        GlutesExerciseListList.add(new GlutesList("Hip Thrust", "Glutes, Erectors\nSecondary: Hamstrings, Glute Medius"));
         GlutesExerciseListList.add(new GlutesList("Isolateral Hip Thrust", "Glutes, Glute Medius Secondary: Hamstrings"));
 
         GlutesExerciseListList.add(new GlutesList("Cable Pull Through", "Glutes Secondary: Hamstrings, Glute Medius"));

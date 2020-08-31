@@ -32,15 +32,15 @@ public class ObliquesVolume extends AppCompatActivity implements ObliquesAdapter
 
         ObliquesExerciseListList.add(new ObliquesList("Obliques", "One set towards obliques"));
         ObliquesExerciseListList.add(new ObliquesList("Neutral Wood Choppers", "Mid Obliques Secondary: Transverse Ab"));
-        ObliquesExerciseListList.add(new ObliquesList("Low to High Wood Choppers", "Upper and Lower Obliques Secondary: Transverse Ab"));
-        ObliquesExerciseListList.add(new ObliquesList("High to Low Wood Choppers", "Upper and Lower Obliques Secondary: Transverse Ab"));
-        ObliquesExerciseListList.add(new ObliquesList("Twisting Leg Raise", "Obliques Secondary: TransverseAb, Lower Abs"));
+        ObliquesExerciseListList.add(new ObliquesList("Low to High Wood Choppers", "Upper and Lower Obliques\nSecondary: Transverse Ab"));
+        ObliquesExerciseListList.add(new ObliquesList("High to Low Wood Choppers", "Upper and Lower Obliques\nSecondary: Transverse Ab"));
+        ObliquesExerciseListList.add(new ObliquesList("Twisting Leg Raise", "Obliques\nSecondary: Transverse Ab, Lower Abs"));
 
 
         ObliquesExerciseListList.add(new ObliquesList("Leg Raise Scissors", "Obliques, Abs Secondary: Transverse Ab"));
 
 
-        ObliquesExerciseListList.add(new ObliquesList("Elbow to Knee Tucks", "Obliques Secondary: Transverse Ab, Middle Abs"));
+        ObliquesExerciseListList.add(new ObliquesList("Elbow to Knee Tucks", "Obliques\nSecondary: Transverse Ab, Middle Abs"));
         ObliquesExerciseListList.add(new ObliquesList("Banded/Cable Step Out", "Obliques Secondary: Transverse Ab"));
         ObliquesExerciseListList.add(new ObliquesList("Rotating Plank", "Obliques Secondary: Abs, Transverse Ab"));
         ObliquesExerciseListList.add(new ObliquesList("Elbow to Knee Plank", "Obliques Secondary: Abs, Transverse Ab"));

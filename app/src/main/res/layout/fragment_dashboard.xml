@@ -7,7 +7,8 @@
     android:background="#000000"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="Aesthet.X.adfree.Classes.Fragments.DashboardFragment">
+    tools:context="Aesthet.X.adfree.Classes.Fragments.DashboardFragment"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -241,7 +242,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8sp"
+            android:layout_marginBottom="16sp"
             android:elevation="15dp">
 
 
@@ -306,6 +307,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>
+
 
 
 </LinearLayout>

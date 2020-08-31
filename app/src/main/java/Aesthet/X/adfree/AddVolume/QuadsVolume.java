@@ -78,7 +78,7 @@ public class QuadsVolume extends AppCompatActivity implements QuadsAdapter.OnIte
         RecyclerView recyclerView = findViewById(R.id.quadsRecyclerView);
         TextView text = Objects.requireNonNull(recyclerView.findViewHolderForAdapterPosition(position)).itemView.findViewById(R.id.exercise);
         String exercise = text.getText().toString();
-        String[] quadsGluteMediusExercises = {"Bulgarian Split Squat", "Explosive Bulgarian Split Squat"};
+        String[] quadsGluteMediusExercises = {"Bulgarian Split Squat", "Explosive Bulgarian Split Squat", "Traditional Lunge"};
         List<String> quadsGluteMediusList = Arrays.asList(quadsGluteMediusExercises);
         String[] quadsExercises = {"Leg Press", "Cable Walkaways", "Banded Lunge", "Quads", "Wall Sit"};
         List<String> quadsList = Arrays.asList(quadsExercises);

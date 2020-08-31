@@ -18,6 +18,8 @@ import com.example.scifit.R;
 
 import java.text.DecimalFormat;
 
+import Aesthet.X.adfree.Classes.AdManager;
+
 public class UpdateData extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
@@ -56,6 +58,13 @@ public class UpdateData extends AppCompatActivity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_data);
+
+
+        //ADS
+        AdManager adManager = new AdManager(this,"ca-app-pub-3950672419252348/4479379527");
+        adManager.createAd();
+
+        //Declarations
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         bodyweight = sharedPreferences.getFloat(EXTRA_BODYWEIGHT, 0);
         heightFeet = sharedPreferences.getFloat(EXTRA_HEIGHT_FEET, 0);

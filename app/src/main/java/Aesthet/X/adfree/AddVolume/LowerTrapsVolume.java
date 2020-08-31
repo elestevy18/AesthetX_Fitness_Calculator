@@ -1,6 +1,7 @@
 package Aesthet.X.adfree.AddVolume;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.scifit.R;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 
 import Aesthet.X.adfree.Classes.Adapters.LowerTrapAdapter;
 import Aesthet.X.adfree.Classes.MuscleGroupObjects.LowerTrapExerciseList;
@@ -34,11 +38,11 @@ public class LowerTrapsVolume extends AppCompatActivity implements LowerTrapAdap
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Y Raise", "Lower Traps"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Reverse Pec Dec", "Lower Traps, Post Delt"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
-        LowerTrapExerciseListList.add(new LowerTrapExerciseList("Floor/Dip Bar Scapular Depression", "Lower Traps"));
+        LowerTrapExerciseListList.add(new LowerTrapExerciseList("Floor/Dip Bar\nScapular Depression", "Lower Traps"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("W's", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Ring Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
-        LowerTrapExerciseListList.add(new LowerTrapExerciseList("Hanging/Cable Scapular Retraction", "Lower Traps"));
+        LowerTrapExerciseListList.add(new LowerTrapExerciseList("Hanging/Cable\nScapular Retraction", "Lower Traps"));
         LowerTrapExerciseListList.add(new LowerTrapExerciseList("Inverted Y", "Upper and Lower Trapezoid"));
 
         //Create Recycler View
@@ -59,40 +63,42 @@ public class LowerTrapsVolume extends AppCompatActivity implements LowerTrapAdap
     }
 
     public void onAddVolumeClick(int position) {
-        switch (position) {
-            case 0:
-            case 1:
-            case 4:
-            case 8:
-                AddLowerTrapVolumeDialog exampleDialog = new AddLowerTrapVolumeDialog(this);
-                exampleDialog.show(getSupportFragmentManager(), "example dialog");
-                break;
-            case 2:
-                AddLowerTrapPostDeltDialog exampleDialog4 = new AddLowerTrapPostDeltDialog(this);
-                exampleDialog4.show(getSupportFragmentManager(), "example dialog");
-                break;
-            case 3:
-                AddAngelOfDeathDialog exampleDialog6 = new AddAngelOfDeathDialog(this);
-                exampleDialog6.show(getSupportFragmentManager(), "example dialog");
-                break;
-
-            case 6:
-            case 7:
-            case 5:
-                AddFacePullDialog exampleDialog3 = new AddFacePullDialog(this);
-                exampleDialog3.show(getSupportFragmentManager(), "example dialog");
-                break;
-            case 9:
-                UpperLowerTrap exampleDialog1 = new UpperLowerTrap(this);
-                exampleDialog1.show(getSupportFragmentManager(), "example dialog");
-                break;
-
-        }
+        stringcomparison(position);
 
     }
 
     @Override
     public void addVolume() {
 
+    }
+
+    public void stringcomparison(Integer position){
+        //GET TEXT FROM RECYCLER VIEW ITEM CLICKED
+        RecyclerView recyclerView = findViewById(R.id.lowerTrapsRecyclerView);
+        TextView text = Objects.requireNonNull(recyclerView.findViewHolderForAdapterPosition(position)).itemView.findViewById(R.id.exercise);
+        String exercise = text.getText().toString();
+        //CREATE ARRAYS AND LISTS FOR EXERCISES WITH EQUAL VOLUME PROFILES
+        String[] lowerTrapExercises = {"Lower Trap", "Y Raise", "Hanging/Cable\nScapular Retraction", "Prone Press", "Floor/Dip\nBar Scapular Depression"};
+        List<String> lowerTrapList = Arrays.asList(lowerTrapExercises);
+
+        String[] postDeltExercises = {"Barbell/Dumbbell High Rows", "Banded Pull Aparts", "Reverse Pec Dec"};
+        List<String> postDeltList = Arrays.asList(postDeltExercises);
+
+        if (lowerTrapList.contains(exercise)) {
+            AddLowerTrapVolumeDialog exampleDialog = new AddLowerTrapVolumeDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Inverted Y")) {
+            UpperLowerTrap exampleDialog = new UpperLowerTrap(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        }  else if (postDeltList.contains(exercise)) {
+            AddLowerTrapPostDeltDialog exampleDialog = new AddLowerTrapPostDeltDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Ring Facepulls") || exercise.equals("W's") || exercise.equals("Facepulls")) {
+            AddFacePullDialog exampleDialog = new AddFacePullDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        } else if (exercise.equals("Angels of Death")) {
+            AddAngelOfDeathDialog exampleDialog = new AddAngelOfDeathDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+        }
     }
 }

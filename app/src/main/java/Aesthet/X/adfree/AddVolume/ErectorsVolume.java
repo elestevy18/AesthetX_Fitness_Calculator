@@ -37,7 +37,7 @@ public class ErectorsVolume extends AppCompatActivity implements ErectorsAdapter
         ErectorsExerciseListList.add(new ErectorsList("Machine Erector Extension", "Spinal Erector"));
 
         ErectorsExerciseListList.add(new ErectorsList("Deadlift", "Spinal Erector Secondary: Glutes, Hamstrings"));
-        ErectorsExerciseListList.add(new ErectorsList("Squats", "Quads Spinal Erector Secondary: Glutes, Hamstrings"));
+        ErectorsExerciseListList.add(new ErectorsList("Squats", "Quads Spinal Erector\nSecondary: Glutes, Hamstrings"));
 
         ErectorsExerciseListList.add(new ErectorsList("Frog Pumps", "Spinal Erectors, Glute Medius"));
         ErectorsExerciseListList.add(new ErectorsList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));

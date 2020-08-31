@@ -174,7 +174,17 @@
     <string name="caloric_ndeficit" translatable="false">CALORIC\nDEFICIT</string>
     <string name="weeks_until_n_ideal_body_weight" translatable="false">WEEKS UNTIL \n IDEAL BODY WEIGHT</string>
     <string name="rate" translatable="false">RATE</string>
-    <string name="learn_nutrition">Learn \nNutriton Here</string>
+    <string name="learn_nutrition" translatable="false">Learn \nNutriton Here</string>
+    <string name="getPremium" translatable="false">Get Premium 1</string>
+    <string name="removeAds" translatable="false">Remove Ads 2</string>
+    <string name="subscription_period_monthly" translatable="false">Monthly $2.49</string>
+    <string name="subscription_period_sixmonth" translatable="false">Biannually $9.99</string>
+    <string name="subscription_period_yearly" translatable="false">Annually $15.99</string>
+    <string name="subscription_period_prompt">Support fitness eduaction, select your subscription</string>
+    <string name="subscription_resignup_prompt">To reactivate your subscription, select your subscription period</string>
+    <string name="subscription_update_prompt">To change your subscription, select your new subscription period</string>
+    <string name="get_premium">GO AD FREE</string>
+    <string name="pref_ad_removal_purchased">Item Purchased</string>
 
 
     <string-array name="activity">

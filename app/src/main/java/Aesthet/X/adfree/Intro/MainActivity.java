@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Creating method to open second activity
     private void openActivity2() {
-        Intent intent = new Intent(this, Activity2.class);
-        startActivity(intent);
+
     }
 }

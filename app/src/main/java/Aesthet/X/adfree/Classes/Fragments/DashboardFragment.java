@@ -1,22 +1,39 @@
 package Aesthet.X.adfree.Classes.Fragments;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.billingclient.api.BillingClient;
+import com.android.billingclient.api.BillingClientStateListener;
+import com.android.billingclient.api.BillingFlowParams;
+import com.android.billingclient.api.BillingResult;
+import com.android.billingclient.api.Purchase;
+import com.android.billingclient.api.PurchasesUpdatedListener;
+import com.android.billingclient.api.SkuDetails;
+import com.android.billingclient.api.SkuDetailsParams;
+import com.android.billingclient.api.SkuDetailsResponseListener;
 import com.example.scifit.R;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
+import Aesthet.X.adfree.Intro.Activity2;
 import Aesthet.X.adfree.PopUpDialogs.DashCMGDialog;
 import Aesthet.X.adfree.PopUpDialogs.DashFLDialog;
 import Aesthet.X.adfree.PopUpDialogs.DashIdealBodyWeight;
@@ -24,7 +41,7 @@ import Aesthet.X.adfree.PopUpDialogs.DashPMGDialog;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class DashboardFragment extends Fragment implements View.OnClickListener {
+public class DashboardFragment extends Fragment implements View.OnClickListener{
 
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
@@ -39,6 +56,8 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
     private float pmgf;
 
+
+
     public DashboardFragment() {
         // Required empty public constructor
     }
@@ -47,6 +66,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        Log.v("loaded","loaded");
         Button ibw = v.findViewById(R.id.ibwbutton);
         Button ibw2 = v.findViewById(R.id.ibwbutton2);
         Button pmg = v.findViewById(R.id.pmgbutton);
@@ -96,9 +116,10 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 
         // progress.setText(getString(R.string.ind, df.format(currentGrowth), pmgs));
 
-
         return v;
     }
+
+
 
 
     public void onClick(View v) {
@@ -122,8 +143,9 @@ public class DashboardFragment extends Fragment implements View.OnClickListener 
 //                startActivity(intcal);
 //                break;
             case R.id.cpbutton:
-                CMGDialog();
+                 CMGDialog();
                 break;
+
 
         }
     }

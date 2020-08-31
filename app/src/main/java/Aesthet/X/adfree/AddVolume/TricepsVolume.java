@@ -32,12 +32,12 @@ public class TricepsVolume extends AppCompatActivity implements TricepsAdapter.O
         //, California Press, Rope Cable Pushdowns, V Bar Pushdown Close Grip Dumbbell Press, Close Grip Barbelll Press, Rope Overhead Triceps Extension, Long Head Triceps Push Downs, Pull Over,Kickback
         TricepsExerciseListList.add(new TricepsList("Triceps", "One set towards triceps"));
         TricepsExerciseListList.add(new TricepsList("Narrow Dip", "Triceps; All Heads, Chest"));
-        TricepsExerciseListList.add(new TricepsList("Incline SkullCrushers", "Triceps; Long Head"));
-        TricepsExerciseListList.add(new TricepsList("California Press", "Triceps; All Heads Secondary: Chest, Anterior Deltoid "));
+        TricepsExerciseListList.add(new TricepsList("Incline Skull Crushers", "Triceps; Long Head"));
+        TricepsExerciseListList.add(new TricepsList("California Press", "Triceps; All Heads\nSecondary: Chest, Anterior Deltoid "));
         TricepsExerciseListList.add(new TricepsList("Cable Rope Pushdowns", "Triceps; Medial and Short Head"));
         TricepsExerciseListList.add(new TricepsList("V Bar Pushdowns", "Triceps; Medial and Short Head"));
         TricepsExerciseListList.add(new TricepsList("Close Grip Dumbbell Press", "Triceps Short And Medial Head \nSecondary: Chest, Anterior Deltoid "));
-        TricepsExerciseListList.add(new TricepsList("Rope Overhead Triceps Extension", "Triceps; Long Head"));
+        TricepsExerciseListList.add(new TricepsList("Rope Overhead Triceps\nExtension", "Triceps; Long Head"));
         TricepsExerciseListList.add(new TricepsList("Long Head Triceps Push Downs", "Triceps; Long Head"));
         TricepsExerciseListList.add(new TricepsList("Triceps Kickback", "Triceps; Short Head"));
 

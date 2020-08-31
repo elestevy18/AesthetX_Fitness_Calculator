@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.scifit.R;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
@@ -45,6 +46,7 @@ import Aesthet.X.adfree.AddVolume.SerratusVolume;
 import Aesthet.X.adfree.AddVolume.TricepsVolume;
 import Aesthet.X.adfree.AddVolume.UlnarForearmVolume;
 import Aesthet.X.adfree.AddVolume.UpperTrapVolume;
+import Aesthet.X.adfree.Classes.AdManager;
 import Aesthet.X.adfree.Classes.Adapters.MuscleListAdapter;
 import Aesthet.X.adfree.Classes.MuscleGroupObjects.MuscleList;
 import Aesthet.X.adfree.DashBoardTabs.Dashboards;
@@ -75,6 +77,7 @@ import Aesthet.X.adfree.MuscleGroupInfo.Serratus;
 import Aesthet.X.adfree.MuscleGroupInfo.Triceps;
 import Aesthet.X.adfree.MuscleGroupInfo.UlnarForearm;
 import Aesthet.X.adfree.MuscleGroupInfo.UpperTrap;
+ import java.util.Random;
 
 public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter.OnItemClickListener {
     //NECK
@@ -198,9 +201,13 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
     private static final String QUADSPROGRESS = "QUADSPROGRESS";
     private static final String QUADSMAX = "QUADSMAX";
     private static final String SHOWADS = "com.example.application.scifit.showads";
+
+    //Other decleration
     private ExtendedFloatingActionButton unifab, bwfab;
     private InterstitialAd mInterstitialAd;
+    Boolean showAds;
 //    InterstitialAd ad;
+
 
 
     public VolumeTrackerFragment() {
@@ -229,13 +236,12 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
         SharedPreferences sp = Objects.requireNonNull(getActivity()).getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
         SharedPreferences.Editor editor = sp.edit();
 
-        //ADS
-        //Boolean showAds = sp.getBoolean(SHOWADS, false);
-        //ADS
+       // ADS
+        final Boolean showAds = sp.getBoolean(SHOWADS, true);
 
-//        mInterstitialAd = new InterstitialAd(requireContext());
-//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd = new InterstitialAd(requireContext());
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
         //NECK
@@ -558,18 +564,51 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
                 super.onScrollStateChanged(recyclerView, newState);
             }
         });
+        //ADS
         unifab = v.findViewById(R.id.allexercisesfab);
         bwfab = v.findViewById(R.id.bodyweightexercisesfab);
+
 
         unifab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                InterstitialAd ad = AdManager.getAd();
+
+                Random rand = new Random(); //instance of random class
+                int upperbound = 10;
+                //generate random values from 0-24
+                int int_random = rand.nextInt(upperbound);
+
+                int x = int_random % 2;
+                boolean even = true;
+                even = x == 0;
+
+                if (ad != null && showAds && even) {
+                    ad.show();
+                }
                 startActivity(new Intent(getContext(), GlobalExercise.class));
             }
         });
+
+
         bwfab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Random rand = new Random(); //instance of random class
+                int upperbound = 10;
+                //generate random values from 0-24
+                int int_random = rand.nextInt(upperbound);
+
+                int x = int_random % 2;
+                boolean even = true;
+                even = x == 0;
+
+                InterstitialAd ad = AdManager.getAd();
+                if (ad != null && showAds && even) {
+                    ad.show();
+                }
                 startActivity(new Intent(getContext(), BWExercise.class));
             }
         });
@@ -690,113 +729,245 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
 
     @Override
     public void onAddVolumeClick(int position) {
+        Random rand = new Random(); //instance of random class
+        int upperbound = 10;
+//generate random values from 0-24
+        int int_random = rand.nextInt(upperbound);
+
+        int x = int_random % 2;
+        boolean even = true;
+        even = x == 0;
+
 
         switch (position) {
             case 0:
                 Intent intent = new Intent(getContext(), NeckVolume.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
                 startActivity(intent);
+
+                InterstitialAd ad = AdManager.getAd();
+                if (ad != null && showAds && even) {
+                    ad.show();
+                }
                 break;
+
             case 1:
                 Intent intent2 = new Intent(getContext(), UpperTrapVolume.class);
                 intent2.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
                 startActivity(intent2);
+
+                InterstitialAd ad2 = AdManager.getAd();
+                if (ad2 != null && showAds && even) {
+                    ad2.show();}
                 break;
+
             case 2:
                 Intent intent3 = new Intent(getContext(), LowerTrapsVolume.class);
                 intent3.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
                 startActivity(intent3);
+
+                InterstitialAd ad3 = AdManager.getAd();
+                if (ad3 != null && showAds && even) {
+                    ad3.show();}
                 break;
+
             case 3:
                 Intent intent4 = new Intent(getContext(), PosteriorDeltoidVolume.class);
                 intent4.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
                 startActivity(intent4);
+
+                InterstitialAd ad4 = AdManager.getAd();
+                if (ad4 != null && showAds && even) {
+                    ad4.show();}
                 break;
+
             case 4:
                 Intent intent5 = new Intent(getContext(), MedialDeltoidVolume.class);
                 startActivity(intent5);
+
+                InterstitialAd ad5 = AdManager.getAd();
+                if (ad5 != null && showAds && even) {
+                    ad5.show();}
                 break;
+
             case 5:
                 Intent intent6 = new Intent(getContext(), AnteriorDeltoidVolume.class);
                 startActivity(intent6);
+
+                InterstitialAd ad6 = AdManager.getAd();
+                if (ad6 != null && showAds && even) {
+                    ad6.show();}
                 break;
+
             case 6:
                 Intent intent7 = new Intent(getContext(), RotatorCuffVolume.class);
                 startActivity(intent7);
+
+                InterstitialAd ad7 = AdManager.getAd();
+                if (ad7 != null && showAds && even) {
+                    ad7.show();}
                 break;
+
             case 7:
                 Intent intent8 = new Intent(getContext(), TricepsVolume.class);
                 startActivity(intent8);
+
+                InterstitialAd ad8 = AdManager.getAd();
+                if (ad8 != null && showAds && even) {
+                    ad8.show();}
                 break;
+
             case 8:
                 Intent intent9 = new Intent(getContext(), UlnarForearmVolume.class);
                 startActivity(intent9);
+
+                InterstitialAd ad9 = AdManager.getAd();
+                if (ad9 != null && showAds && even) {
+                    ad9.show();}
                 break;
+
             case 9:
                 Intent intent10 = new Intent(getContext(), ForearmExtensorsVolume.class);
                 startActivity(intent10);
+
+                InterstitialAd ad10 = AdManager.getAd();
+                if (ad10 != null && showAds && even) {
+                    ad10.show();}
                 break;
+
             case 10:
                 Intent intent11 = new Intent(getContext(), ForearmFlexorsVolume.class);
                 startActivity(intent11);
+
+                InterstitialAd ad11 = AdManager.getAd();
+                if (ad11 != null && showAds && even) {
+                    ad11.show();}
                 break;
+
             case 11:
                 Intent intent12 = new Intent(getContext(), RadialForearmVolume.class);
                 startActivity(intent12);
+
+                InterstitialAd ad12 = AdManager.getAd();
+                if (ad12 != null && showAds && even) {
+                    ad12.show();}
                 break;
+
             case 12:
                 Intent intent13 = new Intent(getContext(), LatsVolume.class);
                 startActivity(intent13);
+
+                InterstitialAd ad13 = AdManager.getAd();
+                if (ad13 != null && showAds && even) {
+                    ad13.show();}
                 break;
+
             case 13:
                 Intent intent14 = new Intent(getContext(), ErectorsVolume.class);
                 startActivity(intent14);
+
+                InterstitialAd ad14 = AdManager.getAd();
+                if (ad14 != null && showAds && even) {
+                    ad14.show();}
                 break;
+
             case 14:
                 Intent intent15 = new Intent(getContext(), GlutesVolume.class);
                 startActivity(intent15);
+
+                InterstitialAd ad15 = AdManager.getAd();
+                if (ad15 != null && showAds && even) {
+                    ad15.show();}
                 break;
+
             case 15:
                 Intent intent16 = new Intent(getContext(), GluteMediusVolume.class);
                 startActivity(intent16);
+
+                InterstitialAd ad16 = AdManager.getAd();
+                if (ad16 != null && showAds && even) {
+                    ad16.show();}
                 break;
+
             case 16:
                 Intent intent17 = new Intent(getContext(), HamstringsVolume.class);
                 startActivity(intent17);
+
+                InterstitialAd ad17 = AdManager.getAd();
+                if (ad17 != null && showAds && even) {
+                    ad17.show();}
                 break;
+
             case 17:
                 Intent intent18 = new Intent(getContext(), CalvesVolume.class);
                 startActivity(intent18);
+
+                InterstitialAd ad18 = AdManager.getAd();
+                if (ad18 != null && showAds && even) {
+                    ad18.show();}
                 break;
+
             case 18:
                 Intent intent19 = new Intent(getContext(), ChestVolume.class);
                 startActivity(intent19);
+
+                InterstitialAd ad19 = AdManager.getAd();
+                if (ad19 != null && showAds && even) {
+                    ad19.show();}
                 break;
+
             case 19:
                 Intent intent20 = new Intent(getContext(), BicepsVolume.class);
                 startActivity(intent20);
+
+                InterstitialAd ad20 = AdManager.getAd();
+                if (ad20 != null && showAds && even) {
+                    ad20.show();}
                 break;
+
             case 20:
                 Intent intent21 = new Intent(getContext(), SerratusVolume.class);
                 startActivity(intent21);
+
+                InterstitialAd ad21 = AdManager.getAd();
+                if (ad21 != null && showAds && even) {
+                    ad21.show();}
                 break;
+
             case 21:
                 Intent intent22 = new Intent(getContext(), AbsVolume.class);
                 startActivity(intent22);
+
+                InterstitialAd ad22 = AdManager.getAd();
+                if (ad22 != null && showAds && even) {
+                    ad22.show();}
                 break;
+
             case 22:
                 Intent intent23 = new Intent(getContext(), ObliquesVolume.class);
                 startActivity(intent23);
+
+                InterstitialAd ad23 = AdManager.getAd();
+                if (ad23 != null && showAds && even) {
+                    ad23.show();}
                 break;
+
             case 23:
                 Intent intent24 = new Intent(getContext(), DiaphragmVolume.class);
                 startActivity(intent24);
+
+                InterstitialAd ad24 = AdManager.getAd();
+                if (ad24 != null && showAds && even) {
+                    ad24.show();}
                 break;
+
             case 24:
                 Intent intent25 = new Intent(getContext(), QuadsVolume.class);
                 startActivity(intent25);
+                InterstitialAd ad25 = AdManager.getAd();
+                if (ad25 != null && showAds && even) {
+                    ad25.show();}
                 break;
-
 
         }
     }

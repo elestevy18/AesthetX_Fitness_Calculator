@@ -41,8 +41,8 @@ HamstringsVolume extends AppCompatActivity implements HamstringsAdapter.OnItemCl
         HamstringsExerciseListList.add(new HamstringsList("Glute Ham Raise", "Hamstring Secondary: Glutes, Erectors"));
         HamstringsExerciseListList.add(new HamstringsList("Physioball Hamstring Curls", "Hamstring Secondary: Glutes, Erectors"));
 
-        HamstringsExerciseListList.add(new HamstringsList("Isolateral Hamstring Curls", "Hamstrings, Glute Medius Secondary: Glutes, Erectors"));
-        HamstringsExerciseListList.add(new HamstringsList("Single Leg Romanian Deadlift", "Hamstrings, Glute Medius Secondary: Glutes, Erectors"));
+        HamstringsExerciseListList.add(new HamstringsList("Isolateral Hamstring Curls", "Hamstrings, Glute Medius\nSecondary: Glutes, Erectors"));
+        HamstringsExerciseListList.add(new HamstringsList("Single Leg Romanian Deadlift", "Hamstrings, Glute Medius\nSecondary: Glutes, Erectors"));
         
         
 

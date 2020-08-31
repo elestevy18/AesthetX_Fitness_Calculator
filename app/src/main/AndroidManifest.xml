@@ -14,6 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="Aesthet.X.adfree.DashBoardTabs.RemoveAds"></activity>
+        <activity android:name="Aesthet.X.adfree.DashBoardTabs.GetPremium" />
         <activity android:name="Aesthet.X.adfree.Charts.FatLossChart" />
         <activity android:name="Aesthet.X.adfree.Excercises.Vacuums" />
         <activity android:name="Aesthet.X.adfree.Excercises.HandstandPushup" />
@@ -444,8 +446,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name="Aesthet.X.adfree.PopUpDialogs.FAQFourYears"
             android:configChanges="orientation"
@@ -517,5 +517,7 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3950672419252348~6149712161" />
     </application>
+
+
 
 </manifest>

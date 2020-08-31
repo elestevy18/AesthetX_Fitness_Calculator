@@ -149,9 +149,9 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         GlobalExerciseListList.add(new GlobalList("Farmer Walk", "Upper Trap"));
         //LOWER TRAP
         GlobalExerciseListList.add(new GlobalList("Y Raise", "Lower Traps"));
-        GlobalExerciseListList.add(new GlobalList("Hanging/Cable Scapular Retraction", "Lower Traps"));
+        GlobalExerciseListList.add(new GlobalList("Hanging/Cable\nScapular Retraction", "Lower Traps"));
         GlobalExerciseListList.add(new GlobalList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
-        GlobalExerciseListList.add(new GlobalList("Floor/Dip Bar Scapular Depression", "Lower Traps"));
+        GlobalExerciseListList.add(new GlobalList("Floor/Dip Bar\nScapular Depression", "Lower Traps"));
         //POSTERIOR DELTOID
         GlobalExerciseListList.add(new GlobalList("Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
         GlobalExerciseListList.add(new GlobalList("Barbell/Dumbbell High Rows", "Posterior Deltoid, Lower Trap"));
@@ -182,18 +182,18 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
 
         //ROTATOR CUFF
         GlobalExerciseListList.add(new GlobalList("Cable External Rotation", "Rotator Cuff, Forearm Extensors"));
-        GlobalExerciseListList.add(new GlobalList("Bench Dumbbell External Rotation", "Rotator Cuff, Forearm Extensors"));
+        GlobalExerciseListList.add(new GlobalList("Bench Dumbbell\nExternal Rotation", "Rotator Cuff, Forearm Extensors"));
         GlobalExerciseListList.add(new GlobalList("Banded External Rotation", "Rotator Cuff, Forearm Extensors"));
         GlobalExerciseListList.add(new GlobalList("Dumbbell High Pull", "Rotator Cuff, Forearm Extensors"));
 
         //Triceps
         GlobalExerciseListList.add(new GlobalList("California Press", "Triceps; All Heads\nSecondary: Chest, Anterior Deltoid "));
-        GlobalExerciseListList.add(new GlobalList("Incline SkullCrushers", "Triceps; Long Head"));
+        GlobalExerciseListList.add(new GlobalList("Incline Skull Crushers", "Triceps; Long Head"));
         GlobalExerciseListList.add(new GlobalList("Narrow Dip", "Triceps; All Heads, Chest"));
         GlobalExerciseListList.add(new GlobalList("Cable Rope Pushdowns", "Triceps; Medial and Short Head"));
         GlobalExerciseListList.add(new GlobalList("V Bar Pushdowns", "Triceps; Medial and Short Head"));
         GlobalExerciseListList.add(new GlobalList("Close Grip Dumbbell Press", "Triceps Short And Medial Head\nSecondary: Chest, Anterior Deltoid "));
-        GlobalExerciseListList.add(new GlobalList("Rope Overhead Triceps Extension", "Triceps; Long Head"));
+        GlobalExerciseListList.add(new GlobalList("Rope Overhead Triceps\nExtension", "Triceps; Long Head"));
         GlobalExerciseListList.add(new GlobalList("Long Head Triceps Push Downs", "Triceps; Long Head"));
         GlobalExerciseListList.add(new GlobalList("Triceps Kickback", "Triceps; Short Head"));
         GlobalExerciseListList.add(new GlobalList("Narrow Pushup", "Triceps; Short and Medial Head, Chest\nSecondary: Anterior Delt"));
@@ -222,7 +222,7 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
 
         GlobalExerciseListList.add(new GlobalList("Pull ins", "Lats"));
         GlobalExerciseListList.add(new GlobalList("Pull Ups", "Lats, Lower Trap\nSecondary:Post Delt, Bicep, Forearms"));
-        GlobalExerciseListList.add(new GlobalList("Chin Ups", "Lats, Lower Trap, Bicep Secondary:Post Delt, Forearms"));
+        GlobalExerciseListList.add(new GlobalList("Chin Ups", "Lats, Lower Trap, Bicep\nSecondary: Post Delt, Forearms"));
 
         GlobalExerciseListList.add(new GlobalList("High Pulley Row", "Lats, Lower Traps\nSecondary: Post Delt, Biceps, Forearm Flexor"));
         GlobalExerciseListList.add(new GlobalList("Cable Rows", "Lats, Lower Traps, Erectors\nSecondary: Post Delt, Biceps, Forearm Flexor"));
@@ -415,7 +415,7 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         List<String> neckList = Arrays.asList(neckExercises);
         String[] upperTrapExercises = {"Cable Shrug", "Dumbbell Shrugs", "Trap Bar Shrugs", "Farmer Walk", "Trap Pushaway"};
         List<String> trapList = Arrays.asList(upperTrapExercises);
-        String[] lowerTrapExercises = {"Y Raise", "Hanging/Cable Scapular Retraction", "Prone Press", "Floor/Dip Bar Scapular Depression"};
+        String[] lowerTrapExercises = {"Y Raise", "Hanging/Cable\nScapular Retraction", "Prone Press", "Floor/Dip Bar\nScapularDepression"};
         List<String> lowerTrapList = Arrays.asList(lowerTrapExercises);
         String[] postDeltExercises = {"Barbell/Dumbbell High Rows", "Banded Pull Aparts", "Reverse Pec Dec"};
         List<String> postDeltList = Arrays.asList(postDeltExercises);
@@ -423,9 +423,9 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
         List<String> lateralDeltList = Arrays.asList(lateralDeltExercises);
         String[] OHPExercises = {"Barbell Overhead Press", "Dumbbell OHP", "Arnolds", "Cable Stretch to OHP", "Landmine Press", "Machine Shoulder Press", "Push Press", "Handstand Pushup", "Pike Pushup"};
         List<String> OHP = Arrays.asList(OHPExercises);
-        String[] rotatorCuffExercises = {"Cable External Rotation", "Bench Dumbbell External Rotation", "Banded External Rotation"};
+        String[] rotatorCuffExercises = {"Cable External Rotation", "Bench Dumbbell\nExternal Rotation", "Banded External Rotation"};
         List<String> rotatorList = Arrays.asList(rotatorCuffExercises);
-        String[] TricepsExercises = {"Incline SkullCrushers", "Cable Rope Pushdowns", "V Bar Pushdowns", "Rope Overhead Triceps Extension", "Long Head Triceps Push Downs", "Triceps Kickback", "Triceps Extension", "Ring Overhead Extension", "Bench Dip"};
+        String[] TricepsExercises = {"Incline Skull Crushers", "Cable Rope Pushdowns", "V Bar Pushdowns", "Rope Overhead Triceps\nExtension", "Long Head Triceps Push Downs", "Triceps Kickback", "Triceps Extension", "Ring Overhead Extension", "Bench Dip"};
         List<String> TricepsList = Arrays.asList(TricepsExercises);
         String[] extensionExercises = {"Standing Barbell Wrist Extension", "Barbell Extension Rolls", "Reverse Curls", "Banded Wrist Extension", "Triceps Extension", "Ring Overhead Extension", "Bench Dip"};
         List<String> extensionList = Arrays.asList(extensionExercises);

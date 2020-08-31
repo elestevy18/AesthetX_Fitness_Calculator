@@ -8,6 +8,9 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.scifit.R;
+import com.google.android.gms.ads.InterstitialAd;
+
+import Aesthet.X.adfree.Classes.AdManager;
 
 public class UpdateFemaleMagicFormula extends AppCompatActivity {
     public static final String ACTIVITYMULTIPLIER = "ACTIVITYMULTIPLIER";
@@ -31,7 +34,12 @@ public class UpdateFemaleMagicFormula extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_female_magic_formula);
+        InterstitialAd ad = AdManager.getAd();
         int delay = 500;
+        if (ad != null) {
+            ad.show();
+            delay = 5000;
+        }
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

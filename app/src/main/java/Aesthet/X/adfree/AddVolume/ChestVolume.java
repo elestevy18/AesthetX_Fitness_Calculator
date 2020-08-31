@@ -49,7 +49,7 @@ public class ChestVolume extends AppCompatActivity implements ChestAdapter.OnIte
         ChestExerciseListList.add(new ChestList("Horizontal Crossover Flyes", "Middle Pectoral"));
         ChestExerciseListList.add(new ChestList("Decline Crossover Flyes", "Lower Pectoral"));
         ChestExerciseListList.add(new ChestList("Pushups", "Chest, Triceps, Anterior Delt"));
-        ChestExerciseListList.add(new ChestList("Wide Dip", "Lower Pectoral, Triceps Secondary: Anterior Delt"));
+        ChestExerciseListList.add(new ChestList("Wide Dip", "Lower Pectoral, Triceps\nSecondary: Anterior Delt"));
 
 
         //Create Recycler View

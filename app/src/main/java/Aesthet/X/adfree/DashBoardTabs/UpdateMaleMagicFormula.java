@@ -8,8 +8,11 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.scifit.R;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.text.DecimalFormat;
+
+import Aesthet.X.adfree.Classes.AdManager;
 
 public class UpdateMaleMagicFormula extends AppCompatActivity {
 
@@ -35,6 +38,13 @@ public class UpdateMaleMagicFormula extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_male_magic_formula);
+
+        InterstitialAd ad = AdManager.getAd();
+        int delay = 500;
+        if (ad != null) {
+            ad.show();
+            delay = 5000;
+        }
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         float bodyweight = sharedPreferences.getFloat(EXTRA_BODYWEIGHT, 0);
@@ -100,6 +110,6 @@ public class UpdateMaleMagicFormula extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Dashboards.class);
                 startActivity(intent);
             }
-        }, 500);
+        }, delay);
     }
 }
