@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Aesthet.X.adfree.Intro.Intro"
+    tools:context="com.AesthetX.aesthetx.Intro.Intro"
     android:background="#000000"
     android:orientation="vertical"
     android:fitsSystemWindows="true">
 
 
-    <Aesthet.X.adfree.Classes.Fragments.LockableViewPager
+    <com.AesthetX.aesthetx.Classes.Fragments.LockableViewPager
         android:id="@+id/container2"
         android:layout_width="match_parent"
         android:layout_height="683sp"

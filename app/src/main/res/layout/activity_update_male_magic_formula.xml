@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:backgroundTint="#000000"
-    tools:context="Aesthet.X.adfree.DashBoardTabs.UpdateMaleMagicFormula">
+    tools:context="com.AesthetX.aesthetx.DashBoardTabs.UpdateMaleMagicFormula">
 
 
     <TextView

@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Aesthet.X.adfree.Excercises.CalfRaise">
+    tools:context="com.AesthetX.aesthetx.Excercises.CalfRaise">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

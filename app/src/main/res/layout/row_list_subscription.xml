@@ -45,7 +45,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
-                android:focusable="true" />
+                android:focusable="true"
+                />
 
 
         </RelativeLayout>

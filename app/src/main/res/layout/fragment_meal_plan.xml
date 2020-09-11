@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context="Aesthet.X.adfree.Classes.Fragments.MealPlanFragment">
+    tools:context="com.AesthetX.aesthetx.Classes.Fragments.MealPlanFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="0sp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="0dp"
             android:layout_marginEnd="0sp"
             android:paddingStart="25sp"
             android:paddingEnd="25sp"
@@ -126,7 +126,7 @@
             android:id="@+id/proteinSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8sp"
+            android:layout_marginTop="0sp"
             android:paddingStart="25sp"
             android:paddingEnd="25sp"
             android:progressBackgroundTint="@color/colorAccent"
@@ -223,9 +223,9 @@
             android:text="@string/track_your_nutrtion_with"
             android:textColor="@color/textColorPrimary"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/proteinSeekBar" />
+            app:layout_constraintTop_toBottomOf="@+id/proteinSeekBar"
+            android:layout_marginLeft="8sp"/>
 
         <ImageView
             android:id="@+id/cronometer"
@@ -235,9 +235,21 @@
             android:clickable="true"
             android:src="@drawable/cronometer454times100"
             android:tag="cronometer.com"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintTop_toBottomOf="@+id/textView14"
+            android:layout_marginLeft="8sp"/>
+
+        <Button
+            android:id="@+id/learnNutrition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8sp"
+            android:background="@drawable/add_button"
+            android:text="@string/learn_nutrition"
+            android:textColor="#BAF833"
+
+            app:layout_constraintBottom_toBottomOf="@+id/cronometer"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

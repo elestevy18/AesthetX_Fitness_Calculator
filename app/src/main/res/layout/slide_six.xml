@@ -6,7 +6,7 @@
     android:background="#000000"
     android:fitsSystemWindows="true"
     android:paddingTop="40dp"
-    tools:context="Aesthet.X.adfree.Intro.Activity6">
+    tools:context="com.AesthetX.aesthetx.Intro.Activity6">
 
 
     <TextView

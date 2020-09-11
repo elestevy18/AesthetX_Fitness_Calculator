@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Aesthet.X.adfree.Classes.Fragments.IntroFragments.IntroEightFragment"
+    tools:context="com.AesthetX.aesthetx.Classes.Fragments.IntroFragments.IntroEightFragment"
     android:orientation="vertical"
     android:background="#000000">
 

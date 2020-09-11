@@ -174,8 +174,8 @@
     <string name="caloric_ndeficit" translatable="false">CALORIC\nDEFICIT</string>
     <string name="weeks_until_n_ideal_body_weight" translatable="false">WEEKS UNTIL \n IDEAL BODY WEIGHT</string>
     <string name="rate" translatable="false">RATE</string>
-    <string name="learn_nutrition" translatable="false">Learn \nNutriton Here</string>
-    <string name="getPremium" translatable="false">Get Premium 1</string>
+    <string name="learn_nutrition" translatable="false">Learn \n    \u0020Nutriton Here\u0020\u0020</string>
+    <string name="getPremium" translatable="false">Get Premium\nGo Ad Free</string>
     <string name="removeAds" translatable="false">Remove Ads 2</string>
     <string name="subscription_period_monthly" translatable="false">Monthly $2.49</string>
     <string name="subscription_period_sixmonth" translatable="false">Biannually $9.99</string>
@@ -194,6 +194,17 @@
         <item>Heavy: 6–7x weekly </item>
         <item>Athletic: 2x daily</item>
     </string-array>
+
+
+    <string name="licence_key_ad" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkGJwajqj8kTWh05ii0fUh4NIn8lhSzV9lZPxyMlewjpt9/8tM5edJGFUgKVBHx4aRLuPmr6/qG1C82/Nf7rYKZ/a0zyA0Xkh/qwgT/xWeVXn7mvNyDj5WG0Egor2vgY9+T/exiyxLLEBDF4ua9pKA6dGHO8cWt58+GXz4fiE7ucIdsUTNwZwlvrxxGaK4t9XeUgBHdokNIVXmYerRlB4df4TihCWNmBlb2sGNA0bTqoq/4HGzFFMqQ8+wXXYpH0j7+7MFRht8WPtyKWJZYbVEo8tiGQRQ3gegHZHbevJD58rXCRWYhb2jj8SnaHu8Bb0sGieBAoAAocHzEa59ThDNwIDAQAB</string>
+
+    <string-array name="subscriptions">
+        <item>1_month_premium</item>
+        <item>annually</item>
+        <item>biannually</item>
+    </string-array>
+
+
 
 
 </resources>

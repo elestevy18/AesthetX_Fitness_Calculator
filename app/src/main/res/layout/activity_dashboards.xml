@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Aesthet.X.adfree.DashBoardTabs.Dashboards"
+    tools:context="com.AesthetX.aesthetx.DashBoardTabs.Dashboards"
     android:orientation="vertical"
     android:clickable="false">
 

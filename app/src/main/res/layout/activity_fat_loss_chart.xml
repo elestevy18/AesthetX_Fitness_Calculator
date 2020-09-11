@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="Aesthet.X.adfree.Charts.FatLossChart">
+    tools:context="com.AesthetX.aesthetx.Charts.FatLossChart">
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/lineChart"

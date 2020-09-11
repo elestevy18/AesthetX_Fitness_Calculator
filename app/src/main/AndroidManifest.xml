@@ -13,432 +13,431 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="Aesthet.X.adfree.DashBoardTabs.RemoveAds"></activity>
-        <activity android:name="Aesthet.X.adfree.DashBoardTabs.GetPremium" />
-        <activity android:name="Aesthet.X.adfree.Charts.FatLossChart" />
-        <activity android:name="Aesthet.X.adfree.Excercises.Vacuums" />
-        <activity android:name="Aesthet.X.adfree.Excercises.HandstandPushup" />
-        <activity android:name="Aesthet.X.adfree.Excercises.LegRaiseScissor" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedRDL" />
-        <activity android:name="Aesthet.X.adfree.Excercises.SprinterLunge" />
-        <activity android:name="Aesthet.X.adfree.Excercises.ProtractedRollout" />
-        <activity android:name="Aesthet.X.adfree.Excercises.LatLever" />
-        <activity android:name="Aesthet.X.adfree.Excercises.RingOverheadExtension" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BWsquats" />
-        <activity android:name="Aesthet.X.adfree.Excercises.VUp" />
-        <activity android:name="Aesthet.X.adfree.Excercises.ReverseHyper" />
-        <activity android:name="Aesthet.X.adfree.Excercises.NarrowDip" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandExtension" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedForearmCurl" />
-        <activity android:name="Aesthet.X.adfree.Excercises.LegRaise" />
-        <activity android:name="Aesthet.X.adfree.Excercises.TwistingLegRaise" />
-        <activity android:name="Aesthet.X.adfree.Excercises.PulseUp" />
-        <activity android:name="Aesthet.X.adfree.Excercises.AbCircles" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedAbduction" />
-        <activity android:name="Aesthet.X.adfree.Excercises.AngelofDeath" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedLunge" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandCrunch" />
-        <activity android:name="Aesthet.X.adfree.Excercises.MarchingBridge" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedPullApart" />
-        <activity android:name="Aesthet.X.adfree.Excercises.SideLunge" />
-        <activity android:name="Aesthet.X.adfree.Excercises.TrapPushaway" />
-        <activity android:name="Aesthet.X.adfree.Excercises.WallSit" />
-        <activity android:name="Aesthet.X.adfree.Excercises.ReverseCrunch" />
-        <activity android:name="Aesthet.X.adfree.Excercises.AbRollout" />
-        <activity android:name="Aesthet.X.adfree.Excercises.NeckFlexion" />
-        <activity android:name="Aesthet.X.adfree.Excercises.HeadFloats" />
-        <activity android:name="Aesthet.X.adfree.Excercises.Lunges" />
-        <activity android:name="Aesthet.X.adfree.Excercises.PullUps" />
-        <activity android:name="Aesthet.X.adfree.Excercises.ChinUps" />
-        <activity android:name="Aesthet.X.adfree.Excercises.HangingScapularRetraction" />
-        <activity android:name="Aesthet.X.adfree.Excercises.DeltRotating" />
-        <activity android:name="Aesthet.X.adfree.Excercises.RotatingPlank" />
-        <activity android:name="Aesthet.X.adfree.Excercises.InvertedY" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedStepOut" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedPunch" />
-        <activity android:name="Aesthet.X.adfree.Excercises.RingFacepulls" />
-        <activity android:name="Aesthet.X.adfree.Excercises.RingRows" />
-        <activity android:name="Aesthet.X.adfree.Excercises.AustralianPullUp" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedCurls" />
-        <activity android:name="Aesthet.X.adfree.Excercises.Pushups" />
-        <activity android:name="Aesthet.X.adfree.Excercises.RadialDeviation" />
-        <activity android:name="Aesthet.X.adfree.Excercises.UlnarDeviation" />
-        <activity android:name="Aesthet.X.adfree.Excercises.WideDip" />
-        <activity android:name="Aesthet.X.adfree.Excercises.TwistingPulseUp" />
-        <activity android:name="Aesthet.X.adfree.Excercises.XCrunch" />
-        <activity android:name="Aesthet.X.adfree.Excercises.ElbowToKneeTuck" />
-        <activity android:name="Aesthet.X.adfree.Excercises.ElbowToKneePlank" />
-        <activity android:name="Aesthet.X.adfree.Excercises.TricepsExtension" />
-        <activity android:name="Aesthet.X.adfree.Excercises.Ts" />
-        <activity android:name="Aesthet.X.adfree.Excercises.PikePushup" />
-        <activity android:name="Aesthet.X.adfree.Excercises.SidePlank" />
-        <activity android:name="Aesthet.X.adfree.Excercises.PlankProtraction" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BWHipThrust" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BenchDip" />
-        <activity android:name="Aesthet.X.adfree.Excercises.PistolSquat" />
-        <activity android:name="Aesthet.X.adfree.Excercises.HamCurl" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BulgarianSplitSquat" />
-        <activity android:name="Aesthet.X.adfree.Excercises.IsoHT" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedLateralRaise" />
-        <activity android:name="Aesthet.X.adfree.Excercises.RingCurls" />
-        <activity android:name="Aesthet.X.adfree.Excercises.NarrowPushup" />
-        <activity android:name="Aesthet.X.adfree.Excercises.CalfRaise" />
-        <activity android:name="Aesthet.X.adfree.Excercises.BandedExternalRotation" />
-        <activity android:name="Aesthet.X.adfree.Excercises.FrogPump" />
-        <activity android:name="Aesthet.X.adfree.Excercises.FloorScapularDepression" />
-        <activity android:name="Aesthet.X.adfree.Classes.ResetVolume" />
+        <activity android:name="com.AesthetX.aesthetx.Classes.MuscleGroupObjects.PremiumPay"></activity>
+        <activity android:name="com.AesthetX.aesthetx.Charts.FatLossChart" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.Vacuums" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.HandstandPushup" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.LegRaiseScissor" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedRDL" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.SprinterLunge" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.ProtractedRollout" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.LatLever" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.RingOverheadExtension" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BWsquats" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.VUp" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.ReverseHyper" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.NarrowDip" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandExtension" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedForearmCurl" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.LegRaise" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.TwistingLegRaise" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.PulseUp" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.AbCircles" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedAbduction" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.AngelofDeath" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedLunge" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandCrunch" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.MarchingBridge" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedPullApart" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.SideLunge" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.TrapPushaway" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.WallSit" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.ReverseCrunch" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.AbRollout" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.NeckFlexion" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.HeadFloats" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.Lunges" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.PullUps" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.ChinUps" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.HangingScapularRetraction" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.DeltRotating" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.RotatingPlank" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.InvertedY" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedStepOut" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedPunch" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.RingFacepulls" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.RingRows" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.AustralianPullUp" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedCurls" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.Pushups" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.RadialDeviation" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.UlnarDeviation" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.WideDip" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.TwistingPulseUp" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.XCrunch" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.ElbowToKneeTuck" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.ElbowToKneePlank" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.TricepsExtension" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.Ts" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.PikePushup" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.SidePlank" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.PlankProtraction" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BWHipThrust" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BenchDip" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.PistolSquat" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.HamCurl" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BulgarianSplitSquat" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.IsoHT" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedLateralRaise" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.RingCurls" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.NarrowPushup" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.CalfRaise" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.BandedExternalRotation" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.FrogPump" />
+        <activity android:name="com.AesthetX.aesthetx.Excercises.FloorScapularDepression" />
+        <activity android:name="com.AesthetX.aesthetx.Classes.ResetVolume" />
         <activity
-            android:name="Aesthet.X.adfree.Excercises.BWExercise"
+            android:name="com.AesthetX.aesthetx.Excercises.BWExercise"
             android:theme="@style/AppThemeBasic" />
         <activity
-            android:name="Aesthet.X.adfree.DashBoardTabs.UpdateMaleMagicFormula"
+            android:name="com.AesthetX.aesthetx.DashBoardTabs.UpdateMaleMagicFormula"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.DashBoardTabs.UpdateFemaleMagicFormula"
+            android:name="com.AesthetX.aesthetx.DashBoardTabs.UpdateFemaleMagicFormula"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.UpdateMagicFormula"
+            android:name="com.AesthetX.aesthetx.Intro.UpdateMagicFormula"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.DashBoardTabs.UpdateData"
+            android:name="com.AesthetX.aesthetx.DashBoardTabs.UpdateData"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Excercises.GlobalExercise"
+            android:name="com.AesthetX.aesthetx.Excercises.GlobalExercise"
             android:theme="@style/AppThemeBasic" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Intro"
+            android:name="com.AesthetX.aesthetx.Intro.Intro"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.LowerTrap"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.LowerTrap"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.UpperTrap"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.UpperTrap"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.DashBoardTabs.Dashboards"
+            android:name="com.AesthetX.aesthetx.DashBoardTabs.Dashboards"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.SuspendedNeckRotation"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.SuspendedNeckRotation"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.HarnessLateralFlexion"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.HarnessLateralFlexion"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.TowelLateralFlexion"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.TowelLateralFlexion"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.PlatedNeckLateralFlexion"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.PlatedNeckLateralFlexion"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.HarnessNeckExtension"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.HarnessNeckExtension"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.TowelNeckExtension"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.TowelNeckExtension"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.PlatedNeckExtension"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.PlatedNeckExtension"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.NeckHarnessCurls"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.NeckHarnessCurls"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.Form.PlateCurl"
+            android:name="com.AesthetX.aesthetx.AddVolume.Form.PlateCurl"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.QuadsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.QuadsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.DiaphragmVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.DiaphragmVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.ObliquesVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.ObliquesVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.AbsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.AbsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.SerratusVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.SerratusVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.BicepsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.BicepsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.ChestVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.ChestVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.CalvesVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.CalvesVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.HamstringsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.HamstringsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.GluteMediusVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.GluteMediusVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.GlutesVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.GlutesVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.ErectorsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.ErectorsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.LatsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.LatsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.RadialForearmVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.RadialForearmVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.ForearmFlexorsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.ForearmFlexorsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.ForearmExtensorsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.ForearmExtensorsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.UlnarForearmVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.UlnarForearmVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.TricepsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.TricepsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.RotatorCuffVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.RotatorCuffVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.AnteriorDeltoidVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.AnteriorDeltoidVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.MedialDeltoidVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.MedialDeltoidVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.PosteriorDeltoidVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.PosteriorDeltoidVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.LowerTrapsVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.LowerTrapsVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.UpperTrapVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.UpperTrapVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.AddVolume.NeckVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.NeckVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Biceps"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Biceps"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Quads"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Quads"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Diaphragm"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Diaphragm"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Obliques"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Obliques"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Abs"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Abs"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Serratus"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Serratus"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Calves"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Calves"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Hamstrings"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Hamstrings"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.GluteMedius"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.GluteMedius"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Glutes"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Glutes"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Erectors"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Erectors"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Lats"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Lats"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.RadialForearm"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.RadialForearm"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.ForearmFlexors"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.ForearmFlexors"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.ForearmExtensors"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.ForearmExtensors"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.UlnarForearm"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.UlnarForearm"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Triceps"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Triceps"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.RotatorCuff"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.RotatorCuff"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.AnteriorDeltoid"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.AnteriorDeltoid"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.MedialDeltoid"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.MedialDeltoid"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.PosteriorDeltoid"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.PosteriorDeltoid"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Chest"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Chest"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.MuscleGroupInfo.Neck"
+            android:name="com.AesthetX.aesthetx.MuscleGroupInfo.Neck"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.SettingsTODO.AboutUS"
+            android:name="com.AesthetX.aesthetx.SettingsTODO.AboutUS"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.DashBoardTabs.Resources"
+            android:name="com.AesthetX.aesthetx.DashBoardTabs.Resources"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.DashBoardTabs.MealPlan"
+            android:name="com.AesthetX.aesthetx.DashBoardTabs.MealPlan"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.PopUpDialogs.BodyFatChart"
+            android:name="com.AesthetX.aesthetx.PopUpDialogs.BodyFatChart"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name="Aesthet.X.adfree.FirstBootManager">
+        <activity android:name="com.AesthetX.aesthetx.FirstBootManager">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -446,77 +445,75 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="Aesthet.X.adfree.PopUpDialogs.FAQFourYears"
+            android:name="com.AesthetX.aesthetx.PopUpDialogs.FAQFourYears"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.SettingsTODO.FAQ"
+            android:name="com.AesthetX.aesthetx.SettingsTODO.FAQ"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.PopUpDialogs.DashCalories"
+            android:name="com.AesthetX.aesthetx.PopUpDialogs.DashCalories"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.PopUpDialogs.DashIdealBodyWeight"
+            android:name="com.AesthetX.aesthetx.PopUpDialogs.DashIdealBodyWeight"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.MagicFormulaMale"
+            android:name="com.AesthetX.aesthetx.Intro.MagicFormulaMale"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Activity6"
+            android:name="com.AesthetX.aesthetx.Intro.Activity6"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Activity5"
+            android:name="com.AesthetX.aesthetx.Intro.Activity5"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Activity7"
+            android:name="com.AesthetX.aesthetx.Intro.Activity7"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Activity4"
+            android:name="com.AesthetX.aesthetx.Intro.Activity4"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.MagicFormulaFemale"
+            android:name="com.AesthetX.aesthetx.Intro.MagicFormulaFemale"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Activity3"
+            android:name="com.AesthetX.aesthetx.Intro.Activity3"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.Activity2"
+            android:name="com.AesthetX.aesthetx.Intro.Activity2"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="Aesthet.X.adfree.Intro.MainActivity"
+            android:name="com.AesthetX.aesthetx.Intro.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
-        <activity android:name="Aesthet.X.adfree.MuscleGroupInfo.SpinalErectors" />
+        <activity android:name="com.AesthetX.aesthetx.MuscleGroupInfo.SpinalErectors" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3950672419252348~6149712161" />
     </application>
-
-
 
 </manifest>
