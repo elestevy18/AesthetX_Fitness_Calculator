@@ -23,19 +23,19 @@ public class ForearmExtensorsVolume extends AppCompatActivity implements Forearm
         setContentView(R.layout.activity_forearm_extensors_volume);
 
         //CreateList
-        final ArrayList<ForearmExtensorList> ForearmExtensorExerciseListList = new ArrayList<>();
-        ForearmExtensorExerciseListList.add(new ForearmExtensorList("Forearm Extensors", "One set towards forearm extensors"));
-        ForearmExtensorExerciseListList.add(new ForearmExtensorList("Standing Barbell Wrist Extension", "Forearm Extensors"));
-        ForearmExtensorExerciseListList.add(new ForearmExtensorList("Barbell Extension Rolls", "Forearm Extensors"));
-        ForearmExtensorExerciseListList.add(new ForearmExtensorList("Reverse Curls", "Forearm Extensors"));
-        ForearmExtensorExerciseListList.add(new ForearmExtensorList("Banded Wrist Extension", "Forearm Extensors"));
+        final ArrayList<ForearmExtensorList> ForearmExtensorsExerciseListList = new ArrayList<>();
+        ForearmExtensorsExerciseListList.add(new ForearmExtensorList("Forearm Extensors", "One set towards forearm Extensors"));
+        ForearmExtensorsExerciseListList.add(new ForearmExtensorList("Standing Barbell Wrist Extension", "Forearm Extensors"));
+        ForearmExtensorsExerciseListList.add(new ForearmExtensorList("Barbell Extension Rolls", "Forearm Extensors"));
+        ForearmExtensorsExerciseListList.add(new ForearmExtensorList("Reverse Curls", "Forearm Extensors"));
+        ForearmExtensorsExerciseListList.add(new ForearmExtensorList("Banded Wrist Extension", "Forearm Extensors"));
 
 
         //Create Recycler View
         RecyclerView mRecyclerView = findViewById(R.id.forearmExtensorsRecyclerView);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
-        ForearmExtensorAdapter mAdapter = new ForearmExtensorAdapter(ForearmExtensorExerciseListList, this);
+        ForearmExtensorAdapter mAdapter = new ForearmExtensorAdapter(ForearmExtensorsExerciseListList, this);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);

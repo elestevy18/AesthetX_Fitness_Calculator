@@ -14,10 +14,10 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.obliquesImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 import static com.example.scifit.R.layout.activity_obliques;
 
@@ -25,7 +25,7 @@ import static com.example.scifit.R.layout.activity_obliques;
 public class Obliques extends AppCompatActivity {
     private static final String OBLIQUESPROGRESS = "OBLIQUESPROGRESS";
     private static final String OBLIQUESMAX = "OBLIQUESMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int obliquesProgress;
     private int obliquesMax;
     private EditText obliquesMRV;

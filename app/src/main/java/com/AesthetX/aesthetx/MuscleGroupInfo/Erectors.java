@@ -14,16 +14,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.erectorsImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class Erectors extends AppCompatActivity {
     private static final String ERECTORSPROGRESS = "ERECTORSPROGRESS";
     private static final String ERECTORSMAX = "ERECTORSMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int erectorsProgress;
     private int erectorsMax;
     private EditText erectorsMRV;

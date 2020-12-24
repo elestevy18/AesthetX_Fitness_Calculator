@@ -22,6 +22,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.Classes.SubscriptionAdapter;
+import com.AesthetX.aesthetx.PopUpDialogs.AddCalvesVolumeDialog;
+import com.AesthetX.aesthetx.PopUpDialogs.FAQDialog;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.BillingClientStateListener;
 import com.android.billingclient.api.BillingResult;
@@ -39,6 +41,8 @@ import com.google.android.material.tabs.TabLayout;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
@@ -53,7 +57,7 @@ import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.PremiumPay;
 import com.AesthetX.aesthetx.Classes.ResetVolume;
 
 
-public class Dashboards extends AppCompatActivity  implements BillingProcessor.IBillingHandler{
+public class Dashboards extends AppCompatActivity  implements BillingProcessor.IBillingHandler, FAQDialog.ExampleDialogListener {
 
     //Constants for sharedPrefereneces
     private static final String TAG = "MainActivity";
@@ -62,10 +66,15 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
     public static final String ADSDATE = "com.example.application.scifit.adsdate";
     private static final String SHARED_PREFS = "com.example.application.scifit.sharedPrefs";
     private static final String FIRSTRUN = "firstrun";
+    private static final String HSPROMO = "com.example.application.scifit.hspromo";
     private static final String SHOWADS = "com.example.application.scifit.showads";
+    private static final String EXP_DATE = "com.example.application.scifit.expdate";
+    private static final String HSPROMOEXP = "com.example.application.scifit.hspromoexp";
+    private static final String FIRSTWIND = "com.example.application.scifit.firstwind";
+
     private final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     private MuscleListAdapter mAdapter;
-    boolean ads;
+    boolean ads, hspromo, showAds, isPremiumActive, hspromoexp, firstRun;
     String currentDate, adsDate;
    // InterstitialAd ad;
     private InterstitialAd mInterstitialAd;
@@ -73,7 +82,6 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
     private BillingClient mBillingClient;
     public SharedPreferences sharedPreferences ;
     private static final String LOG_TAG = "iabv3";
-    boolean isPremiumActive;
     ArrayList<String> listProductIds = new ArrayList<>();
     SharedPreferences.Editor editor;
     SharedPreferences preferences;
@@ -84,19 +92,45 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboards);
 
-
-        //REGULAR CODE
-        //Intialize memory, load Premium info and displayh ads accordingly
+        //Initialize memory
 
         preferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
         editor = preferences.edit();
-        Boolean showAds = preferences.getBoolean(SHOWADS, true);
 
+        // load Premium info and display ads accordingly
+
+        showAds = preferences.getBoolean(SHOWADS, true);
+        hspromo = preferences.getBoolean(HSPROMO, false);
+        hspromoexp = preferences.getBoolean(HSPROMOEXP, false);
+        firstRun = preferences.getBoolean(FIRSTWIND, false);
+
+        if (!firstRun){
+            FAQDialog exampleDialog = new FAQDialog(this);
+            exampleDialog.show(getSupportFragmentManager(), "example dialog");
+            editor.putBoolean(FIRSTWIND, true).apply();
+        }
+
+        if (hspromo && !hspromoexp){
+            final Calendar cal = Calendar.getInstance();
+            Date today = cal.getTime();
+            long millis = preferences.getLong(EXP_DATE, 0L);
+            Date expDate = new Date(millis);
+
+            if(today.before(expDate) ){
+                showAds = false;
+                Log.d("Today", "NOT EXPIRED" + " +++++++++++++++++++++++++++++++++++++++");
+
+            }else{
+                editor.putBoolean(HSPROMOEXP, true);
+                     editor.putBoolean(SHOWADS, true);
+                editor.apply();
+            }
+        }
+
+        //generate random values from 0-24, display ad if even
         Random rand = new Random(); //instance of random class
         int upperbound = 10;
-//generate random values from 0-24
         int int_random = rand.nextInt(upperbound);
-
         int x = int_random % 2;
         boolean even = true;
         even = x == 0;
@@ -129,7 +163,8 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
 
                 Objects.requireNonNull(tabLayout.getTabAt(0)).setText(getResources().getText(R.string.Dashboard));
                 Objects.requireNonNull(tabLayout.getTabAt(1)).setText(getResources().getText(R.string.volumetracker));
-                Objects.requireNonNull(tabLayout.getTabAt(2)).setText(getResources().getText(R.string.mealplan));
+                Objects.requireNonNull(tabLayout.getTabAt(2)).setText(getResources().getText(R.string.history));
+                Objects.requireNonNull(tabLayout.getTabAt(3)).setText(getResources().getText(R.string.mealplan));
                 // tabLayout.getTabAt(3).setText(getResources().getText(R.string.resources));
                 tabLayout.setTabTextColors(color, color2);
 
@@ -163,8 +198,9 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
                 SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
                 adapter.addFragment(new DashboardFragment(), "Dashboard");
                 adapter.addFragment(new VolumeTrackerFragment(), "Volume\nTracker");
+                adapter.addFragment(new HistoryFragment(), "History");
                 adapter.addFragment(new MealPlanFragment(), "Meal\nPlan");
-                // adapter.addFragment(new ResourcesFragment(), "Resources");
+
                 viewPager.setAdapter(adapter);
 
 
@@ -276,7 +312,7 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
                     editor.putBoolean(SHOWADS, true).apply();
                 }
                 data.setStatus(false);
-                Log.d("NOT OWNED: ","-----------------------============"+i);
+                Log.d("NOT OWNED: ","-----------------------============"+ i);
             }
 
 
@@ -286,6 +322,11 @@ public class Dashboards extends AppCompatActivity  implements BillingProcessor.I
 
 }
     private ArrayList<com.AesthetX.aesthetx.Classes.DataModel> listData;
+
+    @Override
+    public void addVolume() {
+
+    }
 }
 
 

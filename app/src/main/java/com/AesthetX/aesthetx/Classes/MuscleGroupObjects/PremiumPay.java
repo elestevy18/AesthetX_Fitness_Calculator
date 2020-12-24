@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.AesthetX.aesthetx.Classes.StudentPromo;
 import com.android.billingclient.api.BillingClient;
 import com.android.billingclient.api.Purchase;
 import com.anjlab.android.iab.v3.BillingProcessor;
@@ -30,9 +35,12 @@ public class PremiumPay extends AppCompatActivity implements BillingProcessor.IB
     ArrayList<String> listProductIds = new ArrayList<>();
     private static final String SHARED_PREFS = "com.example.application.scifit.sharedPrefs";
     private static final String SHOWADS = "com.example.application.scifit.showads";
+    private static final String HSPROMO = "com.example.application.scifit.hspromo";
     public SharedPreferences sharedPreferences ;
     SharedPreferences.Editor editor;
     private static final String LOG_TAG = "iabv3";
+    Button hspromo;
+    Boolean hspromoB;
 
 
     @Override
@@ -52,6 +60,23 @@ public class PremiumPay extends AppCompatActivity implements BillingProcessor.IB
 
         bp = new BillingProcessor(this, getResources().getString(R.string.licence_key_ad), this);
         bp.initialize();
+
+        hspromo = findViewById(R.id.hspromo);
+
+        hspromo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), StudentPromo.class);
+                startActivity(intent);
+            }
+        });
+
+        hspromoB = sharedPreferences.getBoolean(HSPROMO, false);
+
+        if (hspromoB){
+            hspromo.setVisibility(View.GONE);
+        }
+
 
 
 

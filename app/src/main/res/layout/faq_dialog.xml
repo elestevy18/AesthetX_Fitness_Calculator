@@ -2,8 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:background="#F5F5F5"
+    android:layout_marginLeft="20dip"
+    android:layout_marginRight="20dip"
+    android:background="@color/textColorPrimary"
+    android:padding="16sp"
     android:layout_gravity="center">
 
     <TextView
@@ -12,21 +14,11 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="10dp"
         android:layout_toStartOf="@+id/add_volume"
-        android:text="Sets:"
+        android:text="@string/make_sure_to_check_out_the_faq_page_in_the_menu_at_the_top_right_to_learn_how_to_train_properly_and_how_to_use_the_app_go_hard_be_safe"
         android:textColor="#000000"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/add_volume"
-        android:layout_width="60sp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16sp"
-        android:backgroundTint="#000000"
-        android:focusable="true"
-        android:gravity="center"
-        android:inputType="numberDecimal|numberSigned"
-        android:textColor="#000000" />
+
 
 
 </RelativeLayout>

@@ -18,14 +18,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
+import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.example.scifit.R;
 
 import java.util.Objects;
 
-import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
 public class AddQuadsVolumeDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String QUADS_TALLY = "com.example.application.scifit.QUADS_TALLY";
     private final Context mContext;
     private EditText mvolume;

@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
 import java.util.Objects;
@@ -26,9 +27,9 @@ import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class
 AddAbsVolumeDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String ABS_TALLY = "com.example.application.scifit.ABS_TALLY";
-    private static final String Transverse_TALLY = "com.example.application.scifit.Transverse_TALLY";
+    private static final String TRANSVERSE_TALLY = "com.example.application.scifit.TRANSVERSE_TALLY";
     private final Context mContext;
     private EditText mvolume;
 
@@ -94,7 +95,7 @@ AddAbsVolumeDialog extends AppCompatDialogFragment {
                         int TransverseTally = Integer.parseInt(sets);
                         TransverseTally = TransverseTally * 10;
                         TransverseTally = TransverseTally / 2;
-                        editor.putInt(Transverse_TALLY, TransverseTally);
+                        editor.putInt(TRANSVERSE_TALLY, TransverseTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
                         startActivity(intent);

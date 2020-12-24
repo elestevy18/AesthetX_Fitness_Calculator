@@ -79,13 +79,13 @@ public class ChestVolume extends AppCompatActivity implements ChestAdapter.OnIte
         List<String> dipList = Arrays.asList(dipExercises);
         String[] chestExercises = {"Horizontal Crossover Flyes", "Decline Crossover Flyes", "Chest"};
         List<String> chestList = Arrays.asList(chestExercises);
-        if (chestPressList.contains(exercise)) {
+        if (chestPressList.contains(exercise)) {//
             AddChestPressDialog exampleDialog = new AddChestPressDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
-        } else if (dipList.contains(exercise)) {
+        } else if (dipList.contains(exercise)) {//
             AddDipDialog exampleDialog = new AddDipDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
-        } else if (chestList.contains(exercise)) {
+        } else if (chestList.contains(exercise)) {//
             AddChestVolumeDialog exampleDialog = new AddChestVolumeDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Chest Pullover")) {

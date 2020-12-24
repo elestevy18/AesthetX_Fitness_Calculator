@@ -14,16 +14,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.bicepsImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class Biceps extends AppCompatActivity {
     private static final String BICEPSPROGRESS = "BICEPSPROGRESS";
     private static final String BICEPSMAX = "BICEPSMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int bicepsProgress;
     private int bicepsMax;
     private EditText bicepsMRV;

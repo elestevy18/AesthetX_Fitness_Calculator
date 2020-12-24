@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.AesthetX.aesthetx.AddVolume.DiaphragmVolume">
+    tools:context="com.AesthetX.aesthetx.AddVolume.TransverseVolume">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/TransverseRecyclerView"

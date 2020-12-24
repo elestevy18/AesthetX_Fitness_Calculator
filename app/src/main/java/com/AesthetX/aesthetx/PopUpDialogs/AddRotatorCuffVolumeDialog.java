@@ -18,14 +18,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
+import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.example.scifit.R;
 
 import java.util.Objects;
 
-import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
 public class AddRotatorCuffVolumeDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String ROTATORCUFF_TALLY = "com.example.application.scifit.ROTATORCUFF_TALLY";
     public static final String MEDIALDELTOID_TALLY = "com.example.application.scifit.MEDIALDELTOID_TALLY";
     private static final String FOREARMEXTENSORS_TALLY = "com.example.application.scifit.FOREARMEXTENSORS_TALLY";
@@ -93,10 +93,10 @@ public class AddRotatorCuffVolumeDialog extends AppCompatDialogFragment {
                         rotatorCuffTally = rotatorCuffTally * 10;
                         SharedPreferences.Editor editor = sp.edit();
                         editor.putInt(ROTATORCUFF_TALLY, rotatorCuffTally);
-                        int forearmExtensorTally = Integer.parseInt(sets);
-                        forearmExtensorTally = forearmExtensorTally * 10;
-                        forearmExtensorTally = forearmExtensorTally / 2;
-                        editor.putInt(FOREARMEXTENSORS_TALLY, forearmExtensorTally);
+                        int forearmExtensorsTally = Integer.parseInt(sets);
+                        forearmExtensorsTally = forearmExtensorsTally * 10;
+                        forearmExtensorsTally = forearmExtensorsTally / 2;
+                        editor.putInt(FOREARMEXTENSORS_TALLY, forearmExtensorsTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
                         //  intent.putExtra(ROTATORCUFF_TALLY, rotatorCuffTally);

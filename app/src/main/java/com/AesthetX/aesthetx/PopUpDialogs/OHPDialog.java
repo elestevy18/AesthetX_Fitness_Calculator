@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
 import java.util.Objects;
@@ -25,9 +26,9 @@ import java.util.Objects;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class OHPDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String ANTERIORDELTOID_TALLY = "com.example.application.scifit.ANTERIORDELTOID_TALLY";
-    private static final String Triceps_TALLY = "com.example.application.scifit.Triceps_TALLY";
+    private static final String TRICEPS_TALLY = "com.example.application.scifit.TRICEPS_TALLY";
     private static final String MEDIALDELTOID_TALLY = "com.example.application.scifit.MEDIALDELTOID_TALLY";
     private final Context mContext;
     private EditText mvolume;
@@ -51,7 +52,7 @@ public class OHPDialog extends AppCompatDialogFragment {
                 int TricepsTally = Integer.parseInt(sets);
                 TricepsTally = TricepsTally * 10;
                 TricepsTally = TricepsTally / 2;
-                editor.putInt(Triceps_TALLY, TricepsTally);
+                editor.putInt(TRICEPS_TALLY, TricepsTally);
                 editor.apply();
                 Intent intent = new Intent(mContext, Dashboards.class);
                 startActivity(intent);
@@ -97,7 +98,7 @@ public class OHPDialog extends AppCompatDialogFragment {
                         int TricepsTally = Integer.parseInt(sets);
                         TricepsTally = TricepsTally * 10;
                         TricepsTally = TricepsTally / 2;
-                        editor.putInt(Triceps_TALLY, TricepsTally);
+                        editor.putInt(TRICEPS_TALLY, TricepsTally);
                         int medialDeltoidTally = Integer.parseInt(sets);
                         medialDeltoidTally = medialDeltoidTally * 10;
                         medialDeltoidTally = medialDeltoidTally / 2;

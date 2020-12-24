@@ -39,6 +39,7 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
     private static final String PMG = "muscle";
 
     private float pmgf;
+    private static final String UNITS = "com.example.application.scifit.units";
 
 
 
@@ -81,14 +82,24 @@ public class DashboardFragment extends Fragment implements View.OnClickListener{
 
         ibw2.setText(df.format(idealBodyweight));
 
-        gRtv.setText(getString(R.string.lbsin, df.format(growthRate)));
 
-        fLtv.setText(getString(R.string.lbsin, df.format(fatloss)));
+        boolean units = sharedPreferences.getBoolean(UNITS, false);
+        if(units){
+            gRtv.setText(getString(R.string.kgin, df.format(growthRate)));
+            fLtv.setText(getString(R.string.kgin, df.format(fatloss)));
+        } else {
+            gRtv.setText(getString(R.string.lbsin, df.format(growthRate)));
+            fLtv.setText(getString(R.string.lbsin, df.format(fatloss)));
+        }
         //caLtv.setText(df.format(calories));
         currentprogresstxt.setText(df.format(currentGrowth));
         currentprogresstxt.append("/\n");
         currentprogresstxt.append(df.format(pmgf));
-        currentprogresstxt.append("lbs");
+        if (units){
+            currentprogresstxt.append("kg");
+        } else {
+            currentprogresstxt.append("lbs");
+        }
 
 
         ibw2.setOnClickListener(this);

@@ -14,15 +14,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.posteriorDeltoidImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 public class PosteriorDeltoid extends AppCompatActivity {
     private static final String POSTERIORDELTOIDPROGRESS = "POSTERIORDELTOIDPROGRESS";
     private static final String POSTERIORDELTOIDMAX = "POSTERIORDELTOIDMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int posteriorDeltoidProgress;
     private int posteriorDeltoidMax;
     private EditText posteriorDeltoidMRV;

@@ -36,12 +36,12 @@ public class RotatorCuffVolume extends AppCompatActivity implements RotatorCuffA
 
         RotatorCuffExerciseListList.add(new RotatorCuffList("Rotator Cuff", "One set towards rotator cuff"));
         RotatorCuffExerciseListList.add(new RotatorCuffList("Cable External Rotation", "Rotator Cuff, Forearm Extensors"));
-        RotatorCuffExerciseListList.add(new RotatorCuffList("Bench Dumbbell External Rotation", "Rotator Cuff, Forearm Extensors"));
-        RotatorCuffExerciseListList.add(new RotatorCuffList("W's", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
+        RotatorCuffExerciseListList.add(new RotatorCuffList("Bench/Dumbbell External Rotation", "Rotator Cuff, Forearm Extensors"));
+        RotatorCuffExerciseListList.add(new RotatorCuffList("W's", "Rotator Cuff, Lower Trap, Posterior Deltoid"));//
         RotatorCuffExerciseListList.add(new RotatorCuffList("Dumbbell High Pull", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
-        RotatorCuffExerciseListList.add(new RotatorCuffList("Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
-        RotatorCuffExerciseListList.add(new RotatorCuffList("Ring Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
-        RotatorCuffExerciseListList.add(new RotatorCuffList("Banded External Rotation", "Rotator Cuff, Forearm Extensors"));
+        RotatorCuffExerciseListList.add(new RotatorCuffList("Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));//
+        RotatorCuffExerciseListList.add(new RotatorCuffList("Ring Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));//
+        RotatorCuffExerciseListList.add(new RotatorCuffList("Banded External Rotation", "Rotator Cuff, Forearm Extensors"));//
 
 
         //Create Recycler View

@@ -105,4 +105,10 @@
         // default color
     </style>
 
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+
+    </style>
+
 </resources>

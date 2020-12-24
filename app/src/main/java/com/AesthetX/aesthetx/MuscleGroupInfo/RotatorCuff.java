@@ -14,15 +14,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.rotatorCuffImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 public class RotatorCuff extends AppCompatActivity {
     private static final String ROTATORCUFFPROGRESS = "ROTATORCUFFPROGRESS";
     private static final String ROTATORCUFFMAX = "ROTATORCUFFMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int rotatorCuffProgress;
     private int rotatorCuffMax;
     private EditText rotatorCuffMRV;

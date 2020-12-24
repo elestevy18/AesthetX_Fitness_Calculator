@@ -1,7 +1,6 @@
 package com.AesthetX.aesthetx.AddVolume;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,12 +13,12 @@ import com.example.scifit.R;
 import java.util.ArrayList;
 
 import com.AesthetX.aesthetx.Classes.Adapters.NeckExerciseAdapter;
-import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.NeckExerciseList;
-import com.AesthetX.aesthetx.PopUpDialogs.AddNeckVolumeDialog;
+import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.ExerciseListByMuscleGroup;
+import com.AesthetX.aesthetx.PopUpDialogs.AddVolumeDialog;
 
 
 public class
-NeckVolume extends AppCompatActivity implements NeckExerciseAdapter.OnItemClickListener, AddNeckVolumeDialog.ExampleDialogListener {
+NeckVolume extends AppCompatActivity implements NeckExerciseAdapter.OnItemClickListener, AddVolumeDialog.ExampleDialogListener {
     private EditText volume;
 
     @Override
@@ -28,15 +27,15 @@ NeckVolume extends AppCompatActivity implements NeckExerciseAdapter.OnItemClickL
         setContentView(R.layout.activity_neck_volume);
 
         //CreateList
-        final ArrayList<NeckExerciseList> NeckExercisesListList = new ArrayList<>();
-        NeckExercisesListList.add(new NeckExerciseList("Neck", "1 set towards neck"));
-        NeckExercisesListList.add(new NeckExerciseList("Plate Curl", "Neck Flexion"));
-        NeckExercisesListList.add(new NeckExerciseList("Neck Harness Curl", "Neck Flexion"));
-        NeckExercisesListList.add(new NeckExerciseList("Plated Neck Extension", "Neck Extension"));
-        NeckExercisesListList.add(new NeckExerciseList("Harness Lateral Flexion", "Lateral Flexion"));
-        NeckExercisesListList.add(new NeckExerciseList("Suspended Neck Rotation", "Neck Flexion, Rotation"));
-        NeckExercisesListList.add(new NeckExerciseList("Neck Flexion", "Lateral and forward Flexion"));
-        NeckExercisesListList.add(new NeckExerciseList("Head Floats", "Neck Flexion, Lateral Flexion or Extension"));
+        final ArrayList<ExerciseListByMuscleGroup> NeckExercisesListList = new ArrayList<>();
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Neck", "1 set towards neck"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Plate Curl", "Neck Flexion"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Neck Harness Curl", "Neck Flexion"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Plated Neck Extension", "Neck Extension"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Harness Lateral Flexion", "Lateral Flexion"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Suspended Neck Rotation", "Neck Flexion, Rotation"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Neck Flexion", "Lateral and forward Flexion"));
+        NeckExercisesListList.add(new ExerciseListByMuscleGroup("Head Floats", "Neck Flexion, Lateral Flexion or Extension"));
 
 
         //Create Recycler View
@@ -78,7 +77,7 @@ NeckVolume extends AppCompatActivity implements NeckExerciseAdapter.OnItemClickL
             case 6:
             case 7:
             case 8:
-                AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+                AddVolumeDialog exampleDialog = new AddVolumeDialog(this, R.style.DialogeTheme);
                 exampleDialog.show(getSupportFragmentManager(), "example dialog");
                 break;
 

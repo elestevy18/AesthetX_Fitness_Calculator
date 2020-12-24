@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
 import java.util.Objects;
@@ -25,8 +26,8 @@ import java.util.Objects;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class AddChestPressDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
-    private static final String Triceps_TALLY = "com.example.application.scifit.Triceps_TALLY";
+    private static final String PREFS = Constants.PREFS;
+    private static final String TRICEPS_TALLY = "com.example.application.scifit.TRICEPS_TALLY";
     private static final String CHEST_TALLY = "com.example.application.scifit.CHEST_TALLY";
     private static final String ANTERIORDELTOID_TALLY = "com.example.application.scifit.ANTERIORDELTOID_TALLY";
     private final Context mContext;
@@ -47,11 +48,11 @@ public class AddChestPressDialog extends AppCompatDialogFragment {
                 int TricepsTally = Integer.parseInt(sets);
                 TricepsTally = TricepsTally * 10;
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(Triceps_TALLY, TricepsTally);
+                editor.putInt(TRICEPS_TALLY, TricepsTally);
                 editor.apply();
 
                 Intent intent = new Intent(mContext, Dashboards.class);
-                //intent.putExtra(Triceps_TALLY, TricepsTally);
+                //intent.putExtra(TRICEPS_TALLY, TricepsTally);
 
                 startActivity(intent);
 
@@ -92,7 +93,7 @@ public class AddChestPressDialog extends AppCompatDialogFragment {
                         int TricepsTally = Integer.parseInt(sets);
                         TricepsTally = TricepsTally * 10;
                         SharedPreferences.Editor editor = sp.edit();
-                        editor.putInt(Triceps_TALLY, TricepsTally);
+                        editor.putInt(TRICEPS_TALLY, TricepsTally);
                         int chestTally = Integer.parseInt(sets);
                         chestTally = chestTally * 10;
                         editor.putInt(CHEST_TALLY, chestTally);
@@ -101,7 +102,7 @@ public class AddChestPressDialog extends AppCompatDialogFragment {
                         editor.putInt(ANTERIORDELTOID_TALLY, anteriorDeltoidTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
-                        //  intent.putExtra(Triceps_TALLY, TricepsTally);
+                        //  intent.putExtra(TRICEPS_TALLY, TricepsTally);
                         startActivity(intent);
 
                     }

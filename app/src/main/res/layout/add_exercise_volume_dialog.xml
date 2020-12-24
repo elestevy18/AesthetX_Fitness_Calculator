@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="#000000"
+    android:layout_gravity="center"
+    >
+
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_sets"
+        android:layout_alignBottom="@+id/add_sets"
+        android:layout_marginEnd="8sp"
+        android:text="Sets:"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_sets"
+        app:layout_constraintEnd_toStartOf="@+id/add_sets"
+        app:layout_constraintTop_toTopOf="@+id/add_sets" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_sets"
+        android:layout_alignBottom="@+id/add_sets"
+        android:text="Reps:"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        android:layout_marginEnd="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_reps"
+        app:layout_constraintEnd_toStartOf="@+id/add_reps"
+        app:layout_constraintTop_toTopOf="@+id/add_reps" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_sets"
+        android:layout_alignBottom="@+id/add_sets"
+        android:layout_marginEnd="8sp"
+        android:hint="*"
+        android:text="Weight:"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_weight"
+        app:layout_constraintEnd_toStartOf="@+id/add_weight"
+        app:layout_constraintTop_toTopOf="@+id/add_weight" />
+
+    <TextView
+        android:id="@+id/rpe_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_sets"
+        android:layout_alignBottom="@+id/add_sets"
+        android:text="R.P.E \n (Rate of Perceived Exertion):"
+        android:textAlignment="center"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_rpe"
+        app:layout_constraintEnd_toStartOf="@+id/add_rpe"
+        app:layout_constraintTop_toTopOf="@+id/add_rpe"
+        android:layout_marginEnd="8sp" />
+
+    <TextView
+        android:id="@+id/add_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/add_sets"
+        android:layout_alignBottom="@+id/add_sets"
+        android:layout_marginTop="8sp"
+        android:text="Notes:"
+        android:textAlignment="center"
+        android:textColor="#F5F5F5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rpe_textview" />
+
+    <EditText
+        android:id="@+id/add_sets"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#F5F5F5"
+        android:focusable="true"
+        android:gravity="center"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16sp"
+        android:layout_marginTop="8sp"/>
+
+    <EditText
+        android:id="@+id/add_reps"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_sets"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#F5F5F5"
+        android:focusable="true"
+        android:gravity="center"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_sets"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="16sp"
+        android:hint="*"
+        android:textColorHint="#F5F5F5"/>
+
+    <EditText
+        android:id="@+id/add_weight"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8sp"
+        android:layout_marginEnd="16sp"
+        android:backgroundTint="#F5F5F5"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="*"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="#F5F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_reps" />
+
+    <EditText
+        android:id="@+id/add_rpe"
+        android:layout_width="60sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F5F5F5"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="*"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="#F5F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_weight" />
+
+    <EditText
+        android:id="@+id/add_notes"
+        android:layout_width="450sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="#F5F5F5"
+        android:focusable="true"
+        android:gravity="center"
+        android:hint="*"
+
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="#F5F5F5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_note"
+        android:layout_marginTop="8sp"/>
+
+    <TextView
+        android:id="@+id/optional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:text="@string/optional_fields"
+        android:textColor="#989898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

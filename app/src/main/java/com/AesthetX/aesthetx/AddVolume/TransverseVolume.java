@@ -16,7 +16,7 @@ import com.AesthetX.aesthetx.PopUpDialogs.AddDiaphragmVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.ObliqueDiaphragmFullDialog;
 
 
-public class DiaphragmVolume extends AppCompatActivity implements DiaphragmAdapter.OnItemClickListener, AddDiaphragmVolumeDialog.ExampleDialogListener, ObliqueDiaphragmFullDialog.ExampleDialogListener {
+public class TransverseVolume extends AppCompatActivity implements DiaphragmAdapter.OnItemClickListener, AddDiaphragmVolumeDialog.ExampleDialogListener, ObliqueDiaphragmFullDialog.ExampleDialogListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

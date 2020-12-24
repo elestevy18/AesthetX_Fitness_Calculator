@@ -14,57 +14,57 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.extensorImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class ForearmExtensors extends AppCompatActivity {
     private static final String FOREARMEXTENSORSPROGRESS = "FOREARMEXTENSORSPROGRESS";
-    private static final String FOREARMEXTENSORMAX = "FOREARMEXTENSORMAX";
-    private static final String PREFS = "PREFS";
-    private int forearmExtensorProgress;
-    private int forearmExtensorMax;
-    private EditText forearmExtensorMRV;
+    private static final String FOREARMEXTENSORSMAX = "FOREARMEXTENSORSMAX";
+    private static final String PREFS = Constants.PREFS;
+    private int forearmExtensorsProgress;
+    private int forearmExtensorsMax;
+    private EditText forearmExtensorsMRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forearm_extensors);
         SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
-        forearmExtensorMRV = findViewById(R.id.setmaxet);
-        TextView currentforearmExtensorMax = findViewById(R.id.current_max);
-        TextView currentforearmExtensorVolume = findViewById(R.id.current_volume);
-        String forearmExtensorProgressTxt = Integer.toString(sp.getInt(FOREARMEXTENSORSPROGRESS, 0) / 10);
-        String forearmExtensorMaxTxt = Integer.toString(sp.getInt(FOREARMEXTENSORMAX, 100) / 10);
-        currentforearmExtensorMax.append(forearmExtensorMaxTxt);
-        currentforearmExtensorVolume.append(forearmExtensorProgressTxt);
+        forearmExtensorsMRV = findViewById(R.id.setmaxet);
+        TextView currentforearmExtensorsMax = findViewById(R.id.current_max);
+        TextView currentforearmExtensorsVolume = findViewById(R.id.current_volume);
+        String forearmExtensorsProgressTxt = Integer.toString(sp.getInt(FOREARMEXTENSORSPROGRESS, 0) / 10);
+        String forearmExtensorsMaxTxt = Integer.toString(sp.getInt(FOREARMEXTENSORSMAX, 100) / 10);
+        currentforearmExtensorsMax.append(forearmExtensorsMaxTxt);
+        currentforearmExtensorsVolume.append(forearmExtensorsProgressTxt);
 
 
-        Button forearmExtensorReset = findViewById(R.id.extensorresetvolume);
-        forearmExtensorReset.setOnClickListener(new View.OnClickListener() {
+        Button forearmExtensorsReset = findViewById(R.id.Extensorsresetvolume);
+        forearmExtensorsReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                forearmExtensorProgress = 0;
+                forearmExtensorsProgress = 0;
                 SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(FOREARMEXTENSORSPROGRESS, forearmExtensorProgress);
+                editor.putInt(FOREARMEXTENSORSPROGRESS, forearmExtensorsProgress);
                 editor.apply();
                 Intent intent = new Intent(v.getContext(), Dashboards.class);
                 startActivity(intent);
             }
         });
 
-        Button resetforearmExtensorMax = findViewById(R.id.extensorresetmax);
-        resetforearmExtensorMax.setOnClickListener(new View.OnClickListener() {
+        Button resetforearmExtensorsMax = findViewById(R.id.Extensorsresetmax);
+        resetforearmExtensorsMax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
-                forearmExtensorMax = 100;
-                editor.putInt(FOREARMEXTENSORMAX, forearmExtensorMax);
+                forearmExtensorsMax = 100;
+                editor.putInt(FOREARMEXTENSORSMAX, forearmExtensorsMax);
                 editor.apply();
                 Intent intent = new Intent(v.getContext(), Dashboards.class);
                 startActivity(intent);
@@ -73,20 +73,20 @@ public class ForearmExtensors extends AppCompatActivity {
 
         });
 
-        Button setforearmExtensorMax = findViewById(R.id.setextensormax);
-        setforearmExtensorMax.setOnClickListener(new View.OnClickListener() {
+        Button setforearmExtensorsMax = findViewById(R.id.setExtensorsmax);
+        setforearmExtensorsMax.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (TextUtils.isEmpty(forearmExtensorMRV.getText())) {
+                if (TextUtils.isEmpty(forearmExtensorsMRV.getText())) {
                     displayToast();
 
                 } else {
                     SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sp.edit();
-                    final EditText setforearmExtensorMax = findViewById(R.id.setmaxet);
-                    forearmExtensorMax = Integer.parseInt(setforearmExtensorMax.getText().toString());
-                    forearmExtensorMax = forearmExtensorMax * 10;
-                    editor.putInt(FOREARMEXTENSORMAX, forearmExtensorMax);
+                    final EditText setforearmExtensorsMax = findViewById(R.id.setmaxet);
+                    forearmExtensorsMax = Integer.parseInt(setforearmExtensorsMax.getText().toString());
+                    forearmExtensorsMax = forearmExtensorsMax * 10;
+                    editor.putInt(FOREARMEXTENSORSMAX, forearmExtensorsMax);
                     editor.apply();
                     Intent intent = new Intent(v.getContext(), Dashboards.class);
                     startActivity(intent);

@@ -13,41 +13,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.scifit.R;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-
-import java.util.ArrayList;
-import java.util.Objects;
-
-import com.AesthetX.aesthetx.AddVolume.AbsVolume;
-import com.AesthetX.aesthetx.AddVolume.AnteriorDeltoidVolume;
-import com.AesthetX.aesthetx.AddVolume.BicepsVolume;
-import com.AesthetX.aesthetx.AddVolume.CalvesVolume;
-import com.AesthetX.aesthetx.AddVolume.ChestVolume;
-import com.AesthetX.aesthetx.AddVolume.DiaphragmVolume;
-import com.AesthetX.aesthetx.AddVolume.ErectorsVolume;
-import com.AesthetX.aesthetx.AddVolume.ForearmExtensorsVolume;
-import com.AesthetX.aesthetx.AddVolume.ForearmFlexorsVolume;
-import com.AesthetX.aesthetx.AddVolume.GluteMediusVolume;
-import com.AesthetX.aesthetx.AddVolume.GlutesVolume;
-import com.AesthetX.aesthetx.AddVolume.HamstringsVolume;
-import com.AesthetX.aesthetx.AddVolume.LatsVolume;
-import com.AesthetX.aesthetx.AddVolume.LowerTrapsVolume;
-import com.AesthetX.aesthetx.AddVolume.MedialDeltoidVolume;
-import com.AesthetX.aesthetx.AddVolume.NeckVolume;
-import com.AesthetX.aesthetx.AddVolume.ObliquesVolume;
-import com.AesthetX.aesthetx.AddVolume.PosteriorDeltoidVolume;
-import com.AesthetX.aesthetx.AddVolume.QuadsVolume;
-import com.AesthetX.aesthetx.AddVolume.RadialForearmVolume;
-import com.AesthetX.aesthetx.AddVolume.RotatorCuffVolume;
-import com.AesthetX.aesthetx.AddVolume.SerratusVolume;
-import com.AesthetX.aesthetx.AddVolume.TricepsVolume;
-import com.AesthetX.aesthetx.AddVolume.UlnarForearmVolume;
-import com.AesthetX.aesthetx.AddVolume.UpperTrapVolume;
-import com.AesthetX.aesthetx.Classes.AdManager;
+import com.AesthetX.aesthetx.AddVolume.Form.ExercisesByMuscle;
 import com.AesthetX.aesthetx.Classes.Adapters.MuscleListAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.MuscleList;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.AesthetX.aesthetx.Excercises.BWExercise;
@@ -77,14 +45,22 @@ import com.AesthetX.aesthetx.MuscleGroupInfo.Serratus;
 import com.AesthetX.aesthetx.MuscleGroupInfo.Triceps;
 import com.AesthetX.aesthetx.MuscleGroupInfo.UlnarForearm;
 import com.AesthetX.aesthetx.MuscleGroupInfo.UpperTrap;
- import java.util.Random;
+import com.example.scifit.R;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter.OnItemClickListener {
+    private static final String MUSCLE_STRING = "MUSCLESTRING";
     //NECK
     private static final String NECK_TALLY = "com.example.application.scifit.NECK_TALLY";
     private static final String NECKPROGRESS = "NECKPROGRESS";
     private static final String NECKMAX = "NECKMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     //UPPER TRAPS
     private static final String UPPERTRAP_TALLY = "com.example.application.scifit.UPPERTRAP_TALLY";
     private static final String UPPERTRAPPROGRESS = "UPPERTRAPPROGRESS";
@@ -112,16 +88,16 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
     private static final String ROTATORCUFFMAX = "ROTATORCUFFMAX";
 
     //Triceps
-    private static final String Triceps_TALLY = "com.example.application.scifit.Triceps_TALLY";
-    private static final String TricepsPROGRESS = "TricepsPROGRESS";
-    private static final String TricepsMAX = "TricepsMAX";
+    private static final String TRICEPS_TALLY = "com.example.application.scifit.TRICEPS_TALLY";
+    private static final String TRICEPSPROGRESS = "TRICEPSPROGRESS";
+    private static final String TRICEPSMAX = "TRICEPSMAX";
 
     //ULNARFOREARM
     private static final String ULNARFOREARM_TALLY = "com.example.application.scifit.ULNARFOREARM_TALLY";
     private static final String ULNARFOREARMPROGRESS = "ULNARFOREARMPROGRESS";
     private static final String ULNARFOREARMMAX = "ULNARFOREARMMAX";
 
-    //FOREARMEXTENSORS
+    //FOREARMExtensors
     private static final String FOREARMEXTENSORS_TALLY = "com.example.application.scifit.FOREARMEXTENSORS_TALLY";
     private static final String FOREARMEXTENSORSPROGRESS = "FOREARMEXTENSORSPROGRESS";
     private static final String FOREARMEXTENSORSMAX = "FOREARMEXTENSORSMAX";
@@ -192,9 +168,9 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
     private static final String OBLIQUESMAX = "OBLIQUESMAX";
 
     //Transverse
-    private static final String Transverse_TALLY = "com.example.application.scifit.Transverse_TALLY";
-    private static final String TransversePROGRESS = "TransversePROGRESS";
-    private static final String TransverseMAX = "TransverseMAX";
+    private static final String TRANSVERSE_TALLY = "com.example.application.scifit.TRANSVERSE_TALLY";
+    private static final String TRANSVERSEPROGRESS = "TRANSVERSEPROGRESS";
+    private static final String TRANSVERSEMAX = "TRANSVERSEMAX";
 
     //QUADS
     private static final String QUADS_TALLY = "com.example.application.scifit.QUADS_TALLY";
@@ -313,15 +289,15 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
         sp.edit().remove(ROTATORCUFF_TALLY).apply();
 
         //Triceps
-        int TricepsTally = sp.getInt(Triceps_TALLY, 0);
-        int TricepsMaxTimesTen = sp.getInt(TricepsMAX, 100);
-        int TricepsProgressTimesTen = sp.getInt(TricepsPROGRESS, 0);
+        int TricepsTally = sp.getInt(TRICEPS_TALLY, 0);
+        int TricepsMaxTimesTen = sp.getInt(TRICEPSMAX, 100);
+        int TricepsProgressTimesTen = sp.getInt(TRICEPSPROGRESS, 0);
         TricepsProgressTimesTen = TricepsProgressTimesTen + TricepsTally;
-        editor.putInt(TricepsPROGRESS, TricepsProgressTimesTen).apply();
+        editor.putInt(TRICEPSPROGRESS, TricepsProgressTimesTen).apply();
         float TricepsProgressTimesTenFloat = (float) TricepsProgressTimesTen;
         String TricepsProgress = String.valueOf(TricepsProgressTimesTenFloat / 10.00);
         String TricepsMax = String.valueOf(TricepsMaxTimesTen / 10);
-        sp.edit().remove(Triceps_TALLY).apply();
+        sp.edit().remove(TRICEPS_TALLY).apply();
 
         //ULNARFOREARM
         int ulnarForearmTally = sp.getInt(ULNARFOREARM_TALLY, 0);
@@ -334,7 +310,7 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
         String ulnarForearmMax = String.valueOf(ulnarForearmMaxTimesTen / 10);
         sp.edit().remove(ULNARFOREARM_TALLY).apply();
 
-        //FOREARMEXTENSORS
+        //FOREARMExtensors
         int forearmExtensorsTally = sp.getInt(FOREARMEXTENSORS_TALLY, 0);
         int forearmExtensorsMaxTimesTen = sp.getInt(FOREARMEXTENSORSMAX, 100);
         int forearmExtensorsProgressTimesTen = sp.getInt(FOREARMEXTENSORSPROGRESS, 0);
@@ -477,15 +453,15 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
         String obliquesMax = String.valueOf(obliquesMaxTimesTen / 10);
         sp.edit().remove(OBLIQUES_TALLY).apply();
         //Transverse
-        int TransverseTally = sp.getInt(Transverse_TALLY, 0);
-        int TransverseMaxTimesTen = sp.getInt(TransverseMAX, 160);
-        int TransverseProgressTimesTen = sp.getInt(TransversePROGRESS, 0);
+        int TransverseTally = sp.getInt(TRANSVERSE_TALLY, 0);
+        int TransverseMaxTimesTen = sp.getInt(TRANSVERSEMAX, 160);
+        int TransverseProgressTimesTen = sp.getInt(TRANSVERSEPROGRESS, 0);
         TransverseProgressTimesTen = TransverseProgressTimesTen + TransverseTally;
-        editor.putInt(TransversePROGRESS, TransverseProgressTimesTen).apply();
+        editor.putInt(TRANSVERSEPROGRESS, TransverseProgressTimesTen).apply();
         float TransverseProgressTimesTenFloat = (float) TransverseProgressTimesTen;
         String TransverseProgress = String.valueOf(TransverseProgressTimesTenFloat / 10.00);
         String TransverseMax = String.valueOf(TransverseMaxTimesTen / 10);
-        sp.edit().remove(Transverse_TALLY).apply();
+        sp.edit().remove(TRANSVERSE_TALLY).apply();
         //QUADS
         int quadsTally = sp.getInt(QUADS_TALLY, 0);
         int quadsMaxTimesTen = sp.getInt(QUADSMAX, 120);
@@ -503,31 +479,42 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_white, "Neck", "MAV:10-16\nFREQ:2-3", neckProgress, neckMax + " Weekly sets", neckProgressTimesTen, neckMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_white, "Upper Traps", "MAV:12-20\nFREQ:2-6", upperTrapProgress, upperTrapMax + " Weekly sets", upperTrapProgressTimesTen, upperTrapMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Lower Traps", "MAV:12-20\nFREQ:2-6", lowerTrapProgress, lowerTrapMax + " Weekly sets", lowerTrapProgressTimesTen, lowerTrapMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Posterior Deltoid", "MAV:16-22\nFREQ:2-6", posteriorDeltoidProgress, posteriorDeltoidMax + " Weekly sets", posteriorDeltoidProgressTimesTen, posteriorDeltoidMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Medial Deltoid", "MAV:16-22\nFREQ:2-6", medialDeltoidProgress, medialDeltoidMax + " Weekly sets", medialDeltoidProgressTimesTen, medialDeltoidMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Anterior Deltoid", "MAV:16-22\nFREQ:1-2", anteriorDeltoidProgress, anteriorDeltoidMax + " Weekly sets", anteriorDeltoidProgressTimesTen, anteriorDeltoidMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Rotator Cuff", "MAV:12-20\nFREQ:3-6", rotatorCuffProgress, rotatorCuffMax + " Weekly sets", rotatorCuffProgressTimesTen, rotatorCuffMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Posterior Deltoids", "MAV:16-22\nFREQ:2-6", posteriorDeltoidProgress, posteriorDeltoidMax + " Weekly sets", posteriorDeltoidProgressTimesTen, posteriorDeltoidMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Medial Deltoids", "MAV:16-22\nFREQ:2-6", medialDeltoidProgress, medialDeltoidMax + " Weekly sets", medialDeltoidProgressTimesTen, medialDeltoidMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Anterior Deltoids", "MAV:16-22\nFREQ:1-2", anteriorDeltoidProgress, anteriorDeltoidMax + " Weekly sets", anteriorDeltoidProgressTimesTen, anteriorDeltoidMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Rotator Cuffs", "MAV:12-20\nFREQ:3-6", rotatorCuffProgress, rotatorCuffMax + " Weekly sets", rotatorCuffProgressTimesTen, rotatorCuffMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Triceps", "MAV:10-14\nFREQ:2-4", TricepsProgress, TricepsMax + " Weekly sets", TricepsProgressTimesTen, TricepsMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Ulnar Forearm", "MAV:10-20\nFREQ:2-6", ulnarForearmProgress, ulnarForearmMax + " Weekly sets", ulnarForearmProgressTimesTen, ulnarForearmMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Forearm Extensor", "MAV:10-20\nFREQ:2-6", forearmExtensorsProgress, forearmExtensorsMax + " Weekly sets", forearmExtensorsProgressTimesTen, forearmExtensorsMaxTimesTen));
+        //Medial and short delt
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Ulnar Forearms", "MAV:10-20\nFREQ:2-6", ulnarForearmProgress, ulnarForearmMax + " Weekly sets", ulnarForearmProgressTimesTen, ulnarForearmMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Forearm Extensors", "MAV:10-20\nFREQ:2-6", forearmExtensorsProgress, forearmExtensorsMax + " Weekly sets", forearmExtensorsProgressTimesTen, forearmExtensorsMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Forearm Flexors", "MAV:10-20\nFREQ:2-6", forearmFlexorsProgress, forearmFlexorsMax + " Weekly sets", forearmFlexorsProgressTimesTen, forearmFlexorsMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Radial Forearm", "MAV:10-20\nFREQ:2-6", radialForearmProgress, radialForearmMax + " Weekly sets", radialForearmProgressTimesTen, radialForearmMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Radial Forearms", "MAV:10-20\nFREQ:2-6", radialForearmProgress, radialForearmMax + " Weekly sets", radialForearmProgressTimesTen, radialForearmMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Lats", "MAV:12-22\nFREQ:2-4", latsProgress, latsMax + " Weekly sets", latsProgressTimesTen, latsMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Erectors", "MAV:10-15\nFREQ:2-4", erectorsProgress, erectorsMax + " Weekly sets", erectorsProgressTimesTen, erectorsMaxTimesTen));
-        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Glutes", "MAV:4-12\nFREQ:2-3", glutesProgress, glutesMax + " Weekly sets", glutesProgressTimesTen, glutesMaxTimesTen));
+        muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Glute Max", "MAV:4-12\nFREQ:2-3", glutesProgress, glutesMax + " Weekly sets", glutesProgressTimesTen, glutesMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Glute Medius", "MAV:12-15\nFREQ:2-4", gluteMediusProgress, gluteMediusMax + " Weekly sets", gluteMediusProgressTimesTen, gluteMediusMaxTimesTen));
+        //Add Hinge and curl
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Hamstrings", "MAV:10-16\nFREQ:2-3", hamstringsProgress, hamstringsMax + " Weekly sets", hamstringsProgressTimesTen, hamstringsMaxTimesTen));
+        //anterior tibialis
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Calves", "MAV:12-16\nFREQ:2-4", calvesProgress, calvesMax + " Weekly sets", calvesProgressTimesTen, calvesMaxTimesTen));
         //Upper, Middle, Lower
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Chest", "MAV:12-20\nFREQ:2-3", chestProgress, chestMax + " Weekly sets", chestProgressTimesTen, chestMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Biceps", "MAV:14-20\nFREQ:2-6", bicepsProgress, bicepsMax + " Weekly sets", bicepsProgressTimesTen, bicepsMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Serratus", "MAV:16-20\nFREQ:3-5", serratusProgress, serratusMax + " Weekly sets", serratusProgressTimesTen, serratusMaxTimesTen));
-        //Upper, Middle, Lower
+        //Lower abs and oblique : middles and upper abs and obliques
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Abs", "MAV:16-20\nFREQ:3-5", absProgress, absMax + " Weekly sets", absProgressTimesTen, absMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Obliques", "MAV:16-20\nFREQ:3-5", obliquesProgress, obliquesMax + " Weekly sets", obliquesProgressTimesTen, obliquesMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Transverse Ab", "MAV:16-20\nFREQ:3-5", TransverseProgress, TransverseMax + " Weekly sets", TransverseProgressTimesTen, TransverseMaxTimesTen));
         muscleListList.add(new MuscleList(R.drawable.ic_fitness_center_black_24dp, "Quads", "MAV:12-18\nFREQ:1.5-3", quadsProgress, quadsMax + " Weekly sets", quadsProgressTimesTen, quadsMaxTimesTen));
+        //adductors?
+        //TODO missing muscles
 
+
+        //List of exercises
+        //"Posterior Deltoid"
+        //" Medial Deltoid"
+        //"Anterior Deltoid"
+        //"Rotator Cuff"
         //Create Recycler View
         RecyclerView mRecyclerView = v.findViewById(R.id.musclesRecyclerView);
         mRecyclerView.setHasFixedSize(true);
@@ -690,136 +677,176 @@ public class VolumeTrackerFragment extends Fragment implements MuscleListAdapter
 
     @Override
     public void onAddVolumeClick(int position) {
+        SharedPreferences sP = Objects.requireNonNull(getActivity()).getSharedPreferences(PREFS, MODE_PRIVATE);
+        final SharedPreferences.Editor editor = sP.edit();
+
 
 
 
         switch (position) {
             case 0:
-                Intent intent = new Intent(getContext(), NeckVolume.class);
+                //Original Code
+                Intent intent = new Intent(getContext(), ExercisesByMuscle.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+                //SharedPreferences sP = Objects.requireNonNull(getActivity()).getSharedPreferences(PREFS, MODE_PRIVATE);
+                //final SharedPreferences.Editor editor = sP.edit();
+                editor.putString(MUSCLE_STRING, "Neck").apply();
                 startActivity(intent);
                 break;
 
+                //Code that will pass title and display corresponding recyclerview
+//                RecyclerView recyclerView = getActivity().findViewById(R.id.chestRecyclerView);
+//                TextView text = recyclerView.findViewHolderForAdapterPosition(position).itemView.findViewById(R.id.exercise);
+
+
             case 1:
-                Intent intent2 = new Intent(getContext(), UpperTrapVolume.class);
+                Intent intent2 = new Intent(getContext(), ExercisesByMuscle.class);
                 intent2.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+                editor.putString(MUSCLE_STRING, "Upper Traps").apply();
                 startActivity(intent2);
                 break;
 
             case 2:
-                Intent intent3 = new Intent(getContext(), LowerTrapsVolume.class);
+
+                Intent intent3 = new Intent(getContext(), ExercisesByMuscle.class);
                 intent3.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+                editor.putString(MUSCLE_STRING, "Lower Traps").apply();
+
                 startActivity(intent3);
                 break;
 
             case 3:
-                Intent intent4 = new Intent(getContext(), PosteriorDeltoidVolume.class);
+                Intent intent4 = new Intent(getContext(), ExercisesByMuscle.class);
                 intent4.setFlags(Intent.FLAG_ACTIVITY_PREVIOUS_IS_TOP);
+                editor.putString(MUSCLE_STRING, "Posterior Deltoids").apply();
                 startActivity(intent4);
                 break;
 
             case 4:
-                Intent intent5 = new Intent(getContext(), MedialDeltoidVolume.class);
+                Intent intent5 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Medial Deltoids").apply();
                 startActivity(intent5);
                 break;
 
             case 5:
-                Intent intent6 = new Intent(getContext(), AnteriorDeltoidVolume.class);
+                Intent intent6 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Anterior Deltoids").apply();
                 startActivity(intent6);
                 break;
 
             case 6:
-                Intent intent7 = new Intent(getContext(), RotatorCuffVolume.class);
+                Intent intent7 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Rotator Cuff").apply();
+
                 startActivity(intent7);
                 break;
 
             case 7:
-                Intent intent8 = new Intent(getContext(), TricepsVolume.class);
+                Intent intent8 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Triceps").apply();
                 startActivity(intent8);
                 break;
 
             case 8:
-                Intent intent9 = new Intent(getContext(), UlnarForearmVolume.class);
+                Intent intent9 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Ulnar Forearms").apply();
                 startActivity(intent9);
                 break;
 
             case 9:
-                Intent intent10 = new Intent(getContext(), ForearmExtensorsVolume.class);
+                Intent intent10 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Forearm Extensors").apply();
                 startActivity(intent10);
                 break;
 
             case 10:
-                Intent intent11 = new Intent(getContext(), ForearmFlexorsVolume.class);
+                Intent intent11 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Forearm Flexors").apply();
                 startActivity(intent11);
                 break;
 
             case 11:
-                Intent intent12 = new Intent(getContext(), RadialForearmVolume.class);
+                Intent intent12 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Radial Forearms").apply();
                 startActivity(intent12);
                 break;
 
             case 12:
-                Intent intent13 = new Intent(getContext(), LatsVolume.class);
+                Intent intent13 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Lats").apply();
                 startActivity(intent13);
                 break;
 
             case 13:
-                Intent intent14 = new Intent(getContext(), ErectorsVolume.class);
+                Intent intent14 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Erectors").apply();
                 startActivity(intent14);
                 break;
 
             case 14:
-                Intent intent15 = new Intent(getContext(), GlutesVolume.class);
+                Intent intent15 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Glute Max").apply();
                 startActivity(intent15);
                 break;
 
             case 15:
-                Intent intent16 = new Intent(getContext(), GluteMediusVolume.class);
+                Intent intent16 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Glute Medius").apply();
                 startActivity(intent16);
                 break;
 
             case 16:
-                Intent intent17 = new Intent(getContext(), HamstringsVolume.class);
+                Intent intent17 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Hamstrings").apply();
                 startActivity(intent17);
                 break;
 
             case 17:
-                Intent intent18 = new Intent(getContext(), CalvesVolume.class);
+                Intent intent18 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Calves").apply();
                 startActivity(intent18);
                 break;
 
             case 18:
-                Intent intent19 = new Intent(getContext(), ChestVolume.class);
+                Intent intent19 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Chest").apply();
                 startActivity(intent19);
                 break;
 
             case 19:
-                Intent intent20 = new Intent(getContext(), BicepsVolume.class);
+                Intent intent20 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Biceps").apply();
                 startActivity(intent20);
                 break;
 
             case 20:
-                Intent intent21 = new Intent(getContext(), SerratusVolume.class);
+                Intent intent21 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Serratus").apply();
                 startActivity(intent21);
                 break;
 
             case 21:
-                Intent intent22 = new Intent(getContext(), AbsVolume.class);
+                Intent intent22 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Abs").apply();
                 startActivity(intent22);
                 break;
 
             case 22:
-                Intent intent23 = new Intent(getContext(), ObliquesVolume.class);
+                Intent intent23 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Obliques").apply();
                 startActivity(intent23);
                 break;
 
             case 23:
-                Intent intent24 = new Intent(getContext(), DiaphragmVolume.class);
+                Intent intent24 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Transverse Ab").apply();
                 startActivity(intent24);
                 break;
 
             case 24:
-                Intent intent25 = new Intent(getContext(), QuadsVolume.class);
+                Intent intent25 = new Intent(getContext(), ExercisesByMuscle.class);
+                editor.putString(MUSCLE_STRING, "Quads").apply();
+
                 startActivity(intent25);
                 break;
 

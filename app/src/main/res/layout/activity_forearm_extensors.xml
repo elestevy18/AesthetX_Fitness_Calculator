@@ -21,7 +21,7 @@
 
 
         <Button
-            android:id="@+id/extensorresetmax"
+            android:id="@+id/Extensorsresetmax"
             android:layout_width="140sp"
             android:layout_height="35sp"
             android:layout_marginStart="16sp"
@@ -31,13 +31,13 @@
             android:gravity="center"
             android:text="@string/reset_max"
             android:textColor="#BAF833"
-            android:layout_toStartOf="@+id/extensorresetvolume"
+            android:layout_toStartOf="@+id/Extensorsresetvolume"
             app:cornerRadius="200dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/extensorresetvolume"
+            android:id="@+id/Extensorsresetvolume"
             android:layout_width="140sp"
             android:layout_height="35sp"
             android:layout_alignParentEnd="true"
@@ -59,29 +59,29 @@
             android:layout_marginTop="8sp"
             android:text="@string/current_max"
             android:textColor="#F5F5F5"
-            app:layout_constraintEnd_toEndOf="@+id/extensorresetmax"
-            app:layout_constraintStart_toStartOf="@+id/extensorresetmax"
-            app:layout_constraintTop_toBottomOf="@+id/extensorresetmax" />
+            app:layout_constraintEnd_toEndOf="@+id/Extensorsresetmax"
+            app:layout_constraintStart_toStartOf="@+id/Extensorsresetmax"
+            app:layout_constraintTop_toBottomOf="@+id/Extensorsresetmax" />
 
         <TextView
             android:id="@+id/current_volume"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/extensorresetvolume"
-            android:layout_alignStart="@+id/extensorresetvolume"
+            android:layout_below="@+id/Extensorsresetvolume"
+            android:layout_alignStart="@+id/Extensorsresetvolume"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="8sp"
             android:text="@string/current_volume"
             android:textColor="#F5F5F5"
-            app:layout_constraintEnd_toEndOf="@+id/extensorresetvolume"
-            app:layout_constraintStart_toStartOf="@+id/extensorresetvolume"
-            app:layout_constraintTop_toBottomOf="@+id/extensorresetvolume" />
+            app:layout_constraintEnd_toEndOf="@+id/Extensorsresetvolume"
+            app:layout_constraintStart_toStartOf="@+id/Extensorsresetvolume"
+            app:layout_constraintTop_toBottomOf="@+id/Extensorsresetvolume" />
 
         <TextView
             android:id="@+id/mrv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/setextensormax"
+            android:layout_alignBottom="@id/setExtensorsmax"
             android:layout_toStartOf="@id/setmaxet"
             android:text="@string/mrv"
             android:textAlignment="textEnd"
@@ -95,18 +95,18 @@
             android:id="@+id/setmaxet"
             android:layout_width="60sp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/extensorresetvolume"
+            android:layout_below="@id/Extensorsresetvolume"
             android:layout_marginTop="8sp"
             android:layout_marginEnd="8sp"
             android:backgroundTint="#F5F5F5"
-            android:layout_toStartOf="@id/setextensormax"
+            android:layout_toStartOf="@id/setExtensorsmax"
             android:textColor="#F5F5F5"
             android:inputType="numberDecimal|numberSigned"
-            app:layout_constraintEnd_toStartOf="@+id/setextensormax"
+            app:layout_constraintEnd_toStartOf="@+id/setExtensorsmax"
             app:layout_constraintTop_toBottomOf="@+id/current_volume" />
 
         <Button
-            android:id="@+id/setextensormax"
+            android:id="@+id/setExtensorsmax"
             android:layout_width="140sp"
             android:layout_height="35sp"
             android:layout_alignParentTop="true"
@@ -116,7 +116,7 @@
             android:text="@string/set_max"
             android:textColor="#BAF833"
             app:layout_constraintBottom_toBottomOf="@+id/setmaxet"
-            app:layout_constraintEnd_toEndOf="@+id/extensorresetvolume"
+            app:layout_constraintEnd_toEndOf="@+id/Extensorsresetvolume"
             app:layout_constraintTop_toTopOf="@+id/setmaxet" />
 
         <TextView

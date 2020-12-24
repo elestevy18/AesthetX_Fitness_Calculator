@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Aesthet(X) Premium</string>
+    <string name="app_name">Aesthet(X)</string>
     <string name="slideOneText">Achieve an Aesthetic</string>
     <string name="slideOneoneText">Physique</string>
-    <string name="slideTwoText">We\'ll begin by learning \nmore about yourself</string>
+    <string name="slideTwoText">We\'ll begin by learning \nmore about yourself\n\n What unit system do\n you prefer?</string>
     <string name="slideThreeText">What\'s your current\nbodyweight?</string>
     <string name="slideFourText">What\'s your height?</string>
     <string name="slideFourTextFeet">Feet</string>
@@ -11,9 +11,9 @@
     <string name="slideSixText">Are you male or \n female?</string>
     <string name="slideSevenText">What is your body \ncomposition? (Fat %)</string>
     <string name="EditTextLine">__________</string>
-    <string name="pounds">Pounds</string>
-    <string name="feet">Feet</string>
-    <string name="inches">Inches</string>
+    <string name="pounds">Pounds/Kilos</string>
+    <string name="feet">Feet/\nMeters</string>
+    <string name="inches">Inches/\nCentimeters</string>
     <string name="learnMore">Learn More</string>
     <string name="male">Male</string>
     <string name="months">Months</string>
@@ -26,8 +26,8 @@
     <string name="bodyheighthintfeet">Height in Feet</string>
     <string name="bodyheighthintinches">Height in Inches</string>
     <string name="mfmale1">Your ideal body weight after 4\n years of weight lifting is\u0020</string>
-    <string name="lbs">\u0020pounds.</string>
-    <string name="musclelbs">\u0020pounds of muscle\u0020</string>
+    <string name="lbs">\u0020pounds/kilos.</string>
+    <string name="musclelbs">\u0020pounds/kilos of muscle\u0020</string>
     <string name="mfmale2">Your current potential fat loss is\u0020</string>
     <string name="mfmale3">You have currently built\u0020</string>
     <string name="mfmale4">You can build\u0020</string>
@@ -81,6 +81,7 @@
 </string>
 
     <string name="lbsin">%1$s <i>lbs</i></string>
+    <string name="kgin">%1$s <i>kg</i></string>
     <string name="notsure">Not sure?</string>
     <string name="clickehere">Click here.</string>
     <string name="fatchart">Here are a couple charts to visually asses your body composition.
@@ -109,16 +110,16 @@
     <string name="mealplan">Meal\nPlan</string>
     <string name="resources">resources</string>
     <string name="sedentarytxt">No activity/ office employee</string>
-    <string name="sedentary">sedentary</string>
+    <string name="sedentary">  sedentary </string>
     <string name="activitylevel">What is your activity\n level?</string>
     <string name="lighttxt">Train 1–2x a week</string>
-    <string name="light">Light</string>
+    <string name="light">  Light </string>
     <string name="moderatetxt">Train 3–5x a week</string>
-    <string name="moderate">moderate</string>
+    <string name="moderate">  moderate </string>
     <string name="heavytxt">Train 6–7x a week</string>
-    <string name="heavy">Heavy</string>
+    <string name="heavy">  Heavy </string>
     <string name="athletictxt">Train 2x daily</string>
-    <string name="athletic">athletic</string>
+    <string name="athletic">  athletic </string>
     <string name="age">What is your\n age?</string>
     <string name="mptitle">Personalized Meal Plan</string>
     <string name="lowfat">Low Fat</string>
@@ -197,14 +198,30 @@
 
 
     <string name="licence_key_ad" translatable="false">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkGJwajqj8kTWh05ii0fUh4NIn8lhSzV9lZPxyMlewjpt9/8tM5edJGFUgKVBHx4aRLuPmr6/qG1C82/Nf7rYKZ/a0zyA0Xkh/qwgT/xWeVXn7mvNyDj5WG0Egor2vgY9+T/exiyxLLEBDF4ua9pKA6dGHO8cWt58+GXz4fiE7ucIdsUTNwZwlvrxxGaK4t9XeUgBHdokNIVXmYerRlB4df4TihCWNmBlb2sGNA0bTqoq/4HGzFFMqQ8+wXXYpH0j7+7MFRht8WPtyKWJZYbVEo8tiGQRQ3gegHZHbevJD58rXCRWYhb2jj8SnaHu8Bb0sGieBAoAAocHzEa59ThDNwIDAQAB</string>
+    <string name="studentpromo">Are you a high school student? Click here for a student promo.</string>
+    <string name="highschool">What school do you attend?</string>
+    <string name="year">What\'s your year?</string>
+    <string name="freshman">Freshman</string>
+    <string name="sophomore">Sophomore</string>
+    <string name="junior">Junior</string>
+    <string name="senior">Senior</string>
+    <string name="obtainpromo">Obtain your student promo code by emailing \"aesthet.x20@gmail.com\" with the subject \"High Scool Promo Code\".</string>
+    <string name="enter_promo_code_here">Enter promo code here</string>
+    <string name="submit">SUBMIT</string>
+    <string name="metric">Metric</string>
+    <string name="imperial">ENGLISH</string>
+    <string name="make_sure_to_check_out_the_faq_page_in_the_menu_at_the_top_right_to_learn_how_to_train_properly_and_how_to_use_the_app_go_hard_be_safe">Make sure to check out the FAQ page in the menu at the top right to learn how to train properly and how to use the app. Go hard, be safe ;).</string>
+    <string name="history">HISTORY</string>
+    <string name="optional_fields">*Optional Fields\n\nUse negative (-) numbers\nto subtract</string>
+    <string name="noHistory">No history yet. Try adding some sets.</string>
+    <string name="volume">Volume:</string>
+    <string name="date">Date:</string>
 
     <string-array name="subscriptions">
         <item>1_month_premium</item>
         <item>annually</item>
         <item>biannually</item>
     </string-array>
-
-
 
 
 </resources>

@@ -18,16 +18,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
+import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.example.scifit.R;
 
 import java.util.Objects;
 
-import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
 public class ObliqueDiaphragmFullDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String OBLIQUES_TALLY = "com.example.application.scifit.OBLIQUES_TALLY";
-    private static final String Transverse_TALLY = "com.example.application.scifit.Transverse_TALLY";
+    private static final String TRANSVERSE_TALLY = "com.example.application.scifit.TRANSVERSE_TALLY";
 
     private final Context mContext;
     private EditText mvolume;
@@ -92,7 +92,7 @@ public class ObliqueDiaphragmFullDialog extends AppCompatDialogFragment {
                         editor.putInt(OBLIQUES_TALLY, obliquesTally);
                         int TransverseTally = Integer.parseInt(sets);
                         TransverseTally = TransverseTally * 10;
-                        editor.putInt(Transverse_TALLY, TransverseTally);
+                        editor.putInt(TRANSVERSE_TALLY, TransverseTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
                         startActivity(intent);

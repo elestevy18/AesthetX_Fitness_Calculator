@@ -44,13 +44,15 @@
         android:focusableInTouchMode="true"
         android:focusedByDefault="true"
         app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
     <TextView
-        android:layout_width="70dp"
-        android:layout_height="32dp"
+        android:id="@+id/bwunits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/bodyweight_input"
         android:layout_alignStart="@+id/bodyweight_input"
         android:layout_alignEnd="@+id/bodyweight_input"

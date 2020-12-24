@@ -44,7 +44,7 @@
 
             android:text="00"
             android:textColor="#FFFFFF"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/slash"
@@ -58,7 +58,7 @@
             android:layout_toEndOf="@+id/progresstxt"
             android:text="@string/slash"
             android:textColor="#FFFFFF"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/maxtxt"
@@ -73,7 +73,7 @@
             android:elevation="15sp"
             android:text="@string/_16"
             android:textColor="#FFFFFF"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <ProgressBar
             android:id="@+id/neck_progress_bar"
@@ -101,7 +101,7 @@
             android:gravity="end"
             android:text="@string/mav_frequency"
             android:textColor="#F5F5F5"
-            android:textSize="10sp" />
+            android:textSize="12sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/addVolume"
@@ -109,9 +109,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:layout_marginTop="0sp"
             android:layout_marginEnd="0sp"
-            android:layout_marginBottom="0sp"
+            android:layout_marginBottom="6dp"
             android:backgroundTint="@color/colorPrimary"
             android:gravity="center"
             android:text="@string/add_set"

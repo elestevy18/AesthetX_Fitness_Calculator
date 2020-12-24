@@ -45,7 +45,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewactivitylevel"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.037"
+        android:paddingEnd="8sp"
+        android:paddingStart="8sp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -64,13 +66,15 @@
         android:id="@+id/lightbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sedentarybutton"
-        android:textColor="@color/colorAccent"
-        android:background="@drawable/add_button"
         android:layout_marginTop="8sp"
-        android:layout_marginEnd="15sp" />
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/add_button"
+        android:paddingStart="27sp"
+        android:paddingEnd="27sp"
+        android:text="@string/light"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sedentarybutton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -94,7 +98,9 @@
         android:textColor="@color/colorAccent"
         android:background="@drawable/add_button"
         android:layout_marginTop="8sp"
-        android:layout_marginEnd="15sp" />
+        android:layout_marginEnd="15dp"
+        android:paddingEnd="10sp"
+        android:paddingStart="10sp"/>
 
     <Button
         android:id="@+id/heavybutton"
@@ -106,7 +112,9 @@
         android:textColor="@color/colorAccent"
         android:background="@drawable/add_button"
         android:layout_marginTop="8sp"
-        android:layout_marginEnd="15sp" />
+        android:layout_marginEnd="15dp"
+        android:paddingEnd="24sp"
+        android:paddingStart="24sp"/>
 
     <TextView
         android:id="@+id/textView11"
@@ -131,7 +139,9 @@
         android:textColor="@color/colorAccent"
         android:background="@drawable/add_button"
         android:layout_marginTop="8sp"
-        android:layout_marginEnd="15sp" />
+        android:layout_marginEnd="15dp"
+        android:paddingEnd="14sp"
+        android:paddingStart="14sp"/>
 
     <TextView
         android:layout_width="wrap_content"

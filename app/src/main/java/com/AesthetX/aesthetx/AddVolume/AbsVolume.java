@@ -7,17 +7,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.AesthetX.aesthetx.Classes.Adapters.AbsAdapter;
+import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.AbsList;
+import com.AesthetX.aesthetx.PopUpDialogs.AbCirclesDialog;
+import com.AesthetX.aesthetx.PopUpDialogs.AddAbsVolumeDialog;
 import com.example.scifit.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
-
-import com.AesthetX.aesthetx.Classes.Adapters.AbsAdapter;
-import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.AbsList;
-import com.AesthetX.aesthetx.PopUpDialogs.AbCirclesDialog;
-import com.AesthetX.aesthetx.PopUpDialogs.AddAbsVolumeDialog;
 
 
 public class AbsVolume extends AppCompatActivity implements AbsAdapter.OnItemClickListener, AddAbsVolumeDialog.ExampleDialogListener, AbCirclesDialog.ExampleDialogListener {

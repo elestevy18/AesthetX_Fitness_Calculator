@@ -14,16 +14,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.tricepsImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class Triceps extends AppCompatActivity {
-    private static final String TricepsPROGRESS = "TricepsPROGRESS";
-    private static final String TricepsMAX = "TricepsMAX";
-    private static final String PREFS = "PREFS";
+    private static final String TRICEPSPROGRESS = "TRICEPSPROGRESS";
+    private static final String TRICEPSMAX = "TRICEPSMAX";
+    private static final String PREFS = Constants.PREFS;
     private int TricepsProgress;
     private int TricepsMax;
     private EditText TricepsMRV;
@@ -36,8 +36,8 @@ public class Triceps extends AppCompatActivity {
         TricepsMRV = findViewById(R.id.setmaxet);
         TextView currentTricepsMax = findViewById(R.id.current_max);
         TextView currentTricepsVolume = findViewById(R.id.current_volume);
-        String TricepsProgressTxt = Integer.toString(sp.getInt(TricepsPROGRESS, 0) / 10);
-        String TricepsMaxTxt = Integer.toString(sp.getInt(TricepsMAX, 100) / 10);
+        String TricepsProgressTxt = Integer.toString(sp.getInt(TRICEPSPROGRESS, 0) / 10);
+        String TricepsMaxTxt = Integer.toString(sp.getInt(TRICEPSMAX, 100) / 10);
         currentTricepsMax.append(TricepsMaxTxt);
         currentTricepsVolume.append(TricepsProgressTxt);
 
@@ -50,7 +50,7 @@ public class Triceps extends AppCompatActivity {
 
                 SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(TricepsPROGRESS, TricepsProgress);
+                editor.putInt(TRICEPSPROGRESS, TricepsProgress);
                 editor.apply();
                 Intent intent = new Intent(v.getContext(), Dashboards.class);
                 startActivity(intent);
@@ -65,7 +65,7 @@ public class Triceps extends AppCompatActivity {
                 SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 TricepsMax = 100;
-                editor.putInt(TricepsMAX, TricepsMax);
+                editor.putInt(TRICEPSMAX, TricepsMax);
                 editor.apply();
                 Intent intent = new Intent(v.getContext(), Dashboards.class);
                 startActivity(intent);
@@ -87,7 +87,7 @@ public class Triceps extends AppCompatActivity {
                     final EditText setTricepsMax = findViewById(R.id.setmaxet);
                     TricepsMax = Integer.parseInt(setTricepsMax.getText().toString());
                     TricepsMax = TricepsMax * 10;
-                    editor.putInt(TricepsMAX, TricepsMax);
+                    editor.putInt(TRICEPSMAX, TricepsMax);
                     editor.apply();
                     Intent intent = new Intent(v.getContext(), Dashboards.class);
                     startActivity(intent);

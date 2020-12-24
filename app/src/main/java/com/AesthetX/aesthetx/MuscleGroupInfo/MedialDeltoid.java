@@ -14,15 +14,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.medialDeltoidImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 public class MedialDeltoid extends AppCompatActivity {
     private static final String MEDIALDELTOIDPROGRESS = "MEDIALDELTOIDPROGRESS";
     private static final String MEDIALDELTOIDMAX = "MEDIALDELTOIDMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int medialDeltoidProgress;
     private int medialDeltoidMax;
     private EditText medialDeltoidMRV;

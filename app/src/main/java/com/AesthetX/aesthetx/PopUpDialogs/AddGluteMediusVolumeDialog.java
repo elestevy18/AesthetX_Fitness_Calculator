@@ -18,14 +18,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
+import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.example.scifit.R;
 
 import java.util.Objects;
 
-import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
 public class AddGluteMediusVolumeDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String GLUTEMEDIUS_TALLY = "com.example.application.scifit.GLUTEMEDIUS_TALLY";
     private final Context mContext;
     private EditText mvolume;

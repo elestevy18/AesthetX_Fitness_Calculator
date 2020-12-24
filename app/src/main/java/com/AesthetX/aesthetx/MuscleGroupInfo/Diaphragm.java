@@ -14,16 +14,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.diaphragmImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class Diaphragm extends AppCompatActivity {
-    private static final String TransversePROGRESS = "TransversePROGRESS";
-    private static final String TransverseMAX = "TransverseMAX";
-    private static final String PREFS = "PREFS";
+    private static final String TRANSVERSEPROGRESS = "TRANSVERSEPROGRESS";
+    private static final String TRANSVERSEMAX = "TRANSVERSEMAX";
+    private static final String PREFS = Constants.PREFS;
     private int TransverseProgress;
     private int TransverseMax;
     private EditText TransverseMRV;
@@ -36,8 +36,8 @@ public class Diaphragm extends AppCompatActivity {
         TransverseMRV = findViewById(R.id.setmaxet);
         TextView currentTransverseMax = findViewById(R.id.current_max);
         TextView currentTransverseVolume = findViewById(R.id.current_volume);
-        String TransverseProgressTxt = Integer.toString(sp.getInt(TransversePROGRESS, 0) / 10);
-        String TransverseMaxTxt = Integer.toString(sp.getInt(TransverseMAX, 160) / 10);
+        String TransverseProgressTxt = Integer.toString(sp.getInt(TRANSVERSEPROGRESS, 0) / 10);
+        String TransverseMaxTxt = Integer.toString(sp.getInt(TRANSVERSEMAX, 160) / 10);
         currentTransverseMax.append(TransverseMaxTxt);
         currentTransverseVolume.append(TransverseProgressTxt);
 
@@ -50,7 +50,7 @@ public class Diaphragm extends AppCompatActivity {
 
                 SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(TransversePROGRESS, TransverseProgress);
+                editor.putInt(TRANSVERSEPROGRESS, TransverseProgress);
                 editor.apply();
                 Intent intent = new Intent(v.getContext(), Dashboards.class);
                 startActivity(intent);
@@ -65,7 +65,7 @@ public class Diaphragm extends AppCompatActivity {
                 SharedPreferences sp = getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sp.edit();
                 TransverseMax = 160;
-                editor.putInt(TransverseMAX, TransverseMax);
+                editor.putInt(TRANSVERSEMAX, TransverseMax);
                 editor.apply();
                 Intent intent = new Intent(v.getContext(), Dashboards.class);
                 startActivity(intent);
@@ -87,7 +87,7 @@ public class Diaphragm extends AppCompatActivity {
                     final EditText setTransverseMax = findViewById(R.id.setmaxet);
                     TransverseMax = Integer.parseInt(setTransverseMax.getText().toString());
                     TransverseMax = TransverseMax * 10;
-                    editor.putInt(TransverseMAX, TransverseMax);
+                    editor.putInt(TRANSVERSEMAX, TransverseMax);
                     editor.apply();
                     Intent intent = new Intent(v.getContext(), Dashboards.class);
                     startActivity(intent);

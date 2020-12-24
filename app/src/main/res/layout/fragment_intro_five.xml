@@ -45,8 +45,8 @@
 
 
     <TextView
-        android:layout_width="70dp"
-        android:layout_height="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/ExperienceInput"
         android:layout_alignStart="@+id/ExperienceInput"
         android:layout_alignEnd="@+id/ExperienceInput"

@@ -34,7 +34,7 @@ public class IntroSevenFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_intro_seven2, container, false);
+        View v = inflater.inflate(R.layout.fragment_intro_seven, container, false);
         age = v.findViewById(R.id.age_input);
         age.setOnEditorActionListener(editorListener);
         age.setFocusableInTouchMode(true);

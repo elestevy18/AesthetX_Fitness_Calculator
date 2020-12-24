@@ -60,17 +60,21 @@
             android:text="@string/volumetracker"
             android:elevation="5dp" />
 
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history" />
+
+
         <com.google.android.material.tabs.TabItem
             android:id="@+id/mealplan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/mealplan" />
 
-        <com.google.android.material.tabs.TabItem
-            android:id="@+id/resources"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/resources" />
+
 
     </com.google.android.material.tabs.TabLayout>
 

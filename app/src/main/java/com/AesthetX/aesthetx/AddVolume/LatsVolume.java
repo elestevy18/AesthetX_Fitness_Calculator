@@ -50,7 +50,7 @@ public class LatsVolume extends AppCompatActivity implements LatsAdapter.OnItemC
 
         LatsExerciseListList.add(new LatsList("Pull Ups", "Lats, Lower Trap, \nSecondary: Post Delt, Bicep, Forearms"));
         LatsExerciseListList.add(new LatsList("Chin Ups", "Lats, Lower Trap, Bicep \nSecondary: Post Delt, Forearms"));
-        LatsExerciseListList.add(new LatsList("Pull ins", "Lats"));
+        LatsExerciseListList.add(new LatsList("Pull Ins", "Lats"));
 
         LatsExerciseListList.add(new LatsList("Ring Rows", "Lats, Lower Traps \nSecondary: Post Delt, Biceps, Forearm Flexors"));
         LatsExerciseListList.add(new LatsList("Australian Pull Up", "Lats, Lower Traps \nSecondary: Post Delt, Biceps, Forearm Flexors"));

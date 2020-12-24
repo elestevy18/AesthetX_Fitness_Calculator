@@ -14,16 +14,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.glutesMediusImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class GluteMedius extends AppCompatActivity {
     private static final String GLUTEMEDIUSPROGRESS = "GLUTEMEDIUSPROGRESS";
     private static final String GLUTEMEDIUSMAX = "GLUTEMEDIUSMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int gluteMediusProgress;
     private int gluteMediusMax;
     private EditText gluteMediusMRV;

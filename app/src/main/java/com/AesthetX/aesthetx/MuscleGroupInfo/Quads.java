@@ -14,17 +14,17 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.quadsImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class
 Quads extends AppCompatActivity {
     private static final String QUADSPROGRESS = "QUADSPROGRESS";
     private static final String QUADSMAX = "QUADSMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int quadsProgress;
     private int quadsMax;
     private EditText quadsMRV;

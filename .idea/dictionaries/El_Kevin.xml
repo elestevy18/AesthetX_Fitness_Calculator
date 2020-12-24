@@ -12,7 +12,10 @@
       <w>deltoid</w>
       <w>facepulls</w>
       <w>flexion</w>
+      <w>flexor</w>
       <w>flexors</w>
+      <w>forearmextensors</w>
+      <w>forearmflexors</w>
       <w>glute</w>
       <w>glutes</w>
       <w>hyperextension</w>
@@ -20,16 +23,24 @@
       <w>kettlebell</w>
       <w>lowertrap</w>
       <w>medius</w>
+      <w>mnotes</w>
+      <w>mreps</w>
+      <w>mrpe</w>
       <w>mvolume</w>
+      <w>mweight</w>
       <w>posteriordeltoid</w>
       <w>pulldown</w>
       <w>pushaway</w>
       <w>pushdowns</w>
       <w>pushup</w>
       <w>pushups</w>
+      <w>radialforearm</w>
       <w>rotator</w>
+      <w>rotatorcuff</w>
       <w>scienthetic</w>
+      <w>scifit</w>
       <w>serratus</w>
+      <w>ulnarforearm</w>
     </words>
   </dictionary>
 </component>

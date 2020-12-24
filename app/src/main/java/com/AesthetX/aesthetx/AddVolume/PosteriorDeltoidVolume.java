@@ -33,15 +33,15 @@ public class PosteriorDeltoidVolume extends AppCompatActivity implements Posteri
         PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Posterior Deltoid", "One set towards posterior deltoids"));
 
 
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Barbell/Dumbbell High Rows", "Posterior Deltoid, Lower Trap"));
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Facepulls", "Rotator Cuff, Lower Trap, Posterior Deltoid"));
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("W's", "Posterior Deltoid, Rotator Cuff, Lower Traps"));
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Reverse Pec Dec", "Lower Traps, Post Delt"));
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Barbell/Dumbbell High Rows", "Posterior Deltoid, Lower Trap"));//
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Facepulls",                  "Rotator Cuff, Lower Trap, Posterior Deltoid"));//1
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("W's",                        "Posterior Deltoid, Rotator Cuff, Lower Traps"));//1
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Reverse Pec Dec",            "Lower Traps, Post Delt"));//
 
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Floor T's", "Posterior Deltoid"));
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Banded Pull Aparts", "Posterior Delt, Lower Traps"));
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Ring Facepulls", "Posterior Deltoid, Rotator Cuff, Lower Traps"));
-        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Angels of Death", "Spinal Erectors, Lower Traps, Post Delt"));
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Floor T's",                  "Posterior Deltoid"));//2
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Banded Pull Aparts",         "Posterior Delt, Lower Traps"));//
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Ring Facepulls",             "Posterior Deltoid, Rotator Cuff, Lower Traps"));//1
+        PosteriorDeltoidExerciseListList.add(new PosteriorDeltoidList("Angels of Death",            "Spinal Erectors, Lower Traps, Post Delt"));//3
 
 
 

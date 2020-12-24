@@ -1,5 +1,6 @@
 package com.AesthetX.aesthetx.Classes.Fragments.IntroFragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.example.scifit.R;
 
+import static android.content.Context.MODE_PRIVATE;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link IntroOneFragment#newInstance} factory method to
@@ -21,6 +24,9 @@ public class IntroOneFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String SHARED_PREFS = "com.example.application.scifit.sharedPrefs";
+    private static final String UNITS = "com.example.application.scifit.units";
+
 
     public IntroOneFragment() {
         // Required empty public constructor
@@ -47,11 +53,7 @@ public class IntroOneFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            // TODO: Rename and change types of parameters
-            String mParam1 = getArguments().getString(ARG_PARAM1);
-            String mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
@@ -60,10 +62,29 @@ public class IntroOneFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_intro_one, container, false);
         final ViewPager viewPager = getActivity().findViewById(R.id.container2);
-        Button next = v.findViewById(R.id.intronext);
-        next.setOnClickListener(new View.OnClickListener() {
+
+
+        //MEtric
+        Button metric = v.findViewById(R.id.metric);
+        metric.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(UNITS, true).apply();
+                viewPager.setCurrentItem(1);
+            }
+
+        });
+
+        //Imperial
+        Button imperial = v.findViewById(R.id.imperial);
+        imperial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(UNITS, false).apply();
                 viewPager.setCurrentItem(1);
             }
 

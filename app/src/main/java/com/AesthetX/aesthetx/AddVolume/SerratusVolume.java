@@ -28,7 +28,7 @@ public class SerratusVolume extends AppCompatActivity implements SerratusAdapter
         //CreateList
         final ArrayList<SerratusList> SerratusExerciseListList = new ArrayList<>();
         SerratusExerciseListList.add(new SerratusList("Serratus Anterior", "One set towards serratus"));
-        SerratusExerciseListList.add(new SerratusList("Plank Protraction", "Serratus Anterior"));
+        SerratusExerciseListList.add(new SerratusList("Plank Protraction", "Serratus Anterior Secondary: Abs, Transverse"));
         SerratusExerciseListList.add(new SerratusList("Banded/ Cable Punches", "Serratus Anterior"));
         SerratusExerciseListList.add(new SerratusList("Protracted Roll Out", "Serratus Anterior, Abs Secondary: Transverse"));
         SerratusExerciseListList.add(new SerratusList("Protracted Cable Crunch", "Serratus Anterior, Abs Secondary: Transverse"));

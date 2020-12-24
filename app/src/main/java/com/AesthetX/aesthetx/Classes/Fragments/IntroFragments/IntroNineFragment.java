@@ -46,7 +46,7 @@ public class IntroNineFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_intro_seven, container, false);
+        View v = inflater.inflate(R.layout.fragment_intro_nine, container, false);
         InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Dashboards.INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
         Button malebutton = v.findViewById(R.id.malebutton);

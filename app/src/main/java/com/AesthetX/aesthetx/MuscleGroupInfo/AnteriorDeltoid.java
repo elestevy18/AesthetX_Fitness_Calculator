@@ -14,16 +14,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.scifit.R;
-
 import com.AesthetX.aesthetx.Classes.Adapters.anteriorDeltoidImageAdapter;
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
+import com.example.scifit.R;
 
 
 public class AnteriorDeltoid extends AppCompatActivity {
     private static final String ANTERIORDELTOIDPROGRESS = "ANTERIORDELTOIDPROGRESS";
     private static final String ANTERIORDELTOIDMAX = "ANTERIORDELTOIDMAX";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private int anteriorDeltoidProgress;
     private int anteriorDeltoidMax;
     private EditText anteriorDeltoidMRV;

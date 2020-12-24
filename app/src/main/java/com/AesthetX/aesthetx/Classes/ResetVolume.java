@@ -11,7 +11,7 @@ import com.example.scifit.R;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class ResetVolume extends AppCompatActivity {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String NECKPROGRESS = "NECKPROGRESS";
     private static final String UPPERTRAPPROGRESS = "UPPERTRAPPROGRESS";
     private static final String LOWERTRAPPROGRESS = "LOWERTRAPPROGRESS";
@@ -19,7 +19,7 @@ public class ResetVolume extends AppCompatActivity {
     private static final String MEDIALDELTOIDPROGRESS = "MEDIALDELTOIDPROGRESS";
     private static final String ANTERIORDELTOIDPROGRESS = "ANTERIORDELTOIDPROGRESS";
     private static final String ROTATORCUFFPROGRESS = "ROTATORCUFFPROGRESS";
-    private static final String TricepsPROGRESS = "TricepsPROGRESS";
+    private static final String TRICEPSPROGRESS = "TRICEPSPROGRESS";
     private static final String ULNARFOREARMPROGRESS = "ULNARFOREARMPROGRESS";
     private static final String FOREARMEXTENSORSPROGRESS = "FOREARMEXTENSORSPROGRESS";
     private static final String FOREARMFLEXORSPROGRESS = "FOREARMFLEXORSPROGRESS";
@@ -35,7 +35,7 @@ public class ResetVolume extends AppCompatActivity {
     private static final String SERRATUSPROGRESS = "SERRATUSPROGRESS";
     private static final String ABSPROGRESS = "ABSPROGRESS";
     private static final String OBLIQUESPROGRESS = "OBLIQUESPROGRESS";
-    private static final String TransversePROGRESS = "TransversePROGRESS";
+    private static final String TRANSVERSEPROGRESS = "TRANSVERSEPROGRESS";
     private static final String QUADSPROGRESS = "QUADSPROGRESS";
 
 
@@ -69,13 +69,13 @@ public class ResetVolume extends AppCompatActivity {
         editor.putInt(ROTATORCUFFPROGRESS, rotatorCuffProgress);
 
         int TricepsProgress = 0;
-        editor.putInt(TricepsPROGRESS, TricepsProgress);
+        editor.putInt(TRICEPSPROGRESS, TricepsProgress);
 
         int ulnarForearmProgress = 0;
         editor.putInt(ULNARFOREARMPROGRESS, ulnarForearmProgress);
 
-        int forearmExtensorProgress = 0;
-        editor.putInt(FOREARMEXTENSORSPROGRESS, forearmExtensorProgress);
+        int forearmExtensorsProgress = 0;
+        editor.putInt(FOREARMEXTENSORSPROGRESS, forearmExtensorsProgress);
 
         int forearmFlexorProgress = 0;
         editor.putInt(FOREARMFLEXORSPROGRESS, forearmFlexorProgress);
@@ -117,7 +117,7 @@ public class ResetVolume extends AppCompatActivity {
         editor.putInt(OBLIQUESPROGRESS, obliquesProgress);
 
         int TransverseProgress = 0;
-        editor.putInt(TransversePROGRESS, TransverseProgress);
+        editor.putInt(TRANSVERSEPROGRESS, TransverseProgress);
 
         int quadsProgress = 0;
         editor.putInt(QUADSPROGRESS, quadsProgress);

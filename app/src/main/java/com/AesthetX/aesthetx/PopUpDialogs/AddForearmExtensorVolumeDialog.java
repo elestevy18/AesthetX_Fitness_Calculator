@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
 import java.util.Objects;
@@ -25,7 +26,7 @@ import java.util.Objects;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class AddForearmExtensorVolumeDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String FOREARMEXTENSORS_TALLY = "com.example.application.scifit.FOREARMEXTENSORS_TALLY";
     private final Context mContext;
     private EditText mvolume;
@@ -42,10 +43,10 @@ public class AddForearmExtensorVolumeDialog extends AppCompatDialogFragment {
                 SharedPreferences sp = mContext.getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
 
                 String sets = mvolume.getText().toString();
-                int forearmExtensorTally = Integer.parseInt(sets);
-                forearmExtensorTally = forearmExtensorTally * 10;
+                int forearmExtensorsTally = Integer.parseInt(sets);
+                forearmExtensorsTally = forearmExtensorsTally * 10;
                 SharedPreferences.Editor editor = sp.edit();
-                editor.putInt(FOREARMEXTENSORS_TALLY, forearmExtensorTally);
+                editor.putInt(FOREARMEXTENSORS_TALLY, forearmExtensorsTally);
                 editor.apply();
 
                 Intent intent = new Intent(mContext, Dashboards.class);
@@ -87,9 +88,9 @@ public class AddForearmExtensorVolumeDialog extends AppCompatDialogFragment {
                         SharedPreferences sp = mContext.getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                         String sets = mvolume.getText().toString();
                         SharedPreferences.Editor editor = sp.edit();
-                        int forearmExtensorTally = Integer.parseInt(sets);
-                        forearmExtensorTally = forearmExtensorTally * 10;
-                        editor.putInt(FOREARMEXTENSORS_TALLY, forearmExtensorTally);
+                        int forearmExtensorsTally = Integer.parseInt(sets);
+                        forearmExtensorsTally = forearmExtensorsTally * 10;
+                        editor.putInt(FOREARMEXTENSORS_TALLY, forearmExtensorsTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
                         startActivity(intent);

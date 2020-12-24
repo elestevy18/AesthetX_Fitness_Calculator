@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
 import java.util.Objects;
@@ -25,7 +26,7 @@ import java.util.Objects;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class AddForearmCurlsDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String BICEPS_TALLY = "com.example.application.scifit.BICEPS_TALLY";
     private static final String FOREARMFLEXORS_TALLY = "com.example.application.scifit.FOREARMFLEXORS_TALLY";
     private final Context mContext;

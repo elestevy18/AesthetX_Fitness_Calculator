@@ -61,7 +61,7 @@ import com.AesthetX.aesthetx.PopUpDialogs.AddLatsVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddLowerTrapPostDeltDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddLowerTrapVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddMedialDeltoidVolumeDialog;
-import com.AesthetX.aesthetx.PopUpDialogs.AddNeckVolumeDialog;
+import com.AesthetX.aesthetx.PopUpDialogs.AddVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddObliquesVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddPistolSquatDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddPosteriorDeltoidVolumeDialog;
@@ -100,7 +100,7 @@ import com.AesthetX.aesthetx.PopUpDialogs.UpperLowerTrap;
 public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.OnItemClickListener, AddUpperTrapVolumeDialog.ExampleDialogListener,
         AddDeadliftVolumeDialog.ExampleDialogListener, AddLowerTrapVolumeDialog.ExampleDialogListener, AddAngelOfDeathDialog.ExampleDialogListener,
         AddPosteriorDeltoidVolumeDialog.ExampleDialogListener, AddHalfLowerTrapPostDeltDialog.ExampleDialogListener, AddFacePullDialog.ExampleDialogListener,
-        AddNeckVolumeDialog.ExampleDialogListener, AddMedialDeltoidVolumeDialog.ExampleDialogListener, AddTrapDeltDialog.ExampleDialogListener,
+        AddVolumeDialog.ExampleDialogListener, AddMedialDeltoidVolumeDialog.ExampleDialogListener, AddTrapDeltDialog.ExampleDialogListener,
         AddAnteriorDeltoidVolumeDialog.ExampleDialogListener, OHPDialog.ExampleDialogListener,
         AddRotatorCuffVolumeDialog.ExampleDialogListener, AddTricepsVolumeDialog.ExampleDialogListener, AddTricepsLatVolumeDialog.ExampleDialogListener,
         AddDipDialog.ExampleDialogListener, AddHighPullDialog.ExampleDialogListener, AddUlnarForearmVolumeDialog.ExampleDialogListener,
@@ -480,10 +480,10 @@ public class GlobalExercise extends AppCompatActivity implements GlobalAdapter.O
 
         //CHECK WHICH DIALOG TO OPEN FOR PROPER VOLUME INPUT
         if (neckList.contains(exercise)) {
-            AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+            AddVolumeDialog exampleDialog = new AddVolumeDialog(this, R.style.DialogeTheme);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Neck Flexion")) {
-            AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+            AddVolumeDialog exampleDialog = new AddVolumeDialog(this, R.style.DialogeTheme);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Bodyweight Squats")) {
             QuadsHalfGlute exampleDialog = new QuadsHalfGlute(this);

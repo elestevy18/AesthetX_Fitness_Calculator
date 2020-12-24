@@ -18,15 +18,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
+//TODO find out how to ADD CODE THAT STORES THW HISTORY INFORMATION
 public class AddUpperTrapVolumeDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String UPPERTRAP_TALLY = "com.example.application.scifit.UPPERTRAP_TALLY";
+
     private final Context mContext;
     private EditText mvolume;
 
@@ -87,13 +91,14 @@ public class AddUpperTrapVolumeDialog extends AppCompatDialogFragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         SharedPreferences sp = mContext.getSharedPreferences(PREFS, Dashboards.MODE_PRIVATE);
                         String sets = mvolume.getText().toString();
+
+
                         int upperTrapTally = Integer.parseInt(sets);
                         upperTrapTally = upperTrapTally * 10;
                         SharedPreferences.Editor editor = sp.edit();
                         editor.putInt(UPPERTRAP_TALLY, upperTrapTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
-                        //  intent.putExtra(UPPERTRAP_TALLY, upperTrapTally);
                         startActivity(intent);
 
                     }

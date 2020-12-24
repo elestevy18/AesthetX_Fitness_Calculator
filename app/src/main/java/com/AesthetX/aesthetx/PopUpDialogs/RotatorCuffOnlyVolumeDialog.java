@@ -19,15 +19,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
+import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.example.scifit.R;
 
 import java.util.Objects;
 
-import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
 public class RotatorCuffOnlyVolumeDialog extends AppCompatDialogFragment {
     public static final String MEDIALDELTOID_TALLY = "com.example.application.scifit.MEDIALDELTOID_TALLY";
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String ROTATORCUFF_TALLY = "com.example.application.scifit.ROTATORCUFF_TALLY";
     private static final String FOREARMEXTENSORS_TALLY = "com.example.application.scifit.FOREARMEXTENSORS_TALLY";
     private final Context mContext;

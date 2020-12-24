@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
 import com.example.scifit.R;
 
 import java.util.Objects;
@@ -25,10 +26,10 @@ import java.util.Objects;
 import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 
 public class AddPullOverDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String CHEST_TALLY = "com.example.application.scifit.CHEST_TALLY";
     private static final String LATS_TALLY = "com.example.application.scifit.LATS_TALLY";
-    private static final String Triceps_TALLY = "com.example.application.scifit.Triceps_TALLY";
+    private static final String TRICEPS_TALLY = "com.example.application.scifit.TRICEPS_TALLY";
     private final Context mContext;
     private EditText mvolume;
 
@@ -96,7 +97,7 @@ public class AddPullOverDialog extends AppCompatDialogFragment {
                         editor.putInt(LATS_TALLY, latsTally);
                         int TricepsTally = Integer.parseInt(sets);
                         TricepsTally = TricepsTally * 10;
-                        editor.putInt(Triceps_TALLY, TricepsTally);
+                        editor.putInt(TRICEPS_TALLY, TricepsTally);
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
                         startActivity(intent);

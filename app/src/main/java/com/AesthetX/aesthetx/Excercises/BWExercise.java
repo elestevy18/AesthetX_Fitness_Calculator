@@ -65,7 +65,7 @@ import com.AesthetX.aesthetx.PopUpDialogs.AddLatsVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddLowerTrapPostDeltDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddLowerTrapVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddMedialDeltoidVolumeDialog;
-import com.AesthetX.aesthetx.PopUpDialogs.AddNeckVolumeDialog;
+import com.AesthetX.aesthetx.PopUpDialogs.AddVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddObliquesVolumeDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddPistolSquatDialog;
 import com.AesthetX.aesthetx.PopUpDialogs.AddPosteriorDeltoidVolumeDialog;
@@ -103,7 +103,7 @@ import com.AesthetX.aesthetx.PopUpDialogs.SprinterLungeDialog;
 public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemClickListener, AddUpperTrapVolumeDialog.ExampleDialogListener,
         AddDeadliftVolumeDialog.ExampleDialogListener, AddLowerTrapVolumeDialog.ExampleDialogListener, AddAngelOfDeathDialog.ExampleDialogListener,
         AddPosteriorDeltoidVolumeDialog.ExampleDialogListener, AddHalfLowerTrapPostDeltDialog.ExampleDialogListener, AddFacePullDialog.ExampleDialogListener,
-        AddNeckVolumeDialog.ExampleDialogListener, AddMedialDeltoidVolumeDialog.ExampleDialogListener, AddTrapDeltDialog.ExampleDialogListener,
+        AddVolumeDialog.ExampleDialogListener, AddMedialDeltoidVolumeDialog.ExampleDialogListener, AddTrapDeltDialog.ExampleDialogListener,
         AddLowerTrapPostDeltDialog.ExampleDialogListener, AddAnteriorDeltoidVolumeDialog.ExampleDialogListener, OHPDialog.ExampleDialogListener,
         AddRotatorCuffVolumeDialog.ExampleDialogListener, AddTricepsVolumeDialog.ExampleDialogListener, AddTricepsLatVolumeDialog.ExampleDialogListener,
         AddDipDialog.ExampleDialogListener, AddHighPullDialog.ExampleDialogListener, AddUlnarForearmVolumeDialog.ExampleDialogListener,
@@ -563,10 +563,10 @@ public class BWExercise extends AppCompatActivity implements BWAdapter.OnItemCli
 
         //CHECK WHICH DIALOG TO OPEN FOR PROPER VOLUME INPUT
         if (exercise.equals("Head Floats")) {
-            AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+            AddVolumeDialog exampleDialog = new AddVolumeDialog(this, R.style.DialogeTheme);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Neck Flexion")) {
-            AddNeckVolumeDialog exampleDialog = new AddNeckVolumeDialog(this);
+            AddVolumeDialog exampleDialog = new AddVolumeDialog(this, R.style.DialogeTheme);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (exercise.equals("Angels of Death")) {
             AddAngelOfDeathDialog exampleDialog = new AddAngelOfDeathDialog(this);

@@ -82,7 +82,7 @@ public class QuadsVolume extends AppCompatActivity implements QuadsAdapter.OnIte
         List<String> quadsGluteMediusList = Arrays.asList(quadsGluteMediusExercises);
         String[] quadsExercises = {"Leg Press", "Cable Walkaways", "Banded Lunge", "Quads", "Wall Sit"};
         List<String> quadsList = Arrays.asList(quadsExercises);
-        if (quadsGluteMediusList.contains(exercise)) {
+        if (quadsGluteMediusList.contains(exercise)) {//
             AddQuadsGluteMediusDialog exampleDialog = new AddQuadsGluteMediusDialog(this);
             exampleDialog.show(getSupportFragmentManager(), "example dialog");
         } else if (quadsList.contains(exercise)) {

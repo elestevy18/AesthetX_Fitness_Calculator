@@ -9,9 +9,27 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hspromo"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="0dp"
         android:backgroundTint="#000000"
-        android:foregroundTint="#000000"/>
+        android:foregroundTint="#000000" />
+
+    <Button
+        android:id="@+id/hspromo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/studentpromo"
+        android:layout_marginStart="8sp"
+        android:layout_marginRight="8sp"
+        android:background="@drawable/add_button"
+        android:textColor="@color/colorAccent"
+        />
+
 
 </RelativeLayout>

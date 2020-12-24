@@ -14,10 +14,10 @@ import com.example.scifit.R;
 
 import java.util.ArrayList;
 
-import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.NeckExerciseList;
+import com.AesthetX.aesthetx.Classes.MuscleGroupObjects.ExerciseListByMuscleGroup;
 
 public class NeckExerciseAdapter extends RecyclerView.Adapter<NeckExerciseAdapter.ExampleViewHolder> {
-    private final ArrayList<NeckExerciseList> mNeckExercises;
+    private final ArrayList<ExerciseListByMuscleGroup> mNeckExercises;
     private final OnItemClickListener mListener;
     private ProgressBar mProgressBar;
 
@@ -25,7 +25,7 @@ public class NeckExerciseAdapter extends RecyclerView.Adapter<NeckExerciseAdapte
         return mProgressBar;
     }
 
-    public NeckExerciseAdapter(ArrayList<NeckExerciseList> mNeckExercises, OnItemClickListener mListener) {
+    public NeckExerciseAdapter(ArrayList<ExerciseListByMuscleGroup> mNeckExercises, OnItemClickListener mListener) {
         this.mNeckExercises = mNeckExercises;
         this.mListener = mListener;
     }
@@ -78,7 +78,7 @@ public class NeckExerciseAdapter extends RecyclerView.Adapter<NeckExerciseAdapte
 
     @Override
     public void onBindViewHolder(ExampleViewHolder holder, int position) {
-        NeckExerciseList currentItem = mNeckExercises.get(position);
+        ExerciseListByMuscleGroup currentItem = mNeckExercises.get(position);
         holder.mTextView1.setText(currentItem.getNeckText1());
         holder.mTextView2.setText(currentItem.getNeckText2());
     }

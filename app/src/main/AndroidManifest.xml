@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.AesthetX.aesthetx.Classes.MuscleGroupObjects.PremiumPay"></activity>
+        <activity android:name="com.AesthetX.aesthetx.Classes.NotesAndRPE"></activity>
+        <activity android:name="com.AesthetX.aesthetx.AddVolume.Form.ExercisesByMuscle" />
+        <activity android:name="com.AesthetX.aesthetx.Classes.StudentPromo" />
+        <activity android:name="com.AesthetX.aesthetx.Classes.MuscleGroupObjects.PremiumPay" />
         <activity android:name="com.AesthetX.aesthetx.Charts.FatLossChart" />
         <activity android:name="com.AesthetX.aesthetx.Excercises.Vacuums" />
         <activity android:name="com.AesthetX.aesthetx.Excercises.HandstandPushup" />
@@ -183,7 +186,7 @@
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name="com.AesthetX.aesthetx.AddVolume.DiaphragmVolume"
+            android:name="com.AesthetX.aesthetx.AddVolume.TransverseVolume"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />

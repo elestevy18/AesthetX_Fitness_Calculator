@@ -22,6 +22,7 @@ public class IntroThreeFragment extends Fragment {
     private static final String EXTRA_BODYWEIGHT = "com.example.application.scifit.EXTRA_ BODYWEIGHT";
     private EditText bodyweight;
     private static final String SHARED_PREFS = "com.example.application.scifit.sharedPrefs";
+    private static final String UNITS = "com.example.application.scifit.units";
 
     public IntroThreeFragment() {
         // Required empty public constructor
@@ -32,13 +33,18 @@ public class IntroThreeFragment extends Fragment {
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
             if (actionId == EditorInfo.IME_ACTION_NEXT) {
                 final EditText bodyweightInput = getActivity().findViewById(R.id.bodyweight_input);
+                final TextView bwunits = getActivity().findViewById(R.id.bwunits);
                 final float bodyweight = Float.parseFloat(bodyweightInput.getText().toString());
 
                 SharedPreferences sharedPreferences = getActivity().getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
+                Boolean units = sharedPreferences.getBoolean(UNITS, true);
+
                 editor.putFloat(EXTRA_BODYWEIGHT, bodyweight);
                 editor.apply();
+
+
               /*  Intent intentm = new Intent(getContext(), MagicFormulaMale.class);
                 intentm.putExtra(EXTRA_BODYWEIGHT, bodyweight);
 

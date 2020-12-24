@@ -18,14 +18,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
+import com.AesthetX.aesthetx.Classes.Constants;
+import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
 import com.example.scifit.R;
 
 import java.util.Objects;
 
-import com.AesthetX.aesthetx.DashBoardTabs.Dashboards;
-
 public class AddFacePullDialog extends AppCompatDialogFragment {
-    private static final String PREFS = "PREFS";
+    private static final String PREFS = Constants.PREFS;
     private static final String ROTATORCUFF_TALLY = "com.example.application.scifit.ROTATORCUFF_TALLY";
     private static final String LOWERTRAP_TALLY = "com.example.application.scifit.LOWERTRAP_TALLY";
     private static final String POSTERIORDELTOID_TALLY = "com.example.application.scifit.POSTERIORDELTOID_TALLY";
@@ -100,7 +100,6 @@ public class AddFacePullDialog extends AppCompatDialogFragment {
                         int posteriorDeltoidTally = Integer.parseInt(sets);
                         posteriorDeltoidTally = posteriorDeltoidTally * 10;
                         editor.putInt(POSTERIORDELTOID_TALLY, posteriorDeltoidTally);
-                        editor.apply();
                         editor.apply();
                         Intent intent = new Intent(mContext, Dashboards.class);
                         startActivity(intent);
